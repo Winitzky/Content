@@ -1,15 +1,11 @@
 commonfields:
   id: c2d76fe3-0114-4bfb-80aa-38952be8a4d2
-  version: 4
+  version: 5
 name: Testo
-script: |-
+script: |
   asdfasdfsssssss
   ihifuydtf
   asdasdasd
-
-  asdfasdf
-
-  sdfsdf
 type: python
 tags: []
 enabled: true
