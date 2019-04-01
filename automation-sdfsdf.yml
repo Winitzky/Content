@@ -1,0 +1,11 @@
+commonfields:
+  id: 2b3a61dd-0581-4e87-81ec-d7d7cfff0c9b
+  version: 2
+name: sdfsdf
+script: ""
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
