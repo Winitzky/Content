@@ -1,8 +1,8 @@
 commonfields:
   id: a648721c-d892-4d6a-8b19-6e4bf372df31
-  version: 2
+  version: 3
 name: testtesttest
-script: ""
+script: jkl;jkl;jk;j
 type: python
 tags: []
 enabled: true
