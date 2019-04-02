@@ -1,0 +1,11 @@
+commonfields:
+  id: a7f63684-3b37-4e7c-8e19-afc335d3b2ba
+  version: 3
+name: testo
+script: loolilooliloo
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
