@@ -1,8 +1,11 @@
 commonfields:
   id: 167d55e1-83f0-4d0d-8cd3-0d8496dced2c
-  version: 3
+  version: 4
 name: testo
-script: ascascasc
+script: |-
+  ascascascvbnmvbnm
+
+  vbnmvbnmvbnmvbnm
 type: python
 tags: []
 enabled: true
