@@ -1,0 +1,11 @@
+commonfields:
+  id: 96f92f76-d481-4b91-8361-3f3f21fa6e54
+  version: 3
+name: testo
+script: this is my lovley testo
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
