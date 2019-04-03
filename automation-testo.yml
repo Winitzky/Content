@@ -1,0 +1,11 @@
+commonfields:
+  id: 302a0025-018a-402a-8a11-20e08ce07585
+  version: 3
+name: testo
+script: bolshoy
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
