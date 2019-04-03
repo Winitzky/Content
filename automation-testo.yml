@@ -1,0 +1,11 @@
+commonfields:
+  id: 061bdd7e-1c31-40e4-8bd1-a298832027fa
+  version: 3
+name: testo
+script: merenge
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
