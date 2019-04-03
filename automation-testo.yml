@@ -1,0 +1,11 @@
+commonfields:
+  id: 757f2b1f-d26a-4f59-85a1-cb4440b334ef
+  version: 2
+name: testo
+script: juana
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
