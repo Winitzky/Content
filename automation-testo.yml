@@ -1,0 +1,11 @@
+commonfields:
+  id: 1d7e26e6-3867-4571-8d1f-ec650fcefee1
+  version: 3
+name: testo
+script: tu madre
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
