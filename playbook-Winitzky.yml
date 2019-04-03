@@ -1,5 +1,5 @@
 id: fbe3d5cc-6afd-41da-848a-f08fa2983e0e
-version: 1
+version: 3
 name: Winitzky
 starttaskid: "0"
 tasks:
@@ -13,6 +13,9 @@ tasks:
       name: ""
       iscommand: false
       brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
     separatecontext: false
     view: |-
       {
@@ -24,14 +27,36 @@ tasks:
     note: false
     timertriggers: []
     ignoreworker: false
+  "1":
+    id: "1"
+    taskid: 51dcb384-1c73-483d-8f03-130cb02deb08
+    type: regular
+    task:
+      id: 51dcb384-1c73-483d-8f03-130cb02deb08
+      version: -1
+      name: Untitled Task
+      type: regular
+      iscommand: false
+      brand: ""
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 440,
+          "y": 170
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 65,
-        "width": 380,
-        "x": 450,
+        "height": 215,
+        "width": 390,
+        "x": 440,
         "y": 50
       }
     }
