@@ -1,0 +1,11 @@
+commonfields:
+  id: 63545179-6ef6-4bfd-8fb8-5980b51c025e
+  version: 2
+name: b
+script: asdasd
+type: python
+tags: []
+enabled: true
+scripttarget: 0
+runonce: false
+runas: DBotWeakRole
