@@ -1,5 +1,5 @@
 id: 2024b257-b894-43f6-8b6e-7f5d5bb35fdc
-version: 1
+version: 2
 name: a
 starttaskid: "0"
 tasks:
@@ -13,6 +13,9 @@ tasks:
       name: ""
       iscommand: false
       brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
     separatecontext: false
     view: |-
       {
@@ -24,13 +27,35 @@ tasks:
     note: false
     timertriggers: []
     ignoreworker: false
+  "1":
+    id: "1"
+    taskid: 8df1eba2-456e-45d7-887d-a4d799ba59fd
+    type: regular
+    task:
+      id: 8df1eba2-456e-45d7-887d-a4d799ba59fd
+      version: -1
+      name: Untitled Task
+      type: regular
+      iscommand: false
+      brand: ""
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 460,
+          "y": 260
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 65,
-        "width": 380,
+        "height": 305,
+        "width": 390,
         "x": 450,
         "y": 50
       }
