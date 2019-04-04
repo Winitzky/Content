@@ -1,0 +1,11 @@
+commonfields:
+  id: a
+  version: 2
+name: a
+display: a
+category: Authentication
+configuration: []
+script:
+  script: aaaaaaaaaaa
+  type: python
+  runonce: false
