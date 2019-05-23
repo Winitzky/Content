@@ -1,0 +1,40 @@
+id: 102a592f-2696-4ba8-8a5f-3e14635ec177
+version: 1
+name: p
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: 9f7cb7a2-7e0d-4cae-8e7d-c0181fe6cbed
+    type: start
+    task:
+      id: 9f7cb7a2-7e0d-4cae-8e7d-c0181fe6cbed
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 65,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
+inputs: []
+outputs: []
