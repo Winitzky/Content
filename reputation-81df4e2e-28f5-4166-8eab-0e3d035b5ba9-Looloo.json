@@ -1,0 +1,23 @@
+{
+	"contextPath": "",
+	"contextValue": "",
+	"defaultMapping": null,
+	"details": "Looloo",
+	"disabled": false,
+	"enhancementScriptNames": [],
+	"excludedBrands": [],
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"id": "81df4e2e-28f5-4166-8eab-0e3d035b5ba9",
+	"locked": false,
+	"manualMapping": {},
+	"mergeContext": false,
+	"regex": ".*#.*",
+	"reputationCommand": "",
+	"reputationScriptName": "",
+	"sortValues": null,
+	"system": false,
+	"updateAfter": 0,
+	"version": -1
+}
