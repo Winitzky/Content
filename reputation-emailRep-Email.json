@@ -1,0 +1,25 @@
+{
+	"contextPath": "Account.Email(val.Address \u0026\u0026 val.Address === obj.Address)",
+	"contextValue": "Address",
+	"defaultMapping": null,
+	"details": "Email",
+	"disabled": false,
+	"enhancementScriptNames": [
+		"EmailReputation"
+	],
+	"excludedBrands": null,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"id": "emailRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"regex": "\\b[A-Za-z0-9._%=+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+	"reputationCommand": "email",
+	"reputationScriptName": "",
+	"sortValues": null,
+	"system": true,
+	"updateAfter": 0,
+	"version": -1
+}

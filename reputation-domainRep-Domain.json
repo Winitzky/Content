@@ -1,0 +1,25 @@
+{
+	"contextPath": "",
+	"contextValue": "",
+	"defaultMapping": null,
+	"details": "Domain",
+	"disabled": false,
+	"enhancementScriptNames": [
+		"DomainReputation"
+	],
+	"excludedBrands": null,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"id": "domainRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"regex": "",
+	"reputationCommand": "",
+	"reputationScriptName": "",
+	"sortValues": null,
+	"system": true,
+	"updateAfter": 0,
+	"version": -1
+}

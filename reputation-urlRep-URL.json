@@ -1,0 +1,26 @@
+{
+	"contextPath": "URL(val.Data \u0026\u0026 val.Data === obj.Data)",
+	"contextValue": "Data",
+	"defaultMapping": null,
+	"details": "URL",
+	"disabled": false,
+	"enhancementScriptNames": [
+		"URLReputation",
+		"SplunkPySearch"
+	],
+	"excludedBrands": null,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "UnEscapeURLs",
+	"id": "urlRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"regex": "(?i)(?:(?:https?|ftp|hxxps?):\\/\\/|www\\[?\\.\\]?|ftp\\[?\\.\\]?)(?:[-A-Z0-9]+\\[?\\.\\]?)+[-A-Z0-9]+(?::[0-9]+)?(?:(?:\\/|\\?)[-A-Z0-9+\u0026@#\\/%=~_$?!\\-:,.\\(\\);]*[A-Z0-9+\u0026@#\\/%=~_$\\(\\);])?",
+	"reputationCommand": "url",
+	"reputationScriptName": "",
+	"sortValues": null,
+	"system": true,
+	"updateAfter": 0,
+	"version": -1
+}

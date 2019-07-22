@@ -1,0 +1,2334 @@
+category: Endpoint
+commonfields:
+  id: SentinelOne V2
+  version: -1
+configuration:
+- defaultvalue: ""
+  display: Server URL (e.g. https://usea1.sentinelone.net)
+  name: url
+  required: true
+  type: 0
+- defaultvalue: ""
+  display: Username
+  name: credentials
+  required: true
+  type: 9
+- defaultvalue: ""
+  display: API Token
+  name: token
+  required: true
+  type: 4
+- defaultvalue: ""
+  display: Trust any certificate (not secure)
+  name: insecure
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Use system proxy
+  name: proxy
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Fetch incidents
+  name: isFetch
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Incident type
+  name: incidentType
+  required: false
+  type: 13
+- defaultvalue: 3 days
+  display: First fetch timestamp (<number> <time unit>, e.g., 12 hours, 7 days, 3
+    months, 1 year)
+  name: fetch_time
+  required: false
+  type: 0
+- defaultvalue: "5"
+  display: Threats minimum risk level when importing incidents (0-10 where 10 is the
+    highest)
+  name: fetch_threshold
+  required: false
+  type: 0
+description: End point protection
+detaileddescription: |
+  1. To get your API token, log in to your SentinelOne console.
+  2. Click your user name in the upper-right corner, and select *My User*.
+  3. Click the *Generate* link, located near the *API Token* field.
+  4. Save your API token in a safe place because you will not be able to access it anymore.
+display: SentinelOne V2
+image: data:image/png;base64,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
+name: SentinelOne V2
+script:
+  commands:
+  - arguments:
+    - description: Filter by computer name
+      name: computer_name
+    - auto: PREDEFINED
+      description: 'Filter by scan status. Example: "started,aborted".'
+      name: scan_status
+      predefined:
+      - started
+      - none
+      - finished
+      - aborted
+    - auto: PREDEFINED
+      description: 'Included OS types. Example: "windows".'
+      isArray: true
+      name: os_type
+      predefined:
+      - windows
+      - windows_legacy
+      - macos
+      - linux
+    - description: 'Endpoints created after or at this timestamp. Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_at
+    - description: 'Include agents with at least this amount of active threats. Example:
+        "5".'
+      name: min_active_threats
+    description: List all agents matching the input filter.
+    name: sentinelone-list-agents
+    outputs:
+    - contextPath: SentinelOne.Agents.NetworkStatus
+      description: The agent network status
+      type: string
+    - contextPath: SentinelOne.Agents.ID
+      description: The agent ID
+      type: string
+    - contextPath: SentinelOne.Agents.AgentVersion
+      description: The agent software version
+      type: string
+    - contextPath: SentinelOne.Agents.IsDecomissioned
+      description: Is the agent decommissioned
+      type: boolean
+    - contextPath: SentinelOne.Agents.IsActive
+      description: Is the agent active
+      type: boolean
+    - contextPath: SentinelOne.Agents.LastActiveDate
+      description: The last active date of the agent
+      type: date
+    - contextPath: SentinelOne.Agents.RegisteredAt
+      description: The registration date of the agent
+      type: date
+    - contextPath: SentinelOne.Agents.ExternalIP
+      description: The agent IP address
+      type: string
+    - contextPath: SentinelOne.Agents.ThreatCount
+      description: Number of active threats
+      type: number
+    - contextPath: SentinelOne.Agents.EncryptedApplications
+      description: Is disk encryption on
+      type: boolean
+    - contextPath: SentinelOne.Agents.OSName
+      description: Name of operation system
+      type: string
+    - contextPath: SentinelOne.Agents.ComputerName
+      description: Name of agent computer
+      type: string
+    - contextPath: SentinelOne.Agents.Domain
+      description: Domain name of agent
+      type: string
+    - contextPath: SentinelOne.Agents.CreatedAt
+      description: Agent creation time
+      type: date
+    - contextPath: SentinelOne.Agents.SiteName
+      description: Site name involved with the agent.
+      type: string
+  - arguments:
+    - auto: PREDEFINED
+      description: Exclusion item type Can be file_type, path, white_hash, certificate
+        or browser
+      name: exclusion_type
+      predefined:
+      - file_type
+      - path
+      - white_hash
+      - certificate
+      - browser
+      required: true
+    - description: Value of the exclusion item based valid for the exclusion list
+        type
+      name: exclusion_value
+      required: true
+    - auto: PREDEFINED
+      description: OS type Can be windows, windows_legacy, macos or linux. Need OS
+        type for hash exclusions.
+      name: os_type
+      predefined:
+      - windows
+      - windows_legacy.macos
+      - linux
+      required: true
+    - description: Description for adding the item.
+      name: description
+    - auto: PREDEFINED
+      description: Exclusion mode (path exclusion only) Can be suppress, disable_in_process_monitor_deep,
+        disable_in_process_monitor, disable_all_monitors or disable_all_monitors_deep
+      name: exclusion_mode
+      predefined:
+      - suppress
+      - disable_in_process_monitor_deep
+      - disable_in_process_monitor
+      - disable_all_monitors
+      - disable_all_monitors_deep
+    - description: Excluded path for a path exclusion list
+      name: path_exclusion_type
+    - description: List of Group IDs to filter by (Either site_ids or group_ids is
+        mandatory)
+      isArray: true
+      name: group_ids
+    description: Create exclusion item matching the input filter
+    name: sentinelone-create-white-list-item
+    outputs:
+    - contextPath: SentinelOne.Exclusions.ID
+      description: The whitelisted entity id.
+      type: string
+    - contextPath: SentinelOne.Exclusions.Type
+      description: The whitelisted item type.
+      type: string
+    - contextPath: SentinelOne.Exclusions.CreatedAt
+      description: The time whitelist item was created.
+      type: date
+  - arguments:
+    - description: 'List of ids to filter by. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: item_ids
+    - auto: PREDEFINED
+      description: 'List of Os types to filter by. Example: "windows".'
+      isArray: true
+      name: os_types
+      predefined:
+      - windows
+      - windows_legacy
+      - macos
+      - linux
+    - auto: PREDEFINED
+      description: 'Type. Example: "file_type".'
+      name: exclusion_type
+      predefined:
+      - file_type
+      - path
+      - white_hash
+      - certificate
+      - browser
+    - defaultValue: "10"
+      description: Limit the number of items to be retrieved.
+      name: limit
+    description: List all exclusion items matching the input filter.
+    name: sentinelone-get-white-list
+    outputs:
+    - contextPath: SentinelOne.Exclusions.ID
+      description: The item ID
+      type: string
+    - contextPath: SentinelOne.Exclusions.Type
+      description: The exclusion item type.
+      type: string
+    - contextPath: SentinelOne.Exclusions.CreatedAt
+      description: Timestamp when the item added.
+      type: date
+    - contextPath: SentinelOne.Exclusions.Value
+      description: Value of the item added.
+      type: string
+    - contextPath: SentinelOne.Exclusions.Source
+      description: Source of the item added.
+      type: string
+    - contextPath: SentinelOne.Exclusions.UserID
+      description: User ID added the item.
+      type: string
+    - contextPath: SentinelOne.Exclusions.UpdatedAt
+      description: Timestamp when the item updated.
+      type: date
+    - contextPath: SentinelOne.Exclusions.OsType
+      description: OS Type involved.
+      type: string
+    - contextPath: SentinelOne.Exclusions.UserName
+      description: User name added the item
+      type: string
+    - contextPath: SentinelOne.Exclusions.Mode
+      description: 'List of modes to filter by (Path exclusions only). Example: "suppress".'
+      type: string
+  - arguments:
+    - description: The content hash.
+      name: hash
+      required: true
+    description: Get hash reputation.
+    name: sentinelone-get-hash
+    outputs:
+    - contextPath: SentinelOne.Hash.Rank
+      description: The hash reputation measure in a 1-10 scale
+      type: Number
+    - contextPath: SentinelOne.Hash.Hash
+      description: The content hash.
+      type: String
+    - contextPath: SentinelOne.Hash.Classification
+      description: 'The Hash classification '
+      type: String
+    - contextPath: SentinelOne.Hash.Classification Source
+      description: The hash classification source
+      type: String
+  - arguments:
+    - description: Threat's content hash.
+      name: content_hash
+    - auto: PREDEFINED
+      description: 'Mitigation statuses list. Example: "suspicious".'
+      isArray: true
+      name: mitigation_status
+      predefined:
+      - mitigated
+      - active
+      - blocked
+      - suspicious
+      - pending
+      - suspicious_resolved
+    - description: 'Search for threats created before certain date.  Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_before
+    - description: 'Search for threats created after certain date.  Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_after
+    - description: 'Search for threats created until certain date (including the date).  Example:
+        "2018-02-27T04:49:26.257525Z".'
+      name: created_until
+    - description: 'Search for threats created from certain date (including the date).  Example:
+        "2018-02-27T04:49:26.257525Z".'
+      name: created_from
+    - auto: PREDEFINED
+      defaultValue: "false"
+      description: Get only resolved threats (boolean)
+      name: resolved
+      predefined:
+      - "false"
+      - "true"
+    - description: Threat display name. (Does not have to be exact match, can provide
+        only part of name)
+      name: display_name
+    - defaultValue: "20"
+      description: Limit the number of threats in the response. Default is 20
+      name: limit
+    - description: 'Full free text search for fields: content_hash, file_display_name,
+        file_path, computer_name, uuid'
+      name: query
+    - description: 'List of threat IDs. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: threat_ids
+    - auto: PREDEFINED
+      description: ' List of threat classifications to search (comma-separated list).  Example
+        : Malware, Network, Benign etc.'
+      name: classifications
+      predefined:
+      - Engine
+      - Static
+      - Cloud
+      - Behavioral
+    - description: Risk levels threshold to retrieve, number from 1(low) to 10(high)
+      name: rank
+    description: Get threats using a variety of filters.
+    name: sentinelone-get-threats
+    outputs:
+    - contextPath: SentinelOne.Threat.ID
+      description: The threat ID
+      type: String
+    - contextPath: SentinelOne.Threat.AgentComputerName
+      description: The agent computer name
+      type: String
+    - contextPath: SentinelOne.Threat.CreatedDate
+      description: File created date
+      type: Date
+    - contextPath: SentinelOne.Threat.SiteID
+      description: The site ID
+      type: String
+    - contextPath: SentinelOne.Threat.Classification
+      description: Classification name
+      type: string
+    - contextPath: SentinelOne.Threat.MitigationStatus
+      description: The agent Status
+      type: String
+    - contextPath: SentinelOne.Threat.AgentID
+      description: The agent ID.
+      type: String
+    - contextPath: SentinelOne.Threat.Rank
+      description: Number 1-10 representing cloud reputation
+      type: Number
+    - contextPath: SentinelOne.Threat.MarkedAsBenign
+      description: Marked as benign
+      type: Boolean
+  - arguments:
+    - description: 'List of Group IDs to filter by. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: group_ids
+    description: Get dashboard threat summary.
+    name: sentinelone-threat-summary
+    outputs:
+    - contextPath: SentinelOne.Threat.Active
+      description: Active number of threats in the system.
+      type: Number
+    - contextPath: SentinelOne.Threat.Total
+      description: Total number of threats in the system.
+      type: Number
+    - contextPath: SentinelOne.Threat.Mitigated
+      description: Number of threats mitigated in the system.
+      type: Number
+    - contextPath: SentinelOne.Threat.Suspicious
+      description: Suspicious number of threats in the system.
+      type: Number
+    - contextPath: SentinelOne.Threat.Blocked
+      description: Number of threats blocked in the system.
+      type: Number
+  - arguments:
+    - description: A list of threat IDs (Comma separated list).
+      isArray: true
+      name: threat_ids
+    - auto: PREDEFINED
+      description: Scope to be used for exclusions. Can be site or tenant
+      name: target_scope
+      predefined:
+      - site
+      - tenant
+      required: true
+    description: Mark suspicious threats as threats
+    name: sentinelone-mark-as-threat
+    outputs:
+    - contextPath: SentinelOne.Threat.ID
+      description: The threat ID.
+      type: String
+    - contextPath: SentinelOne.Threat.MarkedAsThreat
+      description: A boolean to check if the suspicious threat was marked as threat
+        successfully or not.
+      type: Boolean
+  - arguments:
+    - auto: PREDEFINED
+      description: 'Mitigation action. Example: "rollback-remediation".'
+      name: action
+      predefined:
+      - kill
+      - quarantine
+      - un-quarantine
+      - remediate
+      - rollback-remediation
+      required: true
+    - description: A list of threat IDs (Comma separated list).
+      isArray: true
+      name: threat_ids
+      required: true
+    description: Apply a mitigation action to a group of threats matching the input
+      filter.
+    name: sentinelone-mitigate-threat
+    outputs:
+    - contextPath: SentinelOne.Threat.ID
+      description: The threat ID.
+      type: String
+    - contextPath: SentinelOne.Threat.Mitigated
+      description: A boolean to check if the  threat was mitigated successfully or
+        not.
+      type: Boolean
+    - contextPath: SentinelOne.Threat.Mitigation.Action
+      description: Number of threats affected.
+      type: Number
+  - arguments:
+    - description: A list of threat IDs (Comma separated list).
+      isArray: true
+      name: threat_ids
+      required: true
+    description: Resolve threat by its ID.
+    name: sentinelone-resolve-threat
+    outputs:
+    - contextPath: SentinelOne.Threat.ID
+      description: The threat ID
+      type: String
+    - contextPath: SentinelOne.Threat.Resolved
+      description: A boolean to check if the  threat was resolved successfully or
+        not
+      type: Boolean
+  - arguments:
+    - description: The agent ID
+      name: agent_id
+      required: true
+    description: Get details of an agent by its ID.
+    name: sentinelone-get-agent
+    outputs:
+    - contextPath: SentinelOne.Agent.NetworkStatus
+      description: The agent network status
+      type: string
+    - contextPath: SentinelOne.Agent.ID
+      description: The agent ID
+      type: string
+    - contextPath: SentinelOne.Agent.AgentVersion
+      description: The agent software version
+      type: string
+    - contextPath: SentinelOne.Agent.IsDecomissioned
+      description: Is the agent decommissioned
+      type: boolean
+    - contextPath: SentinelOne.Agent.IsActive
+      description: Is the agent active
+      type: boolean
+    - contextPath: SentinelOne.Agent.LastActiveDate
+      description: The last active date of the agent
+      type: date
+    - contextPath: SentinelOne.Agent.RegisteredAt
+      description: The registration date of the agent
+      type: date
+    - contextPath: SentinelOne.Agent.ExternalIP
+      description: The agent IP address
+      type: string
+    - contextPath: SentinelOne.Agent.ThreatCount
+      description: Number of active threats
+      type: number
+    - contextPath: SentinelOne.Agent.EncryptedApplications
+      description: Is disk encryption on
+      type: boolean
+    - contextPath: SentinelOne.Agent.OSName
+      description: Name of operation system
+      type: string
+    - contextPath: SentinelOne.Agent.ComputerName
+      description: Name of agent computer
+      type: string
+    - contextPath: SentinelOne.Agent.Domain
+      description: Domain name of agent
+      type: string
+    - contextPath: SentinelOne.Agent.CreatedAt
+      description: Agent creation time
+      type: date
+    - contextPath: SentinelOne.Agent.SiteName
+      description: Site name involved with the agent.
+      type: string
+  - arguments:
+    - description: 'Timestamp of last update. Example: "2018-02-27T04:49:26.257525Z".'
+      name: updated_at
+    - description: 'Full text search for fields: name, account_name'
+      name: query
+    - auto: PREDEFINED
+      description: 'Site type. Example: "Trial".'
+      name: site_type
+      predefined:
+      - Trial
+      - Paid
+      - POC
+      - DEV
+      - NFR
+    - auto: PREDEFINED
+      description: 'If sent return only sites that support this features. Example:
+        "firewall-control".'
+      name: features
+      predefined:
+      - firewall-control
+      - device-control
+      - ioc
+    - auto: PREDEFINED
+      description: 'Site state. Example: "active".'
+      name: state
+      predefined:
+      - active
+      - deleted
+      - expired
+    - auto: PREDEFINED
+      description: 'The suite of product features active for this site. Example: "Core".'
+      name: suite
+      predefined:
+      - Core
+      - Complete
+    - auto: PREDEFINED
+      description: Show sites the user has Admin privileges to
+      name: admin_only
+      predefined:
+      - "true"
+      - "false"
+    - description: 'Account id. Example: "225494730938493804".'
+      name: account_id
+    - description: 'Name. Example: "My Site".'
+      name: site_name
+    - description: 'Timestamp of site creation. Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_at
+    - defaultValue: "50"
+      description: 'Limit the number of results. Example : limit = 10'
+      name: limit
+    description: List all sites with filtering options.
+    name: sentinelone-get-sites
+    outputs:
+    - contextPath: SentinelOne.Site.Creator
+      description: The creator name.
+      type: string
+    - contextPath: SentinelOne.Site.Name
+      description: The site name.
+      type: string
+    - contextPath: SentinelOne.Site.Type
+      description: The site type.
+      type: string
+    - contextPath: SentinelOne.Site.AccountName
+      description: The account name.
+      type: string
+    - contextPath: SentinelOne.Site.State
+      description: The site state.
+      type: string
+    - contextPath: SentinelOne.Site.HealthStatus
+      description: The health status of the site.
+      type: boolean
+    - contextPath: SentinelOne.Site.Suite
+      description: The suite site belongs to.
+      type: string
+    - contextPath: SentinelOne.Site.ActiveLicenses
+      description: Number of active licenses on the site.
+      type: number
+    - contextPath: SentinelOne.Site.ID
+      description: ID of the site.
+      type: string
+    - contextPath: SentinelOne.Site.TotalLicenses
+      description: Number of total licenses on the site.
+      type: number
+    - contextPath: SentinelOne.Site.CreatedAt
+      description: Timestamp when the site was created.
+      type: date
+    - contextPath: SentinelOne.Site.Expiration
+      description: Timestamp when the site will get expired.
+      type: string
+    - contextPath: SentinelOne.Site.UnlimitedLicenses
+      description: Unlimited licenses boolean.
+      type: boolean
+  - arguments:
+    - description: ID of the site.
+      name: site_id
+      required: true
+    description: Get a site by id.
+    name: sentinelone-get-site
+    outputs:
+    - contextPath: SentinelOne.Site.Creator
+      description: The creator name.
+      type: string
+    - contextPath: SentinelOne.Site.Name
+      description: The site name.
+      type: string
+    - contextPath: SentinelOne.Site.Type
+      description: The site type.
+      type: string
+    - contextPath: SentinelOne.Site.AccountName
+      description: The account name.
+      type: string
+    - contextPath: SentinelOne.Site.State
+      description: The site state.
+      type: string
+    - contextPath: SentinelOne.Site.HealthStatus
+      description: The health status of the site.
+      type: boolean
+    - contextPath: SentinelOne.Site.Suite
+      description: The suite site belongs to.
+      type: string
+    - contextPath: SentinelOne.Site.ActiveLicenses
+      description: Number of active licenses on the site.
+      type: number
+    - contextPath: SentinelOne.Site.ID
+      description: ID of the site.
+      type: string
+    - contextPath: SentinelOne.Site.TotalLicenses
+      description: Number of total licenses on the site.
+      type: number
+    - contextPath: SentinelOne.Site.CreatedAt
+      description: Timestamp when the site was created.
+      type: date
+    - contextPath: SentinelOne.Site.Expiration
+      description: Timestamp when the site will get expired.
+      type: string
+    - contextPath: SentinelOne.Site.UnlimitedLicenses
+      description: Unlimited licenses boolean.
+      type: boolean
+    - contextPath: SentinelOne.Site.AccountID
+      description: Account ID
+      type: string
+    - contextPath: SentinelOne.Site.IsDefault
+      description: Is site default
+      type: boolean
+  - arguments:
+    - description: 'Site ID. Example: "225494730938493804".'
+      name: site_id
+      required: true
+    description: Reactivates an expired site.
+    name: sentinelone-reactivate-site
+    outputs:
+    - contextPath: SentinelOne.Site.ID
+      description: ID of the site.
+      type: string
+    - contextPath: SentinelOne.Site.Reactivated
+      description: A boolean to check if the site was reactivated or not.
+      type: boolean
+  - arguments:
+    - description: 'Return activities created after this timestamp. Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_after
+    - description: Email of the user who invoked the activity (If applicable)
+      name: user_emails
+    - description: 'List of Group IDs to filter by. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: group_ids
+    - description: 'Return activities created before or at this timestamp. Example:
+        "2018-02-27T04:49:26.257525Z".'
+      name: created_until
+    - auto: PREDEFINED
+      description: 'Include internal activities hidden from display. Example: "False".'
+      name: include_hidden
+      predefined:
+      - "true"
+      - "false"
+    - description: 'Filter activities by specific activity IDs. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: activities_ids
+    - description: 'Return activities created before this timestamp. Example: "2018-02-27T04:49:26.257525Z".'
+      name: created_before
+    - description: 'Return activities related to specified threats. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: threats_ids
+    - description: 'Return only these activity codes (comma-separated list). Example:
+        "52,53,71,72".'
+      isArray: true
+      name: activity_types
+    - description: 'The user who invoked the activity (If applicable). Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: user_ids
+    - description: 'Return activities created after or at this timestamp. Example:
+        "2018-02-27T04:49:26.257525Z".'
+      name: created_from
+    - description: 'Return activities created within this range (inclusive). Example:
+        "1514978764288-1514978999999".'
+      name: created_between
+    - description: 'Return activities related to specified agents. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: agent_ids
+    - description: 'Limit number of returned items (1-100). Example: "10".'
+      name: limit
+    description: Get a list of activities.
+    name: sentinelone-get-activities
+    outputs:
+    - contextPath: SentinelOne.Activity.AgentID
+      description: Related agent (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.AgentUpdatedVersion
+      description: Agent's new version (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.SiteID
+      description: Related site (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.UserID
+      description: The user who invoked the activity (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.SecondaryDescription
+      description: Secondary description
+      type: String
+    - contextPath: SentinelOne.Activity.OsFamily
+      description: Agent's OS type (if applicable). Can be linux, macos, windows or
+        windows_legacy
+      type: String
+    - contextPath: SentinelOne.Activity.ActivityType
+      description: Activity type
+      type: Number
+    - contextPath: SentinelOne.Activity.data.SiteID
+      description: The site ID
+      type: String
+    - contextPath: SentinelOne.Activity.data.SiteName
+      description: The site name
+      type: String
+    - contextPath: SentinelOne.Activity.data.username
+      description: The name of the site creator
+      type: String
+    - contextPath: SentinelOne.Activity.Hash
+      description: Threat file hash (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.UpdatedAt
+      description: Activity last updated time (UTC)
+      type: Date
+    - contextPath: SentinelOne.Activity.Comments
+      description: Comments for the activity
+      type: String
+    - contextPath: SentinelOne.Activity.ThreatID
+      description: Related threat (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.PrimaryDescription
+      description: Primary description for the activity
+      type: String
+    - contextPath: SentinelOne.Activity.GroupID
+      description: Related group (If applicable)
+      type: String
+    - contextPath: SentinelOne.Activity.ID
+      description: Activity ID
+      type: String
+    - contextPath: SentinelOne.Activity.CreatedAt
+      description: Activity creation time (UTC)
+      type: Date
+    - contextPath: SentinelOne.Activity.Description
+      description: Extra activity information
+      type: String
+  - arguments:
+    - description: 'Group type. Example: "static".'
+      name: group_type
+    - description: 'List of Group IDs to filter by. Example: "225494730938493804,225494730938493915".'
+      isArray: true
+      name: group_ids
+    - description: 'Id. Example: "225494730938493804".'
+      name: group_id
+    - auto: PREDEFINED
+      description: Is this the default group?
+      name: is_default
+      predefined:
+      - "true"
+      - "false"
+    - description: The name of the group
+      name: name
+    - description: Free text search on fields name
+      name: query
+    - description: 'The rank sets the priority of a dynamic group over others. Example:
+        "1". (1 is the highest priority)'
+      name: rank
+    - description: 'Limit number of returned items (1-200). Example: "10".'
+      name: limit
+    description: Gets the group data.
+    name: sentinelone-get-groups
+    outputs:
+    - contextPath: SentinelOne.Group.siteId
+      description: The id of the site this group is part of
+      type: String
+    - contextPath: SentinelOne.Group.filterName
+      description: If the group is dynamic the name of the filter which is used to
+        associate agents
+      type: String
+    - contextPath: SentinelOne.Group.creatorId
+      description: The ID of the user that created the group
+      type: String
+    - contextPath: SentinelOne.Group.name
+      description: The name of the group
+      type: String
+    - contextPath: SentinelOne.Group.creator
+      description: The user that created the group
+      type: String
+    - contextPath: SentinelOne.Group.rank
+      description: The rank sets the priority of a dynamic group over others
+      type: Number
+    - contextPath: SentinelOne.Group.updatedAt
+      description: Timestamp of last update
+      type: Date
+    - contextPath: SentinelOne.Group.totalAgents
+      description: Count of agents in the group
+      type: Number
+    - contextPath: SentinelOne.Group.filterId
+      description: If the group is dynamic id of the filter which is used to associate
+        agents
+      type: String
+    - contextPath: SentinelOne.Group.isDefault
+      description: True only for the default group of the Site
+      type: Boolean
+    - contextPath: SentinelOne.Group.inherits
+      description: True if the policy is inherited from Site, False if the group has
+        its own edited policy
+      type: Boolean
+    - contextPath: SentinelOne.Group.type
+      description: Group type. Can be static or dynamic
+      type: String
+    - contextPath: SentinelOne.Group.id
+      description: The ID of the group
+      type: String
+    - contextPath: SentinelOne.Group.createdAt
+      description: Timestamp of group creation
+      type: Date
+  - arguments:
+    - description: The ID of the group to move the agent to
+      name: group_id
+      required: true
+    - description: The IDs of the agents
+      isArray: true
+      name: agents_ids
+    description: Move agents to a new group.
+    name: sentinelone-move-agent
+    outputs:
+    - contextPath: SentinelOne.Agent.AgentsMoved
+      description: The number of agent that moved to another group
+      type: Number
+  - arguments:
+    - description: The ID of the group to delete
+      name: group_id
+      required: true
+    description: Delete a group by the group ID
+    name: sentinelone-delete-group
+  - arguments:
+    - description: 'The ID of the agent from which to retrive the processes from '
+      name: agents_ids
+      required: true
+    description: Retrieve running processes for a specific agent.
+    name: sentinelone-agent-processes
+    outputs:
+    - contextPath: SentinelOne.Agent.memoryUsage
+      description: Memory usage (MB)
+      type: Number
+    - contextPath: SentinelOne.Agent.startTime
+      description: The process start time
+      type: Date
+    - contextPath: SentinelOne.Agent.pid
+      description: The process ID
+      type: Number
+    - contextPath: SentinelOne.Agent.processName
+      description: 'The name of the process '
+      type: String
+    - contextPath: SentinelOne.Agent.cpuUsage
+      description: CPU Usage (%)
+      type: Number
+    - contextPath: SentinelOne.Agent.executablePath
+      description: Executable path
+      type: String
+  dockerimage: demisto/python3:3.7.3.286
+  isfetch: true
+  runonce: false
+  script: |2-
+
+
+
+
+    ''' IMPORTS '''
+
+    import json
+    import requests
+    from distutils.util import strtobool
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+    ''' GLOBALS/PARAMS '''
+
+    USERNAME = demisto.params().get('credentials').get('identifier')
+    PASSWORD = demisto.params().get('credentials').get('password')
+    TOKEN = demisto.params().get('token')
+    SERVER = demisto.params()['url'][:-1] if (demisto.params()['url'] and demisto.params()['url'].endswith('/')) \
+        else demisto.params()['url']
+    USE_SSL = not demisto.params().get('insecure', False)
+    FETCH_TIME = demisto.params().get('fetch_time', '3 days')
+    FETCH_THREAT_RANK = int(demisto.params().get('fetch_threshold', 5))
+    BASE_URL = SERVER + '/web/api/v2.0/'
+    HEADERS = {
+        'Authorization': 'ApiToken ' + TOKEN,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+
+
+    ''' HELPER FUNCTIONS '''
+
+
+    def http_request(method, url_suffix, params={}, data=None):
+        LOG(f'Attempting {method} request to {BASE_URL + url_suffix}\nWith params:{params}\nWith body:\n{data}')
+        res = requests.request(
+            method,
+            BASE_URL + url_suffix,
+            verify=USE_SSL,
+            params=params,
+            data=data,
+            headers=HEADERS
+        )
+
+        if res.status_code not in {200}:
+            try:
+                errors = ''
+                for error in res.json().get('errors'):
+                    errors = '\n' + errors + error.get('detail')
+                return_error(f'Error in API call to Sentinel One [{res.status_code}] - [{res.reason}] \n'
+                             f'Error details: [{errors}]')
+            except Exception:
+                return_error(f'Error in API call to Sentinel One [{res.status_code}] - [{res.reason}')
+
+        return res.json()
+
+
+    ''' COMMANDS + REQUESTS FUNCTIONS '''
+
+
+    def test_module():
+        """
+        Performs basic get request to get activities types.
+        """
+        http_request('GET', 'activities/types')
+        return True
+
+
+    def get_activities_request(created_after=None, user_emails=None, group_ids=None, created_until=None,
+                               activities_ids=None, include_hidden=None, created_before=None, threats_ids=None,
+                               activity_types=None, user_ids=None, created_from=None, created_between=None, agent_ids=None,
+                               limit=None):
+
+        endpoint_url = 'activities'
+
+        params = {
+            'created_at__gt': created_after,
+            'userEmails': user_emails,
+            'groupIds': group_ids,
+            'created_at__lte': created_until,
+            'ids': activities_ids,
+            'includeHidden': include_hidden,
+            'created_at__lt': created_before,
+            'threatIds': threats_ids,
+            'activityTypes': activity_types,
+            'userIds': user_ids,
+            'created_at__gte': created_from,
+            'createdAt_between': created_between,
+            'agentsIds': agent_ids,
+            'limit': limit
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_activities_command():
+        """
+        Get a list of activities.
+        """
+        context = {}
+        context_entries = []
+        contents = []
+        headers = ['ID', 'Primary description', 'Data', 'User ID', 'Created at', 'Updated at', 'Threat ID']
+
+        created_after = demisto.args().get('created_after')
+        user_emails = demisto.args().get('user_emails')
+        group_ids = argToList(demisto.args().get('group_ids', []))
+        created_until = demisto.args().get('created_until')
+        activities_ids = argToList(demisto.args().get('activities_ids', []))
+        include_hidden = demisto.args().get('include_hidden')
+        created_before = demisto.args().get('created_before')
+        threats_ids = argToList(demisto.args().get('threats_ids', []))
+        activity_types = argToList(demisto.args().get('activity_types', []))
+        user_ids = argToList(demisto.args().get('user_ids', []))
+        created_from = demisto.args().get('created_from')
+        created_between = demisto.args().get('created_between')
+        agent_ids = argToList(demisto.args().get('agent_ids', []))
+        limit = int(demisto.args().get('limit', 50))
+
+        activities = get_activities_request(created_after, user_emails, group_ids, created_until, activities_ids,
+                                            include_hidden, created_before, threats_ids,
+                                            activity_types, user_ids, created_from, created_between, agent_ids, limit)
+        if activities:
+            for activity in activities:
+                contents.append({
+                    'ID': activity.get('id'),
+                    'Created at': activity.get('createdAt'),
+                    'Primary description': activity.get('primaryDescription'),
+                    'User ID': activity.get('userId'),
+                    'Data': activity.get('data'),
+                    'Threat ID': activity.get('threatId'),
+                    'Updated at': activity.get('updatedAt')
+                })
+
+                context_entries.append({
+                    'Hash': activity.get('hash'),
+                    'ActivityType': activity.get('activityType'),
+                    'OsFamily': activity.get('osFamily'),
+                    'PrimaryDescription': activity.get('primaryDescription'),
+                    'Comments': activity.get('comments'),
+                    'AgentUpdatedVersion': activity.get('agentUpdatedVersion'),
+                    'UserID': activity.get('userId'),
+                    'ID': activity.get('id'),
+                    'Data': activity.get('data'),
+                    'CreatedAt': activity.get('createdAt'),
+                    'SecondaryDescription': activity.get('secondaryDescription'),
+                    'ThreatID': activity.get('threatId'),
+                    'GroupID': activity.get('groupId'),
+                    'UpdatedAt': activity.get('updatedAt'),
+                    'Description': activity.get('description'),
+                    'AgentID': activity.get('agentId'),
+                    'SiteID': activity.get('siteId')
+                })
+
+            context['SentinelOne.Activity(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One Activities', contents, headers, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_groups_request(group_type=None, group_ids=None, group_id=None, is_default=None, name=None, query=None,
+                           rank=None, limit=None):
+
+        endpoint_url = 'groups'
+
+        params = {
+            'type': group_type,
+            'groupIds': group_ids,
+            'id': group_id,
+            'isDefault': is_default,
+            'name': name,
+            'query': query,
+            'rank': rank,
+            'limit': limit
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_groups_command():
+        """
+        Gets the group data.
+        """
+
+        context = {}
+        contents = []
+        headers = ['ID', 'Name', 'Type', 'Creator', 'Creator ID', 'Created at', 'Rank']
+
+        group_type = demisto.args().get('type')
+        group_id = demisto.args().get('id')
+        group_ids = argToList(demisto.args().get('group_ids', []))
+        is_default = demisto.args().get('is_default')
+        name = demisto.args().get('name')
+        query = demisto.args().get('query')
+        rank = demisto.args().get('rank')
+        limit = int(demisto.args().get('limit', 50))
+
+        groups = get_groups_request(group_type, group_id, group_ids, is_default, name, query, rank, limit)
+        if groups:
+            for group in groups:
+                contents.append({
+                    'ID': group.get('id'),
+                    'Type': group.get('type'),
+                    'Name': group.get('name'),
+                    'Creator ID': group.get('creatorId'),
+                    'Creator': group.get('creator'),
+                    'Created at': group.get('createdAt'),
+                    'Rank': group.get('rank')
+                })
+
+            context['SentinelOne.Group(val.ID && val.ID === obj.ID)'] = groups
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One Groups', contents, headers, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def delete_group_request(group_id=None):
+
+        endpoint_url = f'groups/{group_id}'
+
+        response = http_request('DELETE', endpoint_url)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def delete_group():
+        """
+        Deletes a group by ID.
+        """
+        group_id = demisto.args().get('group_id')
+
+        delete_group_request(group_id)
+        demisto.results('The group was deleted successfully')
+
+
+    def move_agent_request(group_id, agents_id):
+
+        endpoint_url = f'groups/{group_id}/move-agents'
+
+        payload = {
+            "filter": {
+                "agentIds": agents_id
+            }
+        }
+
+        response = http_request('PUT', endpoint_url, data=json.dumps(payload))
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def move_agent_to_group_command():
+        """
+        Move agents to a new group.
+        """
+        group_id = demisto.args().get('group_id')
+        agents_id = argToList(demisto.args().get('agents_ids', []))
+        context = {}
+
+        agents_groups = move_agent_request(group_id, agents_id)
+
+        # Parse response into context & content entries
+        if agents_groups.get('agentsMoved') and int(agents_groups.get('agentsMoved')) > 0:
+            agents_moved = True
+        else:
+            agents_moved = False
+        date_time_utc = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+        context_entries = contents = {
+            'Date': date_time_utc,
+            'AgentsMoved': agents_groups.get('agentsMoved'),
+            'AffectedAgents': agents_moved
+        }
+
+        context['SentinelOne.Agent(val.Date && val.Date === obj.Date)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One - Moved Agents \n' + 'Total of: ' + str(
+                agents_groups.get('AgentsMoved')) + ' agents were Moved successfully', contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_agent_processes_request(agents_ids=None):
+
+        endpoint_url = 'agents/processes'
+
+        params = {
+            'ids': agents_ids
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_agent_processes():
+        """
+        Retrieve running processes for a specific agent.
+        Note: This feature is obsolete and an empty array will always be returned
+        """
+        headers = ['ProcessName', 'StartTime', 'Pid', 'MemoryUsage', 'CpuUsage', 'ExecutablePath']
+        contents = []
+        context = {}
+        agents_ids = demisto.args().get('agents_ids')
+
+        processes = get_agent_processes_request(agents_ids)
+
+        if processes:
+            for process in processes:
+                contents.append({
+                    'ProcessName': process.get('processName'),
+                    'CpuUsage': process.get('cpuUsage'),
+                    'MemoryUsage': process.get('memoryUsage'),
+                    'StartTime': process.get('startTime'),
+                    'ExecutablePath': process.get('executablePath'),
+                    'Pid': process.get('pid')
+                })
+            context['SentinelOne.Agent(val.Pid && val.Pid === obj.Pid)'] = processes
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One Agent Processes', contents, headers, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_threats_command():
+        """
+        Gets a list of threats.
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+
+        # Get arguments
+        content_hash = demisto.args().get('content_hash')
+        mitigation_status = argToList(demisto.args().get('mitigation_status'))
+        created_before = demisto.args().get('created_before')
+        created_after = demisto.args().get('created_after')
+        created_until = demisto.args().get('created_until')
+        created_from = demisto.args().get('created_from')
+        resolved = bool(strtobool(demisto.args().get('resolved', 'false')))
+        display_name = demisto.args().get('display_name_like')
+        query = demisto.args().get('query', '')
+        threat_ids = argToList(demisto.args().get('threat_ids', []))
+        limit = int(demisto.args().get('limit', 20))
+        classifications = argToList(demisto.args().get('classifications', []))
+        rank = int(demisto.args().get('rank', 0))
+
+        # Make request and get raw response
+        threats = get_threats_request(content_hash, mitigation_status, created_before, created_after, created_until,
+                                      created_from, resolved, display_name, query, threat_ids, limit, classifications)
+
+        # Parse response into context & content entries
+        if threats:
+            title = 'Sentinel One - Getting Threat List \n' + \
+                    'Provides summary information and details for all the threats that matched your search criteria.'
+            for threat in threats:
+                if not rank or (rank and threat.get('rank') >= rank):
+                    contents.append({
+                        'ID': threat.get('id'),
+                        'Agent Computer Name': threat.get('agentComputerName'),
+                        'Created Date': threat.get('createdDate'),
+                        'Site ID': threat.get('siteId'),
+                        'Classification': threat.get('classification'),
+                        'Mitigation Status': threat.get('mitigationStatus'),
+                        'Agent ID': threat.get('agentId'),
+                        'Site Name': threat.get('siteName'),
+                        'Rank': threat.get('rank'),
+                        'Marked As Benign': threat.get('markedAsBenign'),
+                        'File Content Hash': threat.get('fileContentHash')
+                    })
+                    context_entries.append({
+                        'ID': threat.get('id'),
+                        'AgentComputerName': threat.get('agentComputerName'),
+                        'CreatedDate': threat.get('createdDate'),
+                        'SiteID': threat.get('siteId'),
+                        'Classification': threat.get('classification'),
+                        'MitigationStatus': threat.get('mitigationStatus'),
+                        'AgentID': threat.get('agentId'),
+                        'Rank': threat.get('rank'),
+                        'MarkedAsBenign': threat.get('markedAsBenign'),
+                        'FileContentHash': threat.get('fileContentHash'),
+                        'InQuarantine': threat.get('inQuarantine'),
+                        'FileMaliciousContent': threat.get('fileMaliciousContent'),
+                        'ThreatName': threat.get('threatName'),
+                        'FileSha256': threat.get('fileSha256'),
+                        'AgentOsType': threat.get('agentOsType'),
+                        'Description': threat.get('description'),
+                        'FileDisplayName': threat.get('fileDisplayName'),
+                        'FilePath': threat.get('filePath'),
+                        'Username': threat.get('username')
+
+
+
+                    })
+
+            context['SentinelOne.Threat(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_threats_request(content_hash=None, mitigation_status=None, created_before=None, created_after=None,
+                            created_until=None, created_from=None, resolved=None, display_name=None, query=None,
+                            threat_ids=None, limit=None, classifications=None):
+
+        endpoint_url = 'threats'
+
+        params = {
+            'contentHash': content_hash,
+            'mitigationStatus': mitigation_status,
+            'created_at__lt': created_before,
+            'created_at__gt': created_after,
+            'created_at__lte': created_until,
+            'created_at__gte': created_from,
+            'resolved': resolved,
+            'displayName__like': display_name,
+            'query': query,
+            'ids': threat_ids,
+            'limit': limit,
+            'classifications': classifications,
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_hash_command():
+        """
+        Get hash reputation and classification.
+        """
+        # Init main vars
+        context = {}
+        headers = ['Hash', 'Rank', 'Classification Source', 'Classification']
+
+        # Get arguments
+        hash_ = demisto.args().get('hash')
+
+        # Make request and get raw response
+        hash_reputation = get_hash_reputation_request(hash_)
+        hash_classification = get_hash_classification_request(hash_)
+
+        # Parse response into context & content entries
+        title = 'Sentinel One - Hash Reputation and Classification \n' + \
+                'Provides hash reputation (rank from 0 to 10):'
+        contents = {
+            'Rank': hash_reputation.get('rank'),
+            'Hash': hash_,
+            'Classification Source': hash_classification.get('classificationSource'),
+            'Classification': hash_classification.get('classification')
+        }
+
+        context_entries = {
+            'Rank': hash_reputation.get('rank'),
+            'Hash': hash_,
+            'Classification Source': hash_classification.get('classificationSource'),
+            'Classification': hash_classification.get('classification')
+        }
+
+        context['SentinelOne.Hash(val.Hash && val.Hash === obj.Hash)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, headers, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_hash_reputation_request(hash_):
+
+        endpoint_url = f'hashes/{hash_}/reputation'
+
+        response = http_request('GET', endpoint_url)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_hash_classification_request(hash_):
+
+        endpoint_url = f'hashes/{hash_}/classification'
+
+        response = http_request('GET', endpoint_url)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if response.get('data'):
+            if response.get('data').get('classification'):
+                return response.get('data')
+            else:
+                return {}
+        return {}
+
+
+    def mark_as_threat_command():
+        """
+        Mark suspicious threats as threats
+        """
+        # Init main vars
+        headers = ['ID', 'Marked As Threat']
+        contents = []
+        context = {}
+        context_entries = []
+
+        # Get arguments
+        threat_ids = argToList(demisto.args().get('threat_ids'))
+        target_scope = demisto.args().get('target_scope')
+
+        # Make request and get raw response
+        affected_threats = mark_as_threat_request(threat_ids, target_scope)
+
+        # Parse response into context & content entries
+        if affected_threats.get('affected') and int(affected_threats.get('affected')) > 0:
+            title = 'Total of ' + str(affected_threats.get('affected')) + ' provided threats were marked successfully'
+            affected = True
+        else:
+            affected = False
+            title = 'No threats were marked'
+        for threat_id in threat_ids:
+            contents.append({
+                'Marked As Threat': affected,
+                'ID': threat_id,
+            })
+            context_entries.append({
+                'MarkedAsThreat': affected,
+                'ID': threat_id,
+            })
+
+        context['SentinelOne.Threat(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One - Marking suspicious threats as threats \n' + title, contents,
+                                             headers, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def mark_as_threat_request(threat_ids, target_scope):
+        endpoint_url = 'threats/mark-as-threat'
+
+        payload = {
+            "filter": {
+                "ids": threat_ids
+            },
+            "data": {
+                "targetScope": target_scope
+            }
+        }
+
+        response = http_request('POST', endpoint_url, data=json.dumps(payload))
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def mitigate_threat_command():
+        """
+        Apply a mitigation action to a group of threats
+        """
+        # Init main vars
+        headers = ['ID', 'Mitigation Action', 'Mitigated']
+        contents = []
+        context = {}
+        context_entries = []
+
+        # Get arguments
+        threat_ids = argToList(demisto.args().get('threat_ids'))
+        action = demisto.args().get('action')
+
+        # Make request and get raw response
+        mitigated_threats = mitigate_threat_request(threat_ids, action)
+
+        # Parse response into context & content entries
+        if mitigated_threats.get('affected') and int(mitigated_threats.get('affected')) > 0:
+            mitigated = True
+            title = 'Total of ' + str(mitigated_threats.get('affected')) + ' provided threats were mitigated successfully'
+        else:
+            mitigated = False
+            title = 'No threats were mitigated'
+        for threat_id in threat_ids:
+            contents.append({
+                'Mitigated': mitigated,
+                'ID': threat_id,
+                'Mitigation Action': action
+            })
+            context_entries.append({
+                'Mitigated': mitigated,
+                'ID': threat_id,
+                'Mitigation': {
+                    'Action': action
+                }
+            })
+
+        context['SentinelOne.Threat(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One - Mitigating threats \n' + title, contents, headers,
+                                             removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def mitigate_threat_request(threat_ids, action):
+        endpoint_url = f'threats/mitigate/{action}'
+
+        payload = {
+            "filter": {
+                "ids": threat_ids
+            }
+        }
+
+        response = http_request('POST', endpoint_url, data=json.dumps(payload))
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def resolve_threat_command():
+        """
+        Mark threats as resolved
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+
+        # Get arguments
+        threat_ids = argToList(demisto.args().get('threat_ids'))
+
+        # Make request and get raw response
+        resolved_threats = resolve_threat_request(threat_ids)
+
+        # Parse response into context & content entries
+        if resolved_threats.get('affected') and int(resolved_threats.get('affected')) > 0:
+            resolved = True
+            title = 'Total of ' + str(resolved_threats.get('affected')) + ' provided threats were resolved successfully'
+        else:
+            resolved = False
+            title = 'No threats were resolved'
+
+        for threat_id in threat_ids:
+            contents.append({
+                'Resolved': resolved,
+                'ID': threat_id
+            })
+            context_entries.append({
+                'Resolved': resolved,
+                'ID': threat_id
+            })
+
+        context['SentinelOne.Threat(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown('Sentinel One - Resolving threats \n' + title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def resolve_threat_request(threat_ids):
+        endpoint_url = 'threats/mark-as-resolved'
+
+        payload = {
+            "filter": {
+                "ids": threat_ids
+            }
+        }
+
+        response = http_request('POST', endpoint_url, data=json.dumps(payload))
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_white_list_command():
+        """
+        List all white items matching the input filter
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        item_ids = argToList(demisto.args().get('item_ids', []))
+        os_types = argToList(demisto.args().get('os_types', []))
+        exclusion_type = demisto.args().get('exclusion_type')
+        limit = int(demisto.args().get('limit', 10))
+
+        # Make request and get raw response
+        exclusion_items = get_white_list_request(item_ids, os_types, exclusion_type, limit)
+
+        # Parse response into context & content entries
+        if exclusion_items:
+            title = 'Sentinel One - Listing exclusion items \n' + \
+                    'provides summary information and details for ' \
+                    'all the exclusion items that matched your search criteria.'
+            for exclusion_item in exclusion_items:
+                contents.append({
+                    'ID': exclusion_item.get('id'),
+                    'Type': exclusion_item.get('type'),
+                    'CreatedAt': exclusion_item.get('createdAt'),
+                    'Value': exclusion_item.get('value'),
+                    'Source': exclusion_item.get('source'),
+                    'UserID': exclusion_item.get('userId'),
+                    'UpdatedAt': exclusion_item.get('updatedAt'),
+                    'OsType': exclusion_item.get('osType'),
+                    'UserName': exclusion_item.get('userName'),
+                    'Mode': exclusion_item.get('mode')
+                })
+                context_entries.append({
+                    'ID': exclusion_item.get('id'),
+                    'Type': exclusion_item.get('type'),
+                    'CreatedAt': exclusion_item.get('createdAt'),
+                    'Value': exclusion_item.get('value'),
+                    'Source': exclusion_item.get('source'),
+                    'UserID': exclusion_item.get('userId'),
+                    'UpdatedAt': exclusion_item.get('updatedAt'),
+                    'OsType': exclusion_item.get('osType'),
+                    'UserName': exclusion_item.get('userName'),
+                    'Mode': exclusion_item.get('mode')
+                })
+
+            context['SentinelOne.Exclusions(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_white_list_request(item_ids, os_types, exclusion_type, limit):
+
+        endpoint_url = 'exclusions'
+
+        params = {
+            "ids": item_ids,
+            "osTypes": os_types,
+            "type": exclusion_type,
+            "limit": limit
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def create_white_item_command():
+        """
+        Create white item.
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        group_ids = argToList(demisto.args().get('group_ids', []))
+        site_ids = argToList(demisto.args().get('site_ids', []))
+        exclusion_type = demisto.args().get('exclusion_type')
+        exclusion_value = demisto.args().get('exclusion_value')
+        os_type = demisto.args().get('os_type')
+        description = demisto.args().get('description')
+        exclusion_mode = demisto.args().get('exclusion_mode')
+        path_exclusion_type = demisto.args().get('path_exclusion_type')
+
+        # Make request and get raw response
+        new_item = create_exclusion_item_request(exclusion_type, exclusion_value, os_type, description, exclusion_mode,
+                                                 path_exclusion_type, group_ids, site_ids)
+
+        # Parse response into context & content entries
+        if new_item:
+            title = 'Sentinel One - Adding an exclusion item \n' + \
+                    'The provided item was successfully added to the exclusion list'
+            contents.append({
+                'ID': new_item.get('id'),
+                'Type': new_item.get('type'),
+                'Created At': new_item.get('createdAt')
+            })
+            context_entries.append({
+                'ID': new_item.get('id'),
+                'Type': new_item.get('type'),
+                'CreatedAt': new_item.get('createdAt')
+            })
+
+            context['SentinelOne.Exclusion(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def create_exclusion_item_request(exclusion_type, exclusion_value, os_type, description, exclusion_mode,
+                                      path_exclusion_type, group_ids, site_ids):
+        endpoint_url = 'exclusions'
+
+        payload = {
+            "filter": {
+                "groupIds": group_ids,
+                "siteIds": site_ids
+            },
+            "data": {
+                "type": exclusion_type,
+                "value": exclusion_value,
+                "osType": os_type,
+                "description": description,
+                "mode": exclusion_mode
+            }
+        }
+
+        if path_exclusion_type:
+            payload['data']['pathExclusionType'] = path_exclusion_type
+
+        response = http_request('POST', endpoint_url, data=json.dumps(payload))
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')[0]
+        return {}
+
+
+    def get_sites_command():
+        """
+        List all sites with filtering options
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        updated_at = demisto.args().get('updated_at')
+        query = demisto.args().get('query')
+        site_type = demisto.args().get('site_type')
+        features = demisto.args().get('features')
+        state = demisto.args().get('state')
+        suite = demisto.args().get('suite')
+        admin_only = bool(strtobool(demisto.args().get('admin_only', 'false')))
+        account_id = demisto.args().get('account_id')
+        site_name = demisto.args().get('site_name')
+        created_at = demisto.args().get('created_at')
+        limit = int(demisto.args().get('limit', 50))
+        site_ids = argToList(demisto.args().get('site_ids', []))
+
+        # Make request and get raw response
+        sites, all_sites = get_sites_request(updated_at, query, site_type, features, state, suite, admin_only, account_id,
+                                             site_name, created_at, limit, site_ids)
+
+        # Parse response into context & content entries
+        if sites:
+            title = 'Sentinel One - Gettin List of Sites \n' + \
+                    'Provides summary information and details for all sites that matched your search criteria.'
+            for site in sites:
+                contents.append({
+                    'ID': site.get('id'),
+                    'Creator': site.get('creator'),
+                    'Name': site.get('name'),
+                    'Type': site.get('siteType'),
+                    'Account Name': site.get('accountName'),
+                    'State': site.get('state'),
+                    'Health Status': site.get('healthStatus'),
+                    'Suite': site.get('suite'),
+                    'Created At': site.get('createdAt'),
+                    'Expiration': site.get('expiration'),
+                    'Unlimited Licenses': site.get('unlimitedLicenses'),
+                    'Total Licenses': all_sites.get('totalLicenses'),
+                    'Active Licenses': all_sites.get('activeLicenses')
+                })
+                context_entries.append({
+                    'ID': site.get('id'),
+                    'Creator': site.get('creator'),
+                    'Name': site.get('name'),
+                    'Type': site.get('siteType'),
+                    'AccountName': site.get('accountName'),
+                    'State': site.get('state'),
+                    'HealthStatus': site.get('healthStatus'),
+                    'Suite': site.get('suite'),
+                    'CreatedAt': site.get('createdAt'),
+                    'Expiration': site.get('expiration'),
+                    'UnlimitedLicenses': site.get('unlimitedLicenses'),
+                    'TotalLicenses': all_sites.get('totalLicenses'),
+                    'ActiveLicenses': all_sites.get('activeLicenses')
+                })
+
+            context['SentinelOne.Site(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_sites_request(updated_at, query, site_type, features, state, suite, admin_only, account_id, site_name,
+                          created_at, limit, site_ids):
+
+        endpoint_url = 'sites'
+
+        params = {
+            "updatedAt": updated_at,
+            "query": query,
+            "siteType": site_type,
+            "features": features,
+            "state": state,
+            "suite": suite,
+            "adminOnly": admin_only,
+            "accountId": account_id,
+            "name": site_name,
+            "createdAt": created_at,
+            "limit": limit,
+            "siteIds": site_ids
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data').get('sites'), response.get('data').get('allSites')
+        return {}
+
+
+    def get_site_command():
+        """
+        Get a specific site by ID
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        site_id = demisto.args().get('site_id')
+
+        # Make request and get raw response
+        site = get_site_request(site_id)
+
+        # Parse response into context & content entries
+        if site:
+            title = 'Sentinel One - Summary About Site: ' + site_id + '\n' + \
+                    'Provides summary information and details for specific site ID'
+            contents.append({
+                'ID': site.get('id'),
+                'Creator': site.get('creator'),
+                'Name': site.get('name'),
+                'Type': site.get('siteType'),
+                'Account Name': site.get('accountName'),
+                'State': site.get('state'),
+                'Health Status': site.get('healthStatus'),
+                'Suite': site.get('suite'),
+                'Created At': site.get('createdAt'),
+                'Expiration': site.get('expiration'),
+                'Unlimited Licenses': site.get('unlimitedLicenses'),
+                'Total Licenses': site.get('totalLicenses'),
+                'Active Licenses': site.get('activeLicenses'),
+                'AccountID': site.get('accountId'),
+                'IsDefault': site.get('isDefault')
+            })
+            context_entries.append({
+                'ID': site.get('id'),
+                'Creator': site.get('creator'),
+                'Name': site.get('name'),
+                'Type': site.get('siteType'),
+                'AccountName': site.get('accountName'),
+                'State': site.get('state'),
+                'HealthStatus': site.get('healthStatus'),
+                'Suite': site.get('suite'),
+                'CreatedAt': site.get('createdAt'),
+                'Expiration': site.get('expiration'),
+                'UnlimitedLicenses': site.get('unlimitedLicenses'),
+                'TotalLicenses': site.get('totalLicenses'),
+                'ActiveLicenses': site.get('activeLicenses'),
+                'AccountID': site.get('accountId'),
+                'IsDefault': site.get('isDefault')
+            })
+
+            context['SentinelOne.Site(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_site_request(site_id):
+        endpoint_url = f'sites/{site_id}'
+
+        response = http_request('GET', endpoint_url)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def reactivate_site_command():
+        """
+        Reactivate specific site by ID
+        """
+        # Init main vars
+        context = {}
+        title = ''
+
+        # Get arguments
+        site_id = demisto.args().get('site_id')
+
+        # Make request and get raw response
+        site = reactivate_site_request(site_id)
+
+        # Parse response into context & content entries
+        if site:
+            title = 'Sentinel One - Reactivated Site: ' + site_id + '\n' + 'Site has been reactivated successfully'
+            contents = {
+                'ID': site.get('id'),
+                'Reactivated': site.get('success')
+            }
+            context_entries = {
+                'ID': site.get('id'),
+                'Reactivated': site.get('success')
+            }
+
+            context['SentinelOne.Site(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def reactivate_site_request(site_id):
+        endpoint_url = f'sites/{site_id}/reactivate'
+
+        response = http_request('PUT', endpoint_url)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if response.get('data'):
+            return response.get('data')
+        return {}
+
+
+    def get_threat_summary_command():
+        """
+        Get dashboard threat summary
+        """
+        # Init main vars
+        context = {}
+        title = ''
+
+        # Get arguments
+        site_ids = argToList(demisto.args().get('site_ids', []))
+        group_ids = argToList(demisto.args().get('group_ids', []))
+
+        # Make request and get raw response
+        threat_summary = get_threat_summary_request(site_ids, group_ids)
+
+        # Parse response into context & content entries
+        if threat_summary:
+            title = 'Sentinel One - Dashboard Threat Summary'
+            contents = {
+                'Active': threat_summary.get('active'),
+                'Total': threat_summary.get('total'),
+                'Mitigated': threat_summary.get('mitigated'),
+                'Suspicious': threat_summary.get('suspicious'),
+                'Blocked': threat_summary.get('blocked')
+            }
+
+            context_entries = {
+                'Active': threat_summary.get('active'),
+                'Total': threat_summary.get('total'),
+                'Mitigated': threat_summary.get('mitigated'),
+                'Suspicious': threat_summary.get('suspicious'),
+                'Blocked': threat_summary.get('blocked')
+            }
+
+            context['SentinelOne.Threat(val && val === obj)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_threat_summary_request(site_ids, group_ids):
+        endpoint_url = 'private/threats/summary'
+
+        params = {
+            "siteIds": site_ids,
+            "groupIds": group_ids
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def list_agents_command():
+        """
+        List all agents matching the input filter
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        active_threats = demisto.args().get('min_active_threats')
+        computer_name = demisto.args().get('computer_name')
+        scan_status = demisto.args().get('scan_status')
+        os_type = demisto.args().get('os_type')
+        created_at = demisto.args().get('created_at')
+
+        # Make request and get raw response
+        agents = list_agents_request(active_threats, computer_name, scan_status, os_type, created_at)
+
+        # Parse response into context & content entries
+        if agents:
+            title = 'Sentinel One - List of Agents \n ' \
+                    'Provides summary information and details for all the agents that matched your search criteria'
+            for agent in agents:
+                contents.append({
+                    'ID': agent.get('id'),
+                    'Network Status': agent.get('networkStatus'),
+                    'Agent Version': agent.get('agentVersion'),
+                    'Is Decomissioned': agent.get('isDecommissioned'),
+                    'Is Active': agent.get('isActive'),
+                    'Last ActiveDate': agent.get('lastActiveDate'),
+                    'Registered At': agent.get('registeredAt'),
+                    'External IP': agent.get('externalIp'),
+                    'Threat Count': agent.get('activeThreats'),
+                    'Encrypted Applications': agent.get('encryptedApplications'),
+                    'OS Name': agent.get('osName'),
+                    'Computer Name': agent.get('computerName'),
+                    'Domain': agent.get('domain'),
+                    'Created At': agent.get('createdAt'),
+                    'Site Name': agent.get('siteName')
+                })
+                context_entries.append({
+                    'ID': agent.get('id'),
+                    'NetworkStatus': agent.get('networkStatus'),
+                    'AgentVersion': agent.get('agentVersion'),
+                    'IsDecomissioned': agent.get('isDecommissioned'),
+                    'IsActive': agent.get('isActive'),
+                    'LastActiveDate': agent.get('lastActiveDate'),
+                    'RegisteredAt': agent.get('registeredAt'),
+                    'ExternalIP': agent.get('externalIp'),
+                    'ThreatCount': agent.get('activeThreats'),
+                    'EncryptedApplications': agent.get('encryptedApplications'),
+                    'OSName': agent.get('osName'),
+                    'ComputerName': agent.get('computerName'),
+                    'Domain': agent.get('domain'),
+                    'CreatedAt': agent.get('createdAt'),
+                    'SiteName': agent.get('siteName')
+                })
+
+            context['SentinelOne.Agents(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def list_agents_request(active_threats, computer_name, scan_status, os_type, created_at):
+        endpoint_url = 'agents'
+
+        params = {
+            "activeThreats__gt": active_threats,
+            "computerName": computer_name,
+            "scanStatus": scan_status,
+            "osType": os_type,
+            "createdAt__gte": created_at
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')
+        return {}
+
+
+    def get_agent_command():
+        """
+        Get single agent via ID
+        """
+        # Init main vars
+        contents = []
+        context = {}
+        context_entries = []
+        title = ''
+
+        # Get arguments
+        agent_id = demisto.args().get('agent_id')
+
+        # Make request and get raw response
+        agent = get_agent_request(agent_id)
+
+        # Parse response into context & content entries
+        if agent:
+            title = 'Sentinel One - Get Agent Details \nProvides details for the following agent ID : ' + agent_id
+            contents.append({
+                'ID': agent.get('id'),
+                'Network Status': agent.get('networkStatus'),
+                'Agent Version': agent.get('agentVersion'),
+                'Is Decomissioned': agent.get('isDecommissioned'),
+                'Is Active': agent.get('isActive'),
+                'Last ActiveDate': agent.get('lastActiveDate'),
+                'Registered At': agent.get('registeredAt'),
+                'External IP': agent.get('externalIp'),
+                'Threat Count': agent.get('activeThreats'),
+                'Encrypted Applications': agent.get('encryptedApplications'),
+                'OS Name': agent.get('osName'),
+                'Computer Name': agent.get('computerName'),
+                'Domain': agent.get('domain'),
+                'Created At': agent.get('createdAt'),
+                'Site Name': agent.get('siteName')
+            })
+            context_entries.append({
+                'ID': agent.get('id'),
+                'NetworkStatus': agent.get('networkStatus'),
+                'AgentVersion': agent.get('agentVersion'),
+                'IsDecomissioned': agent.get('isDecommissioned'),
+                'IsActive': agent.get('isActive'),
+                'LastActiveDate': agent.get('lastActiveDate'),
+                'RegisteredAt': agent.get('registeredAt'),
+                'ExternalIP': agent.get('externalIp'),
+                'ThreatCount': agent.get('activeThreats'),
+                'EncryptedApplications': agent.get('encryptedApplications'),
+                'OSName': agent.get('osName'),
+                'ComputerName': agent.get('computerName'),
+                'Domain': agent.get('domain'),
+                'CreatedAt': agent.get('createdAt'),
+                'SiteName': agent.get('siteName')
+            })
+
+            context['SentinelOne.Agent(val.ID && val.ID === obj.ID)'] = context_entries
+
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['json'],
+            'Contents': contents,
+            'ReadableContentsFormat': formats['markdown'],
+            'HumanReadable': tableToMarkdown(title, contents, removeNull=True),
+            'EntryContext': context
+        })
+
+
+    def get_agent_request(agent_id):
+        endpoint_url = 'agents'
+
+        params = {
+            "ids": [agent_id]
+        }
+
+        response = http_request('GET', endpoint_url, params)
+        if response.get('errors'):
+            return_error(response.get('errors'))
+        if 'data' in response:
+            return response.get('data')[0]
+        return {}
+
+
+    def fetch_incidents():
+        last_run = demisto.getLastRun()
+        last_fetch = last_run.get('time')
+
+        # handle first time fetch
+        if last_fetch is None:
+            last_fetch, _ = parse_date_range(FETCH_TIME, to_timestamp=True)
+
+        current_fetch = last_fetch
+
+        incidents = []
+        threats = get_threats_request()
+        for threat in threats:
+            # If no fetch threat rank is provided, bring everything, else only fetch above the threshold
+            if not FETCH_THREAT_RANK or (FETCH_THREAT_RANK and threat.get('rank') >= FETCH_THREAT_RANK):
+                incident = threat_to_incident(threat)
+                incident_date = date_to_timestamp(incident['occurred'], '%Y-%m-%dT%H:%M:%S.%fZ')
+                # update last run
+                if incident_date > last_fetch:
+                    incidents.append(incident)
+
+                if incident_date > current_fetch:
+                    current_fetch = incident_date
+
+        demisto.setLastRun({'time': current_fetch})
+        demisto.incidents(incidents)
+
+
+    def threat_to_incident(threat):
+        incident = {}
+        incident['name'] = 'Sentinel One Threat: ' + threat.get('classification')
+        incident['occurred'] = threat.get('createdDate')
+        incident['rawJSON'] = json.dumps(threat)
+        return incident
+
+
+    ''' COMMANDS MANAGER / SWITCH PANEL '''
+
+    LOG('command is %s' % (demisto.command()))
+
+    try:
+        handle_proxy()
+        if demisto.command() == 'test-module':
+            # This is the call made when pressing the integration test button.
+            test_module()
+            demisto.results('ok')
+        elif demisto.command() == 'fetch-incidents':
+            fetch_incidents()
+        elif demisto.command() == 'sentinelone-get-activities':
+            get_activities_command()
+        elif demisto.command() == 'sentinelone-get-threats':
+            get_threats_command()
+        elif demisto.command() == 'sentinelone-mark-as-threat':
+            mark_as_threat_command()
+        elif demisto.command() == 'sentinelone-mitigate-threat':
+            mitigate_threat_command()
+        elif demisto.command() == 'sentinelone-resolve-threat':
+            resolve_threat_command()
+        elif demisto.command() == 'sentinelone-threat-summary':
+            get_threat_summary_command()
+        elif demisto.command() == 'sentinelone-get-hash':
+            get_hash_command()
+        elif demisto.command() == 'sentinelone-get-white-list':
+            get_white_list_command()
+        elif demisto.command() == 'sentinelone-create-white-list-item':
+            create_white_item_command()
+        elif demisto.command() == 'sentinelone-get-sites':
+            get_sites_command()
+        elif demisto.command() == 'sentinelone-get-site':
+            get_site_command()
+        elif demisto.command() == 'sentinelone-reactivate-site':
+            reactivate_site_command()
+        elif demisto.command() == 'sentinelone-list-agents':
+            list_agents_command()
+        elif demisto.command() == 'sentinelone-get-agent':
+            get_agent_command()
+        elif demisto.command() == 'sentinelone-get-groups':
+            get_groups_command()
+        elif demisto.command() == 'sentinelone-move-agent':
+            move_agent_to_group_command()
+        elif demisto.command() == 'sentinelone-delete-group':
+            delete_group()
+        elif demisto.command() == 'sentinelone-agent-processes':
+            get_agent_processes()
+
+
+    except Exception as e:
+        LOG(str(e))
+        LOG.print_log()
+        raise
+  type: python
+system: true

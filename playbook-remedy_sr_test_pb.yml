@@ -1,0 +1,117 @@
+description: Testing the Remedy SR 1.6 integration
+id: remedy_sr_test_pb
+inputs: []
+name: remedy_sr_test_pb
+outputs: []
+starttaskid: "0"
+system: true
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 87ba94f0-538c-4ca2-86de-6d6c93a6e53d
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 87ba94f0-538c-4ca2-86de-6d6c93a6e53d
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 20
+        }
+      }
+  "1":
+    id: "1"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    scriptarguments:
+      details:
+        simple: lolo
+      requester_email:
+        simple: bark@demisto.com
+      requester_name:
+        simple: bar
+      requester_ntid:
+        simple: "12357894326"
+      requester_phone:
+        simple: "0506757883"
+      requester_work_city:
+        simple: TLV
+      requester_work_location:
+        simple: NYC
+      requester_work_street:
+        simple: Wall st
+    separatecontext: false
+    task:
+      brand: ""
+      description: Create a ticket
+      id: 0d4782cd-2819-4e8a-8220-34986d91a7cc
+      iscommand: true
+      name: remedy-create-ticket
+      script: '|||remedy-create-ticket'
+      type: regular
+      version: -1
+    taskid: 0d4782cd-2819-4e8a-8220-34986d91a7cc
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 230
+        }
+      }
+  "2":
+    id: "2"
+    ignoreworker: false
+    note: false
+    scriptarguments:
+      service_request_id:
+        complex:
+          accessor: Ticket.ServiceRequestId
+          root: Remedy
+    separatecontext: false
+    task:
+      brand: ""
+      id: acc52239-63fb-45cd-8f39-ea27e94891f3
+      iscommand: true
+      name: remedy-get-ticket
+      script: '|||remedy-get-ticket'
+      type: regular
+      version: -1
+    taskid: acc52239-63fb-45cd-8f39-ea27e94891f3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 430
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 505,
+        "width": 380,
+        "x": 450,
+        "y": 20
+      }
+    }
+  }

@@ -1,0 +1,49 @@
+{
+	"contextPath": "",
+	"contextValue": "",
+	"defaultMapping": {
+		"md5": {
+			"complex": null,
+			"simple": "File.MD5"
+		},
+		"sha1": {
+			"complex": null,
+			"simple": "File.SHA1"
+		},
+		"sha256": {
+			"complex": null,
+			"simple": "File.SHA256"
+		},
+		"ssdeep": {
+			"complex": null,
+			"simple": "File.SSDeep"
+		}
+	},
+	"details": "File",
+	"disabled": false,
+	"enhancementScriptNames": [
+		"FileReputation",
+		"SplunkSearch",
+		"WildfireReport"
+	],
+	"excludedBrands": null,
+	"file": false,
+	"fileHashesPriority": [
+		"ssdeep",
+		"md5",
+		"sha1",
+		"sha256"
+	],
+	"formatScript": "",
+	"id": "unifiedFileRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"regex": "\\b[a-fA-F\\d]{64}|[a-fA-F\\d]{40}|[a-fA-F\\d]{32}\\b",
+	"reputationCommand": "file",
+	"reputationScriptName": "",
+	"sortValues": null,
+	"system": true,
+	"updateAfter": 0,
+	"version": -1
+}

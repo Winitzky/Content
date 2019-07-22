@@ -1,0 +1,786 @@
+category: Network Security
+commonfields:
+  id: Perch
+  version: -1
+configuration:
+- defaultvalue: https://api.perch.rocks/
+  display: Server URL (e.g., https://api.perch.rocks/)
+  name: url
+  required: true
+  type: 0
+- defaultvalue: ""
+  display: API Token
+  name: api-key
+  required: true
+  type: 4
+- defaultvalue: "true"
+  display: Trust any certificate (unsecure)
+  name: insecure
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Use system proxy
+  name: proxy
+  required: false
+  type: 8
+- defaultvalue: "7"
+  display: Previous days to fetch
+  name: fetch_time
+  required: false
+  type: 0
+- defaultvalue: ""
+  display: Credentials
+  name: credentials
+  required: false
+  type: 9
+- defaultvalue: ""
+  display: Fetch incidents
+  name: isFetch
+  required: false
+  type: 8
+- defaultvalue: ""
+  display: Incident type
+  name: incidentType
+  required: false
+  type: 13
+description: Perch is a co-managed threat detection and response platform.
+detaileddescription: |
+  Perch Security is a crowd-sourced threat and intelligence feed which also provides network security.
+
+  When you configure an instance of the Perch Security integration in Demisto, you need to enter your Perch Key.
+
+  ## Generate your Perch key
+  1. Log in to your Perch environment and navigate to the [Integrations menu](https://app.perchsecurity.com/settings/integrations).
+  2. Generate a **Key**.
+display: Perch
+image: data:image/png;base64,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
+name: Perch
+script:
+  commands:
+  - arguments:
+    - description: Page of results to return.
+      name: page
+    - description: Number of results to return per page.
+      name: page_size
+    - auto: PREDEFINED
+      description: Whether the alert is closed.
+      name: closed
+      predefined:
+      - "true"
+      - "false"
+    - description: Time that the alert was closed.
+      name: closed_at
+    - description: Community ID that generated the alert.
+      name: community_id
+    - description: Time that the alert was created.
+      name: created_at
+    - description: Destination IP address.
+      name: dest_ip
+    - description: Destination port.
+      name: dest_port
+    - description: Full URL of the alert.
+      name: full_url
+    - description: ID of the alert.
+      name: id
+    - description: ID of the indicator.
+      name: indicator_id
+    - auto: PREDEFINED
+      description: Whether the indicator is loaded.
+      name: indicator_loaded
+      predefined:
+      - "true"
+      - "false"
+    - description: Observable ID.
+      name: observable_id
+    - description: Protocol effected by the alert.
+      name: protocol
+    - description: ID of the sensor that generated the alert.
+      name: sensor_id
+    - description: Name of the sensor that generated the alert.
+      name: sensor_name
+    - description: Status in the SOC.
+      name: soc_status
+    - description: Source IP address.
+      name: src_ip
+    - description: Source port.
+      name: src_port
+    - description: Status of the alert.
+      name: status
+    - description: Time that the status was last updated.
+      name: status_updated_at
+    - description: ID of the team that generated the alert.
+      name: team_id
+    - description: Title of the alert.
+      name: title
+    - description: Timestamp of the alert.
+      name: ts
+    - description: Order of the returned alerts.
+      name: ordering
+    description: Searches for alerts in Perch.
+    name: perch-search-alerts
+    outputs:
+    - contextPath: Perch.Alert.DestPort
+      description: Destination port of the alert.
+      type: Number
+    - contextPath: Perch.Alert.SrcPort
+      description: Source port of the alert.
+      type: Number
+    - contextPath: Perch.Alert.DestIP
+      description: Destination IP of the alert.
+      type: Number
+    - contextPath: Perch.Alert.IndicatorID
+      description: Indicator ID of the alert.
+      type: Number
+    - contextPath: Perch.Alert.SrcIP
+      description: IP address of the source.
+      type: String
+    - contextPath: Perch.Alert.SrcGeo.Country
+      description: Country of the threat.
+      type: String
+    - contextPath: Perch.Alert.SrcGeo.Latitude
+      description: Latitude of the detected threat.
+      type: Number
+    - contextPath: Perch.Alert.SrcGeo.Longitude
+      description: Longitude of the detected threat.
+      type: Number
+    - contextPath: Perch.Alert.SensorID
+      description: ID of the sensor that reported the threat.
+      type: Number
+    - contextPath: Perch.Alert.Title
+      description: Title of the alert.
+      type: String
+    - contextPath: Perch.Alert.Protocol
+      description: Protocol on which the alert was detected.
+      type: String
+    - contextPath: Perch.Alert.ID
+      description: ID of the alert.
+      type: Number
+    - contextPath: Perch.Alert.ObservableID
+      description: ID of the observable event.
+      type: Number
+    - contextPath: Perch.Alert.TS
+      description: Timestamp of the alert.
+      type: Date
+  - arguments:
+    - description: ID of the community.
+      name: id
+      required: true
+    description: Gets community information by ID.
+    name: perch-get-community
+    outputs:
+    - contextPath: Perch.Community.Allsectors
+      description: Indicates if the community covers all sectors.
+      type: Boolean
+    - contextPath: Perch.Community.Credentialreq
+      description: Credentials required to interact with the community.
+      type: Number
+    - contextPath: Perch.Community.Desc
+      description: Description of the community.
+      type: String
+    - contextPath: Perch.Community.Id
+      description: ID of the community.
+      type: Number
+    - contextPath: Perch.Community.Name
+      description: Name of the community.
+      type: String
+    - contextPath: Perch.Community.Poweredby
+      description: Organization providing the feed.
+      type: String
+    - contextPath: Perch.Community.Selectablefeeds
+      description: Whether the feeds are selectable.
+      type: Boolean
+  - arguments: []
+    description: Lists all communities.
+    name: perch-list-communities
+    outputs:
+    - contextPath: Perch.Community.Allsectors
+      description: Indicates if the community covers all sectors.
+      type: Boolean
+    - contextPath: Perch.Community.Credentialreq
+      description: Credentials required to interact with the community.
+      type: Number
+    - contextPath: Perch.Community.Desc
+      description: Description of the community.
+      type: String
+    - contextPath: Perch.Community.Id
+      description: ID of the community.
+      type: Number
+    - contextPath: Perch.Community.Name
+      description: Name of the community.
+      type: String
+    - contextPath: Perch.Community.Poweredby
+      description: Organization providing the feed.
+      type: String
+    - contextPath: Perch.Community.Selectablefeeds
+      description: Whether the feeds are selectable.
+      type: Boolean
+  - arguments:
+    - description: Communities to report the indicator to.
+      name: communities
+      required: true
+    - auto: PREDEFINED
+      description: Confidence of the findings.
+      name: confidence
+      predefined:
+      - LOW
+      - MEDIUM
+      - HIGH
+      required: true
+    - auto: PREDEFINED
+      description: Type of indicator.
+      name: type
+      predefined:
+      - IP
+      - Domain
+      - URL
+      - REGEX
+      - File Hash
+      required: true
+    - description: The value of the indicator.
+      name: value
+      required: true
+    - description: The title of the indicator.
+      name: title
+      required: true
+    - description: Description of the indicator.
+      name: description
+      required: true
+    - description: TLP of the Indicator.
+      name: tlp
+      required: true
+    - description: Operator of the indicator.
+      name: operator
+    - description: When the indicator was first sighted.
+      name: first_sighting
+    - description: Sends a email with the summary of the indicator.
+      name: email_summary
+    description: Creates an indicator in Perch.
+    name: perch-create-indicator
+    outputs:
+    - contextPath: Perch.Indicator.Confidence
+      description: Confidence of the indicator.
+      type: Unknown
+    - contextPath: Perch.Indicator.UpdatedAt
+      description: Date and time that the indicator was last updated.
+      type: Date
+    - contextPath: Perch.Indicator.TLP
+      description: TLP of the Indicator.
+      type: String
+    - contextPath: Perch.Indicator.Title
+      description: Title of the indicator.
+      type: String
+    - contextPath: Perch.Indicator.ID
+      description: ID of the indicator.
+      type: Number
+    - contextPath: Perch.Indicator.CreatedAt
+      description: Date that the indicator was created.
+      type: Date
+    - contextPath: Perch.Indicator.Team
+      description: ID of the team.
+      type: Number
+    - contextPath: Perch.Indicator.PerchID
+      description: The Perch ID for the incident.
+      type: String
+    - contextPath: Perch.Indicator.CreatedBy
+      description: ID of user that created the incident.
+      type: Number
+  dockerimage: demisto/python3:3.7.2.214
+  isfetch: true
+  runonce: false
+  script: |2-
+
+
+
+
+    ''' IMPORTS '''
+
+    import requests
+    import json
+    import collections
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+    ''' GLOBALS/PARAMS '''
+
+    USERNAME = demisto.params().get('credentials').get('identifier')
+    PASSWORD = demisto.params().get('credentials').get('password')
+    API_KEY = demisto.params().get('api-key')
+    FETCH_TIME = int(demisto.params().get('fetch_time', '7'))
+    SERVER = demisto.params()['url'][:-1] if (demisto.params()['url'] and demisto.params()['url'].endswith('/')) else \
+        demisto.params()['url']
+    USE_SSL = not demisto.params().get('insecure', False)
+    BASE_URL = SERVER + '/v1'
+
+    # Remove proxy if not set to true in params
+    handle_proxy()
+
+    TLP_MAP = {
+        'WHITE': 0,
+        'GREEN': 1,
+        'AMBER': 2,
+        'RED': 3
+    }
+
+    CONFIDENCE_MAP = {
+        'LOW': 0,
+        'MEDIUM': 1,
+        'HIGH': 2
+    }
+
+    OBSERVABLE_TYPES_MAP = {
+        'IP': 0,
+        'Domain': 1,
+        'URL': 2,
+        'REGEX': 3,
+        'File Hash': 4
+    }
+
+    ''' HELPER FUNCTIONS '''
+
+
+    # Allows nested keys to be accessible
+    def makehash():
+        return collections.defaultdict(makehash)
+
+
+    def http_request(method, url_suffix, params=None, data=None, headers=None):
+        try:
+            res = requests.request(
+                method,
+                BASE_URL + url_suffix,
+                verify=USE_SSL,
+                params=params,
+                data=data,
+                headers=headers
+            )
+            if res.status_code == 403:
+                return_error('Connection forbidden. Please verify your API key is valid.')
+            elif res.status_code not in {200, 201}:
+                return_error(f'Error in API call to Perch Integration [{res.status_code}] - {res.reason}')
+
+        except requests.exceptions.ConnectionError as error:
+            return_error(f"Failed to establish a new connection: {type(error)}")
+
+        try:
+            response = res.json()
+        except Exception as e:
+            return_error(f'Failed to parse JSON response: {str(e)}')
+        return response
+
+
+    def find_key_by_value(val, dic_map):
+        for key, value in dic_map.items():
+            if value == val:
+                return key
+
+
+    def format_alerts(alert):
+        hr = makehash()  # type: dict
+        ec = makehash()  # type: dict
+        if alert.get('id'):
+            hr['ID'] = alert.get('id')
+            ec['ID'] = alert.get('id')
+        if alert.get('sensor_id'):
+            hr['Sensor ID'] = alert.get('sensor_id')
+            ec['SensorID'] = alert.get('sensor_id')
+        if alert.get('observable_id'):
+            hr['Observable ID'] = alert.get('observable_id')
+            ec['ObservableID'] = alert.get('observable_id')
+        if alert.get('indicator_id'):
+            hr['Indicator ID'] = alert.get('indicator_id')
+            ec['IndicatorID'] = alert.get('indicator_id')
+        if alert.get('status'):
+            hr['Status'] = alert.get('status')
+            ec['Status'] = alert.get('status')
+        if alert.get('ts'):
+            hr['Timestamp'] = alert.get('ts')
+            ec['TS'] = alert.get('ts')
+        if alert.get('title'):
+            hr['Title'] = alert.get('title')
+            ec['Title'] = alert.get('title')
+        if alert.get('protocol'):
+            hr['Protocol'] = alert.get('protocol')
+            ec['Protocol'] = alert.get('protocol')
+        if alert.get('src_ip'):
+            hr['Source IP'] = alert.get('src_ip')
+            ec['SrcIP'] = alert.get('src_ip')
+        if alert.get('src_port'):
+            hr['Source Port'] = alert.get('src_port')
+            ec['SrcPort'] = alert.get('src_port')
+        if alert.get('src_geo_ip'):
+            src_geo = alert['src_geo_ip']
+            if src_geo.get('latitude'):
+                hr['Source Geo']['Latitude'] = src_geo.get('latitude')
+                ec['SrcGeo']['Latitude'] = src_geo.get('latitude')
+            if src_geo.get('longitude'):
+                hr['Source Geo']['Longitude'] = src_geo.get('longitude')
+                ec['SrcGeo']['Longitude'] = src_geo.get('longitude')
+            if src_geo.get('country_name'):
+                hr['Source Geo']['Country Name'] = src_geo.get('country_name')
+                ec['SrcGeo']['Country'] = src_geo.get('country_name')
+        if alert.get('dest_ip'):
+            hr['Destination IP'] = alert.get('dest_ip')
+            ec['DestIP'] = alert.get('dest_ip')
+        if alert.get('dest_port'):
+            hr['Destination Port'] = alert.get('dest_port')
+            ec['DestPort'] = alert.get('dest_port')
+        if alert.get('dest_geo_ip'):
+            dest_geo = alert['dest_geo_ip']
+            if dest_geo.get('latitude'):
+                hr['Destination Geo']['Latitude'] = dest_geo.get('latitude')
+                ec['DestGeo']['Latitude'] = dest_geo.get('latitude')
+            if dest_geo.get('longitude'):
+                hr['Destination Geo']['Longitude'] = dest_geo.get('longitude')
+                ec['DestGeo']['Longitude'] = dest_geo.get('longitude')
+            if dest_geo.get('country_name'):
+                hr['Destination Geo']['Country Name'] = dest_geo.get('country_name')
+                ec['DestGeo']['Country'] = dest_geo.get('country_name')
+        return hr, ec
+
+
+    def alerts_params(args):
+        params = {}  # type:dict
+        if args.get('page'):
+            params['page'] = args.get('page')
+        if args.get('page_size'):
+            params['page_size'] = args.get('page_size')
+        if args.get('closed'):
+            params['closed'] = args.get('closed')
+        if args.get('closed_at'):
+            params['closed_at'] = args.get('closed_at')
+        if args.get('community_id'):
+            params['community_id'] = args.get('community_id')
+        if args.get('created_at'):
+            params['created_at'] = args.get('created_at')
+        if args.get('dest_ip'):
+            params['dest_ip'] = args.get('dest_ip')
+        if args.get('dest_port'):
+            params['dest_port'] = args.get('dest_port')
+        if args.get('full_url'):
+            params['full_url'] = args.get('full_url')
+        if args.get('id'):
+            params['id'] = args.get('id')
+        if args.get('indicator_id'):
+            params['indicator_id'] = args.get('indicator_id')
+        if args.get('indicator_loaded'):
+            params['indicator_loaded'] = args.get('indicator_loaded')
+        if args.get('observable_id'):
+            params['observable_id'] = args.get('observable_id')
+        if args.get('protocol'):
+            params['protocol'] = args.get('protocol')
+        if args.get('sensor_id'):
+            params['sensor_id'] = args.get('sensor_id')
+        if args.get('sensor_name'):
+            params['sensor_name'] = args.get('sensor_name')
+        if args.get('soc_status'):
+            params['soc_status'] = args.get('soc_status')
+        if args.get('src_ip'):
+            params['src_ip'] = args.get('src_ip')
+        if args.get('src_port'):
+            params['src_port'] = args.get('src_port')
+        if args.get('status'):
+            params['status'] = args.get('status')
+        if args.get('status_updated_at'):
+            params['status_updated_at'] = args.get('status_updated_at')
+        if args.get('team_id'):
+            params['team_id'] = args.get('team_id')
+        if args.get('title'):
+            params['title'] = args.get('title')
+        if args.get('ts'):
+            params['ts'] = args.get('ts')
+        if args.get('closed_at__gte'):
+            params['closed_at__gte'] = args.get('closed_at__gte')
+        if args.get('closed_at__lte'):
+            params['closed_at__lte'] = args.get('closed_at__lte')
+        if args.get('created_at__gte'):
+            params['created_at__gte'] = args.get('created_at__gte')
+        if args.get('created_at__lte'):
+            params['created_at__lte'] = args.get('created_at__lte')
+        if args.get('status_updated_at__gte'):
+            params['status_updated_at__gte'] = args.get('status_updated_at__gte')
+        if args.get('status_updated_at__lte'):
+            params['status_updated_at__lte'] = args.get('status_updated_at__lte')
+        if args.get('status_updated_at__gt'):
+            params['status_updated_at__gt'] = args.get('status_updated_at__gt')
+        if args.get('status_updated_at__lt'):
+            params['status_updated_at__lt'] = args.get('status_updated_at__lt')
+        if args.get('ordering'):
+            params['ordering'] = args.get('ordering')
+        return params
+
+
+    def indicator_params(args):
+        params = []
+        param = {}
+        observables = []
+        communities = []
+        if args.get('communities'):
+            community = {
+                'id': args.get('communities')
+            }
+            communities.append(community)
+
+            param['communities'] = communities
+        if args.get('type'):
+            observable = {
+                'type': OBSERVABLE_TYPES_MAP[args.get('type')],
+                'details': {
+                    'value': args.get('value')
+                }
+            }
+            observables.append(observable)
+            param['observables'] = observables
+        if args.get('title'):
+            param['title'] = args.get('title')
+        if args.get('description'):
+            param['description'] = args.get('description')
+        if args.get('tlp'):
+            param['tlp'] = TLP_MAP[args.get('tlp')]  # type: ignore
+        if args.get('confidence'):
+            param['confidence'] = CONFIDENCE_MAP[args.get('confidence')]  # type: ignore
+        if args.get('operator'):
+            param['operator'] = args.get('operator')
+        if args.get('first_sighting'):
+            param['first_sighting'] = args.get('first_sighting')
+        if args.get('email_summary'):
+            param['email_summary'] = args.get('email_summary')
+        params.append(param)
+
+        return params
+
+
+    def authenticate():
+        headers = {'Content-Type': 'application/json', 'x-api-key': API_KEY}
+        req_body = json.dumps({'username': USERNAME, 'password': PASSWORD})
+        url = '/auth/access_token'
+        res_body = http_request('POST', url, data=req_body, headers=headers)
+        headers['Authorization'] = 'Bearer ' + res_body['access_token']
+        return headers
+
+
+    def format_indicator(indicator):
+        hr = makehash()  # type: dict
+        ec = makehash()  # type: dict
+        if indicator.get('id'):
+            hr['ID'] = indicator.get('id')
+            ec['ID'] = indicator.get('id')
+        if indicator.get('confidence'):
+            hr['Confidence'] = find_key_by_value(indicator.get('confidence'), CONFIDENCE_MAP)
+            ec['Confidence'] = find_key_by_value(indicator.get('confidence'), CONFIDENCE_MAP)
+        if indicator.get('created_at'):
+            hr['Created At'] = indicator.get('created_at')
+            ec['CreatedAt'] = indicator.get('created_at')
+        if indicator.get('created_by'):
+            hr['Created By'] = indicator.get('created_by')
+            ec['CreatedBy'] = indicator.get('created_by')
+        if indicator.get('description'):
+            hr['Description'] = indicator.get('description')
+            ec['Description'] = indicator.get('description')
+        if indicator.get('email_summary'):
+            hr['Email Summary'] = indicator.get('email_summary')
+            ec['EmailSummary'] = indicator.get('email_summary')
+        if indicator.get('title'):
+            hr['Title'] = indicator.get('title')
+            ec['Title'] = indicator.get('title')
+        if indicator.get('first_sighting'):
+            hr['First Sighting'] = indicator.get('first_sighting')
+            ec['FirstSighting'] = indicator.get('first_sighting')
+        if indicator.get('perch_id'):
+            hr['Perch ID'] = indicator.get('perch_id')
+            ec['PerchID'] = indicator.get('perch_id')
+        if indicator.get('team'):
+            hr['Team'] = indicator.get('team')
+            ec['Team'] = indicator.get('team')
+        if indicator.get('tlp'):
+            hr['TLP'] = find_key_by_value(indicator.get('tlp'), TLP_MAP)
+            ec['TLP'] = find_key_by_value(indicator.get('tlp'), TLP_MAP)
+        if indicator.get('updated_at'):
+            hr['Updated At'] = indicator.get('updated_at')
+            ec['UpdatedAt'] = indicator.get('updated_at')
+        if indicator.get('operator'):
+            hr['Operator'] = indicator.get('operator')
+            ec['Operator'] = indicator.get('operator')
+        return hr, ec
+
+
+    def item_to_incident(item):
+        incident = {'name': 'Perch Incident: ' + item.get('title'),
+                    'occurred': item.get('created_at'),
+                    'rawJSON': json.dumps(item)}
+        return incident
+
+
+    '''COMMAND FUNCTIONS'''
+
+
+    def search_alerts_command():
+        headers = authenticate()
+        args = demisto.args()
+        params = alerts_params(args)
+        url = '/alerts'
+        res = http_request('GET', url, headers=headers, params=params)
+        res_results = res.get('results')
+        hr = ''
+        ec = {
+            "Perch": {
+                "Alert": []
+            }
+        }  # type: dict
+        for alert in res_results:
+            alert_hr, alert_ec = format_alerts(alert)
+            ec['Perch']['Alert'].append(alert_ec)
+            hr += tableToMarkdown(f'{alert_ec.get("Title")}', alert_hr)
+        if len(res_results) == 0:
+            demisto.results('No results were found')
+        else:
+            demisto.results({
+                'Type': entryTypes['note'],
+                'ContentsFormat': formats['markdown'],
+                'Contents': res_results,
+                'HumanReadable': hr,
+                'EntryContext': ec
+            })
+
+
+    def list_communities_command():
+        headers = authenticate()
+        args = demisto.args()
+        params = alerts_params(args)
+        url = '/communities'
+        res = http_request('GET', url, headers=headers, params=params)
+        res_results = res.get('results')
+        hr = tableToMarkdown('Communities Found', res_results, headerTransform=string_to_table_header, removeNull=True)
+        ec = {
+            "Perch": {
+                "Community": []
+            }
+        }  # type: dict
+        for alert in res_results:
+            ec['Perch']['Community'].append(createContext(alert, keyTransform=string_to_context_key, removeNull=True))
+        if len(res_results) == 0:
+            demisto.results('No communities were found')
+        else:
+            demisto.results({
+                'Type': entryTypes['note'],
+                'ContentsFormat': formats['markdown'],
+                'Contents': res_results,
+                'HumanReadable': hr,
+                'EntryContext': ec
+            })
+
+
+    def get_community_command():
+        headers = authenticate()
+        args = demisto.args()
+        params = alerts_params(args)
+        community_id = args.get('id')
+        url = f'/communities/{community_id}'
+        res = http_request('GET', url, headers=headers, params=params)
+        if len(res) > 0:
+            hr = tableToMarkdown('Communities Found', res, headerTransform=string_to_table_header, removeNull=True)
+            ec = {
+                "Perch": {
+                    "Community": createContext(res, keyTransform=string_to_context_key, removeNull=True)
+                }
+            }  # type: dict
+            demisto.results({
+                'Type': entryTypes['note'],
+                'ContentsFormat': formats['markdown'],
+                'Contents': res,
+                'HumanReadable': hr,
+                'EntryContext': ec
+            })
+        else:
+            demisto.results('No communities were found')
+
+
+    def create_indicator_command():
+        headers = authenticate()
+        args = demisto.args()
+        raw_data = indicator_params(args)
+        data = json.dumps(raw_data)
+        url = '/indicators'
+        res = http_request('POST', url, headers=headers, data=data)
+        indicator_hr, indicator_ec = format_indicator(res[0])
+        hr = ''
+        ec = {
+            "Perch": {
+                "Indicator": []
+            }
+        }  # type: dict
+        ec['Perch']['Indicator'].append(indicator_ec)
+        hr += tableToMarkdown(f'{indicator_hr.get("Title")}', indicator_hr)
+        demisto.results({
+            'Type': entryTypes['note'],
+            'ContentsFormat': formats['markdown'],
+            'Contents': res,
+            'HumanReadable': hr,
+            'EntryContext': ec
+        })
+
+
+    def fetch_alerts(last_run, headers):
+        last_fetch = last_run.get('time')
+        url = '/alerts'
+        res = http_request('GET', url, headers=headers)
+        items = res.get('results')
+        items.sort(key=lambda r: r['created_at'])
+        if last_fetch is None:
+            last_fetch_raw = datetime.now() - timedelta(days=FETCH_TIME)
+            last_fetch = date_to_timestamp(last_fetch_raw, '%Y-%m-%dT%H:%M:%S.%fZ')
+        incidents = []
+        for item in items:
+            incident = item_to_incident(item)
+            incident_date = date_to_timestamp(incident['occurred'], '%Y-%m-%dT%H:%M:%S.%fZ')
+            if incident_date > last_fetch:
+                incidents.append(incident)
+                last_fetch = incident_date
+        return last_fetch, incidents
+
+
+    def fetch_alerts_command():
+        last_run = demisto.getLastRun()
+        headers = authenticate()
+        last_fetch, incidents = fetch_alerts(last_run, headers)
+        demisto.setLastRun({'time': last_fetch})
+        demisto.incidents(incidents)
+
+
+    def test_module():
+        try:
+            headers = authenticate()
+            if demisto.params().get('isFetch'):
+                last_run = {'time': 1561017202}
+                fetch_alerts(last_run, headers)
+            demisto.results('ok')
+        except Exception as err:
+            return_error(str(err))
+
+
+    ''' COMMANDS MANAGER / SWITCH PANEL '''
+    demisto.info(f'Command being called is {demisto.command()}')
+
+    try:
+        if demisto.command() == 'perch-search-alerts':
+            search_alerts_command()
+        elif demisto.command() == 'perch-get-community':
+            get_community_command()
+        elif demisto.command() == 'perch-list-communities':
+            list_communities_command()
+        elif demisto.command() == 'perch-create-indicator':
+            create_indicator_command()
+        elif demisto.command() == 'fetch-incidents':
+            fetch_alerts_command()
+        elif demisto.command() == 'test-module':
+            test_module()
+
+
+    # Log exceptions
+    except Exception as e:
+        LOG(str(e))
+        LOG.print_log()
+        raise
+  subtype: python3
+  type: python
+system: true
