@@ -1,0 +1,64 @@
+{
+	"action": "dropAndUpdate",
+	"enabled": true,
+	"existingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "Incident #2"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"id": "7ca0136a-d234-4271-8a56-eaecd0feb486",
+	"index": 1,
+	"linkTo": "oldest",
+	"locked": false,
+	"name": "Link And Drop",
+	"newEventFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "Incident #2"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"period": {
+		"by": "minutes",
+		"fromValue": 5
+	},
+	"scriptName": "",
+	"searchClosed": false,
+	"sortValues": null,
+	"system": false,
+	"version": -1
+}

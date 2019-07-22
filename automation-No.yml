@@ -1,0 +1,13 @@
+commonfields:
+  id: 36c8cf32-dda7-4298-8f10-9fd0f9448be0
+  version: -1
+dockerimage: demisto/python3:3.7.4.977
+enabled: true
+name: "No"
+runas: DBotWeakRole
+runonce: false
+script: 'demisto.executeCommand("Print", {"value" : "No!"})'
+scripttarget: 0
+subtype: python3
+tags: []
+type: python

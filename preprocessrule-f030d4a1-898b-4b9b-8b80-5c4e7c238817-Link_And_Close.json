@@ -1,0 +1,64 @@
+{
+	"action": "linkAndClose",
+	"enabled": true,
+	"existingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "Incident #1"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"id": "f030d4a1-898b-4b9b-8b80-5c4e7c238817",
+	"index": 0,
+	"linkTo": "oldest",
+	"locked": false,
+	"name": "Link And Close",
+	"newEventFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "name"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "Incident #1"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"period": {
+		"by": "minutes",
+		"fromValue": 5
+	},
+	"scriptName": "",
+	"searchClosed": false,
+	"sortValues": null,
+	"system": false,
+	"version": -1
+}

@@ -1,0 +1,138 @@
+{
+	"TypeName": "",
+	"id": "Access",
+	"kind": "details",
+	"name": "",
+	"sortValues": null,
+	"system": false,
+	"tabs": [
+		{
+			"id": "summary",
+			"name": "Legacy Summary",
+			"type": "summary"
+		},
+		{
+			"id": "warRoom",
+			"name": "War Room",
+			"type": "warRoom"
+		},
+		{
+			"id": "workPlan",
+			"name": "Work Plan",
+			"type": "workPlan"
+		},
+		{
+			"id": "evidenceBoard",
+			"name": "Evidence Board",
+			"type": "evidenceBoard"
+		},
+		{
+			"id": "relatedIncidents",
+			"name": "Related Incidents",
+			"type": "relatedIncidents"
+		},
+		{
+			"id": "canvas",
+			"name": "Canvas",
+			"type": "canvas"
+		},
+		{
+			"hidden": false,
+			"id": "olgmuhpqqq",
+			"name": "choochoo",
+			"sections": [
+				{
+					"displayType": "ROW",
+					"h": 1,
+					"hideName": false,
+					"i": "813afa10-ac83-11e9-abec-695255f4a181",
+					"isVisible": true,
+					"items": [],
+					"maxW": 3,
+					"minH": 1,
+					"minW": 1,
+					"moved": false,
+					"name": "Dropped Duplicate Incidents",
+					"readOnly": true,
+					"static": false,
+					"type": "droppedIncidents",
+					"w": 1,
+					"x": 0,
+					"y": 0
+				},
+				{
+					"displayType": "ROW",
+					"h": 1,
+					"hideName": false,
+					"i": "85b8e110-ac83-11e9-abec-695255f4a181",
+					"isVisible": true,
+					"items": [],
+					"maxW": 3,
+					"minH": 1,
+					"minW": 1,
+					"moved": false,
+					"name": "Linked Incidents",
+					"readOnly": true,
+					"static": false,
+					"type": "linkedIncidents",
+					"w": 1,
+					"x": 0,
+					"y": 1
+				},
+				{
+					"displayType": "ROW",
+					"h": 2,
+					"hideName": false,
+					"i": "435cbdd0-ac85-11e9-abec-695255f4a181",
+					"isVisible": true,
+					"items": [
+						{
+							"endCol": 2,
+							"fieldId": "testologic",
+							"height": 24,
+							"id": "45185080-ac85-11e9-abec-695255f4a181",
+							"index": 0,
+							"startCol": 0
+						},
+						{
+							"endCol": 2,
+							"fieldId": "type",
+							"height": 24,
+							"id": "939f9dd0-ac85-11e9-abec-695255f4a181",
+							"index": 1,
+							"startCol": 0
+						},
+						{
+							"endCol": 2,
+							"fieldId": "occurred",
+							"height": 24,
+							"id": "95d40a00-ac85-11e9-abec-695255f4a181",
+							"index": 2,
+							"startCol": 0
+						},
+						{
+							"endCol": 2,
+							"fieldId": "phase",
+							"height": 24,
+							"id": "9782cb70-ac85-11e9-abec-695255f4a181",
+							"index": 3,
+							"startCol": 0
+						}
+					],
+					"maxW": 3,
+					"minH": 1,
+					"minW": 1,
+					"moved": false,
+					"name": "New Section",
+					"static": false,
+					"w": 1,
+					"x": 1,
+					"y": 0
+				}
+			],
+			"type": "custom"
+		}
+	],
+	"typeId": "Access",
+	"version": -1
+}

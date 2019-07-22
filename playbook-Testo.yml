@@ -1,0 +1,155 @@
+id: bb672604-ce52-4b1b-826e-bc2240f26d81
+inputs: []
+name: Testo
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 7c2c0526-5d52-4e7b-8799-e17d8d942ec2
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 7c2c0526-5d52-4e7b-8799-e17d8d942ec2
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.id
+          operator: endWith
+          right:
+            value:
+              simple: "0"
+      label: "yes"
+    id: "1"
+    ignoreworker: false
+    nexttasks:
+      '#default#':
+      - "3"
+      "yes":
+      - "2"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 05a292ca-74d1-4897-8517-247b560f37c9
+      iscommand: false
+      name: Untitled Task
+      type: condition
+      version: -1
+    taskid: 05a292ca-74d1-4897-8517-247b560f37c9
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 210
+        }
+      }
+  "2":
+    id: "2"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: c28bc44b-c2ec-480d-8c16-27763be48fb5
+      iscommand: false
+      name: Yes!
+      script: 41f034c6-2f43-4c21-8f86-4922164b7ff7
+      type: regular
+      version: -1
+    taskid: c28bc44b-c2ec-480d-8c16-27763be48fb5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 840,
+          "y": 460
+        }
+      }
+  "3":
+    id: "3"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: fc2f0b71-153a-4127-84a5-23061d30a157
+      iscommand: false
+      name: No!
+      script: 36c8cf32-dda7-4298-8f10-9fd0f9448be0
+      type: regular
+      version: -1
+    taskid: fc2f0b71-153a-4127-84a5-23061d30a157
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 150,
+          "y": 450
+        }
+      }
+  "4":
+    id: "4"
+    ignoreworker: false
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: 76fa84c9-d1e2-4c23-8fa4-098da139fb43
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 76fa84c9-d1e2-4c23-8fa4-098da139fb43
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 490,
+          "y": 720
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 735,
+        "width": 1070,
+        "x": 150,
+        "y": 50
+      }
+    }
+  }
