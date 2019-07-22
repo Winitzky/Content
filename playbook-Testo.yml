@@ -24,7 +24,7 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 450,
+          "x": 265,
           "y": 50
         }
       }
@@ -44,26 +44,26 @@ tasks:
     ignoreworker: false
     nexttasks:
       '#default#':
-      - "3"
-      "yes":
       - "2"
+      "yes":
+      - "3"
     note: false
     separatecontext: false
     task:
       brand: ""
-      id: 05a292ca-74d1-4897-8517-247b560f37c9
+      id: 3874c696-3ea6-427f-80e7-c38bb0409e6c
       iscommand: false
       name: Untitled Task
       type: condition
       version: -1
-    taskid: 05a292ca-74d1-4897-8517-247b560f37c9
+    taskid: 3874c696-3ea6-427f-80e7-c38bb0409e6c
     timertriggers: []
     type: condition
     view: |-
       {
         "position": {
-          "x": 450,
-          "y": 210
+          "x": 265,
+          "y": 195
         }
       }
   "2":
@@ -71,7 +71,7 @@ tasks:
     ignoreworker: false
     nexttasks:
       '#none#':
-      - "4"
+      - "5"
     note: false
     separatecontext: false
     task:
@@ -88,8 +88,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 840,
-          "y": 460
+          "x": 480,
+          "y": 370
         }
       }
   "3":
@@ -97,7 +97,7 @@ tasks:
     ignoreworker: false
     nexttasks:
       '#none#':
-      - "4"
+      - "5"
     note: false
     separatecontext: false
     task:
@@ -114,8 +114,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 150,
-          "y": 450
+          "x": 50,
+          "y": 370
         }
       }
   "4":
@@ -136,8 +136,34 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 490,
+          "x": 265,
           "y": 720
+        }
+      }
+  "5":
+    id: "5"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    separatecontext: false
+    task:
+      brand: ""
+      id: f9401c35-ee30-4031-8112-0514a8739a21
+      iscommand: false
+      name: Maybe
+      script: 407455d8-0898-459d-827c-ebe87af8ad88
+      type: regular
+      version: -1
+    taskid: f9401c35-ee30-4031-8112-0514a8739a21
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
         }
       }
 version: -1
@@ -147,8 +173,8 @@ view: |-
     "paper": {
       "dimensions": {
         "height": 735,
-        "width": 1070,
-        "x": 150,
+        "width": 810,
+        "x": 50,
         "y": 50
       }
     }
