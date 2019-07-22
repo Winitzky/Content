@@ -1,12 +1,12 @@
 commonfields:
-  id: 36c8cf32-dda7-4298-8f10-9fd0f9448be0
+  id: 407455d8-0898-459d-827c-ebe87af8ad88
   version: -1
 dockerimage: demisto/python3:3.7.4.977
 enabled: true
-name: "No"
+name: Maybe
 runas: DBotWeakRole
 runonce: false
-script: 'demisto.executeCommand("Print", {"value" : "No!!!!"})'
+script: 'demisto.executeCommand("Print", {"value" : "maybe..."})'
 scripttarget: 0
 subtype: python3
 tags: []
