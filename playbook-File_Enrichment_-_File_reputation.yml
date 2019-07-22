@@ -128,7 +128,7 @@ tasks:
       id: 61a4a533-980d-4b46-816e-75bbf2550d0a
       iscommand: false
       name: Get MD5 reputation
-      scriptName: FileReputation
+      script: FileReputation
       type: regular
       version: -1
     taskid: 61a4a533-980d-4b46-816e-75bbf2550d0a
@@ -263,7 +263,7 @@ tasks:
       id: 092a1e7e-b7d8-4d50-8f6e-021c31701974
       iscommand: false
       name: Get SHA-256 reputation
-      scriptName: FileReputation
+      script: FileReputation
       type: regular
       version: -1
     taskid: 092a1e7e-b7d8-4d50-8f6e-021c31701974
@@ -336,7 +336,7 @@ tasks:
       id: 9cd10068-c589-4c05-8a22-7ec3528b89de
       iscommand: false
       name: Get SHA-1 reputation
-      scriptName: FileReputation
+      script: FileReputation
       type: regular
       version: -1
     taskid: 9cd10068-c589-4c05-8a22-7ec3528b89de

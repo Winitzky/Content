@@ -87,7 +87,7 @@ tasks:
       id: 22f91f1b-ad02-4439-85de-444c9cc9165c
       iscommand: false
       name: Find Closed Incidents
-      scriptName: SearchIncidents
+      script: SearchIncidents
       type: regular
       version: -1
     taskid: 22f91f1b-ad02-4439-85de-444c9cc9165c
@@ -123,7 +123,7 @@ tasks:
       id: b28d0033-ac09-4d02-84fc-c6d363d80f51
       iscommand: false
       name: Generate Summary Report
-      scriptName: GenerateSummaryReports
+      script: GenerateSummaryReports
       type: regular
       version: -1
     taskid: b28d0033-ac09-4d02-84fc-c6d363d80f51
@@ -353,7 +353,7 @@ tasks:
       id: 58e69d68-ff03-4356-8b8f-d61f60346c81
       iscommand: false
       name: Are there relevant closed incidents?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 58e69d68-ff03-4356-8b8f-d61f60346c81

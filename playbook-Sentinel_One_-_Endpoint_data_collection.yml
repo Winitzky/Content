@@ -120,7 +120,7 @@ tasks:
       id: 8a5366c2-6ab4-4eeb-8515-edde825d2f0d
       iscommand: false
       name: Did we get the Agent info?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 8a5366c2-6ab4-4eeb-8515-edde825d2f0d
@@ -149,7 +149,7 @@ tasks:
       id: 88cf0630-08b2-4ec8-8dff-a49dc81a9f8c
       iscommand: false
       name: No Agent was found
-      scriptName: Print
+      script: Print
       type: regular
       version: -1
     taskid: 88cf0630-08b2-4ec8-8dff-a49dc81a9f8c
@@ -257,7 +257,7 @@ tasks:
       id: d5db1794-ef8a-400b-8001-7f8f196f602e
       iscommand: false
       name: Is SentinelOne enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: d5db1794-ef8a-400b-8001-7f8f196f602e

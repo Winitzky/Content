@@ -213,7 +213,7 @@ tasks:
       id: 0b05b0cc-13d4-4486-8d8f-81c37b9a3d9f
       iscommand: false
       name: Set severity to "Critical"
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 0b05b0cc-13d4-4486-8d8f-81c37b9a3d9f

@@ -111,7 +111,7 @@ tasks:
       id: c202a667-b138-4635-819f-56a7396cc7f8
       iscommand: false
       name: Schedule Polling Task
-      scriptName: ScheduleGenericPolling
+      script: ScheduleGenericPolling
       type: regular
       version: -1
     taskid: c202a667-b138-4635-819f-56a7396cc7f8
@@ -179,7 +179,7 @@ tasks:
       id: bc152ecc-4c23-4296-844a-d21b32be0ec3
       iscommand: false
       name: RunPollingCommand
-      scriptName: RunPollingCommand
+      script: RunPollingCommand
       type: regular
       version: -1
     taskid: bc152ecc-4c23-4296-844a-d21b32be0ec3
@@ -229,7 +229,7 @@ tasks:
       id: 62b13486-ae6a-49c1-8988-16765f35f1cc
       iscommand: false
       name: Scheduled Task Failed
-      scriptName: PrintErrorEntry
+      script: PrintErrorEntry
       type: regular
       version: -1
     taskid: 62b13486-ae6a-49c1-8988-16765f35f1cc

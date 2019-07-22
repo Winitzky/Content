@@ -235,7 +235,7 @@ tasks:
       id: 8102ebf2-e72a-4139-8532-fc4e3e1f0ba2
       iscommand: false
       name: Block IP - Generic
-      playbookName: Block IP - Generic
+      playbookId: block_ip_-_generic
       type: playbook
       version: -1
     taskid: 8102ebf2-e72a-4139-8532-fc4e3e1f0ba2
@@ -272,7 +272,7 @@ tasks:
       id: 0b19553d-6281-43ac-8bfc-583b1bfd6171
       iscommand: false
       name: Block URL - Generic
-      playbookName: Block URL - Generic
+      playbookId: block_url_-_generic
       type: playbook
       version: -1
     taskid: 0b19553d-6281-43ac-8bfc-583b1bfd6171
@@ -311,7 +311,7 @@ tasks:
       id: ba10aaed-dffd-4eae-8dcd-16807997f52f
       iscommand: false
       name: Block Account - Generic
-      playbookName: Block Account - Generic
+      playbookId: block_account_-_generic
       type: playbook
       version: -1
     taskid: ba10aaed-dffd-4eae-8dcd-16807997f52f
@@ -365,7 +365,7 @@ tasks:
       id: 90693a3c-4767-46ac-8199-0bc4706264bf
       iscommand: false
       name: Block File - Generic
-      playbookName: Block File - Generic
+      playbookId: block_file_-_generic
       type: playbook
       version: -1
     taskid: 90693a3c-4767-46ac-8199-0bc4706264bf

@@ -87,7 +87,7 @@ tasks:
       id: f2699240-6fe1-40ae-8da6-8017aabf41ff
       iscommand: false
       name: Search And Delete Emails - EWS
-      playbookName: Search And Delete Emails - EWS
+      playbookId: search_and_delete_emails_-_ews
       type: playbook
       version: -1
     taskid: f2699240-6fe1-40ae-8da6-8017aabf41ff

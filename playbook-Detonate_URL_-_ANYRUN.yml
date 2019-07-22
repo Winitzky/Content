@@ -313,7 +313,7 @@ tasks:
       id: 8c93dd33-bf2d-4d0a-8e21-e8c14d3ef936
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: 8c93dd33-bf2d-4d0a-8e21-e8c14d3ef936

@@ -432,7 +432,7 @@ tasks:
       id: 7902e341-c29c-4037-8e6a-6c2289d3806e
       iscommand: false
       name: Detonate URL - ThreatGrid
-      playbookName: Detonate URL - ThreatGrid
+      playbookId: detonate_url_-_threatgrid
       type: playbook
       version: -1
     taskid: 7902e341-c29c-4037-8e6a-6c2289d3806e
@@ -473,7 +473,7 @@ tasks:
       id: 7119396c-ac89-473c-82fa-c634c25788d6
       iscommand: false
       name: Detonate URL - McAfee ATD
-      playbookName: Detonate URL - McAfee ATD
+      playbookId: detonate_url_-_mcafee_atd
       type: playbook
       version: -1
     taskid: 7119396c-ac89-473c-82fa-c634c25788d6
@@ -521,7 +521,7 @@ tasks:
       id: 7a53b305-64ef-47c4-85f7-8ff702cb4209
       iscommand: false
       name: Detonate URL - JoeSecurity
-      playbookName: Detonate URL - JoeSecurity
+      playbookId: detonate_url_-_joesecurity
       type: playbook
       version: -1
     taskid: 7a53b305-64ef-47c4-85f7-8ff702cb4209
@@ -565,7 +565,7 @@ tasks:
       id: 2555400f-2fd3-4bdc-82e4-3e5be8948952
       iscommand: false
       name: Detonate URL - CrowdStrike
-      playbookName: Detonate URL - CrowdStrike
+      playbookId: detonate_url_-_crowdstrike
       type: playbook
       version: -1
     taskid: 2555400f-2fd3-4bdc-82e4-3e5be8948952
@@ -605,7 +605,7 @@ tasks:
       id: 4e47aa4e-bef0-4566-8aae-b249bdf06ce0
       iscommand: false
       name: Detonate URL - Lastline
-      playbookName: Detonate URL - Lastline
+      playbookId: Detonate URL - Lastline
       type: playbook
       version: -1
     taskid: 4e47aa4e-bef0-4566-8aae-b249bdf06ce0
@@ -641,7 +641,7 @@ tasks:
       id: 317e29bb-856f-4081-8fdd-f4a189d01c90
       iscommand: false
       name: Detonate URL - Cuckoo
-      playbookName: Detonate URL - Cuckoo
+      playbookId: Detonate URL - Cuckoo
       type: playbook
       version: -1
     taskid: 317e29bb-856f-4081-8fdd-f4a189d01c90
@@ -668,7 +668,7 @@ tasks:
       id: a2cbc7cf-2d9e-4eda-87e9-909b88265839
       iscommand: false
       name: Detonate URL - ANYRUN
-      playbookName: Detonate URL - ANYRUN
+      playbookId: Detonate URL - ANYRUN
       type: playbook
       version: -1
     taskid: a2cbc7cf-2d9e-4eda-87e9-909b88265839

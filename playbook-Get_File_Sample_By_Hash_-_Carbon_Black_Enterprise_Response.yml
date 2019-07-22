@@ -80,7 +80,7 @@ tasks:
       id: 795290dd-889b-4ea6-8e83-7b04252bddf2
       iscommand: false
       name: Is Carbon Black Enterprise Response enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 795290dd-889b-4ea6-8e83-7b04252bddf2
@@ -113,7 +113,7 @@ tasks:
       id: d489fccb-fab0-471b-849c-3b64ab63e7ce
       iscommand: false
       name: Do we have a MD5?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: d489fccb-fab0-471b-849c-3b64ab63e7ce

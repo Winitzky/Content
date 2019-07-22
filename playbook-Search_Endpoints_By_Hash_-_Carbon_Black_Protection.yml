@@ -64,7 +64,7 @@ tasks:
       id: 0891cd8c-8331-42ee-80d8-ec78652b7ad2
       iscommand: false
       name: Search hashes in the file catalog
-      scriptName: CBPCatalogFindHash
+      script: CBPCatalogFindHash
       type: regular
       version: -1
     taskid: 0891cd8c-8331-42ee-80d8-ec78652b7ad2
@@ -100,7 +100,7 @@ tasks:
       id: 255f2625-68d4-4475-81a2-663da89a39d6
       iscommand: false
       name: Check if the hashes are included in any rules
-      scriptName: CBPFindRule
+      script: CBPFindRule
       type: regular
       version: -1
     taskid: 255f2625-68d4-4475-81a2-663da89a39d6
@@ -298,7 +298,7 @@ tasks:
       id: accc2606-97d8-45e7-8382-8fa3a8799240
       iscommand: false
       name: Get hostname
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: accc2606-97d8-45e7-8382-8fa3a8799240
@@ -332,7 +332,7 @@ tasks:
       id: cecaea78-7661-4243-8f10-3f1a4aa38668
       iscommand: false
       name: Any endpoints found?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: cecaea78-7661-4243-8f10-3f1a4aa38668

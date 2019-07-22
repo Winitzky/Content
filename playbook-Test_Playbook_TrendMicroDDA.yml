@@ -82,7 +82,7 @@ tasks:
       id: f83a1490-70bb-4ec9-8bf2-93096b23cd3b
       iscommand: false
       name: FileCreateAndUpload
-      scriptName: FileCreateAndUpload
+      script: FileCreateAndUpload
       type: regular
       version: -1
     taskid: f83a1490-70bb-4ec9-8bf2-93096b23cd3b
@@ -150,7 +150,7 @@ tasks:
       id: 2e89f1f0-ccde-416f-8175-1b25c774f6a3
       iscommand: false
       name: get-report AreValuesEqual
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: 2e89f1f0-ccde-416f-8175-1b25c774f6a3
@@ -218,7 +218,7 @@ tasks:
       id: c5382a0a-70ba-46ba-8ea1-cee235e5ff55
       iscommand: false
       name: DeleteContext
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: c5382a0a-70ba-46ba-8ea1-cee235e5ff55
@@ -327,7 +327,7 @@ tasks:
       id: 8f1f6e95-3a23-4793-80b1-4e7ec2d31757
       iscommand: false
       name: DeleteContext
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: 8f1f6e95-3a23-4793-80b1-4e7ec2d31757
@@ -393,7 +393,7 @@ tasks:
       id: 07f5d0a6-616c-41ae-886b-ac74353656f2
       iscommand: false
       name: FileCreateAndUpload
-      scriptName: FileCreateAndUpload
+      script: FileCreateAndUpload
       type: regular
       version: -1
     taskid: 07f5d0a6-616c-41ae-886b-ac74353656f2
@@ -424,7 +424,7 @@ tasks:
       id: c98e55b2-5370-4e5d-870f-3fa2eefc5b0b
       iscommand: false
       name: Delete Context
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: c98e55b2-5370-4e5d-870f-3fa2eefc5b0b
@@ -450,7 +450,7 @@ tasks:
       id: 86700a5d-f744-402d-8201-69812002210e
       iscommand: false
       name: Detonate File - Trend Micro Deep Discovery Analyzer
-      playbookName: Detonate File - Trend Micro Deep Discovery Analyzer
+      playbookId: Detonate File - Trend Micro Deep Discovery Analyzer
       type: playbook
       version: -1
     taskid: 86700a5d-f744-402d-8201-69812002210e
@@ -487,7 +487,7 @@ tasks:
       id: 927cfb35-eb2b-4d84-85cf-1d21a0cf855d
       iscommand: false
       name: Detonate URL - Trend Micro Deep Discovery Analyzer
-      playbookName: Detonate URL - Trend Micro Deep Discovery Analyzer
+      playbookId: Detonate URL - Trend Micro Deep Discovery Analyzer
       type: playbook
       version: -1
     taskid: 927cfb35-eb2b-4d84-85cf-1d21a0cf855d

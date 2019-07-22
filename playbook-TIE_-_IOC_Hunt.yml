@@ -66,7 +66,7 @@ tasks:
       id: 1bf80041-9e03-4daf-861c-a709df537687
       iscommand: false
       name: Is TIE enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 1bf80041-9e03-4daf-861c-a709df537687
@@ -99,7 +99,7 @@ tasks:
       id: 992f05a8-3c0e-43bc-8f68-b40d2a9542e9
       iscommand: false
       name: Is ePO enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 992f05a8-3c0e-43bc-8f68-b40d2a9542e9
@@ -181,7 +181,7 @@ tasks:
       id: adfc3709-ca91-4ac0-8c2b-179c44d30403
       iscommand: false
       name: Did we find any relevant agents?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: adfc3709-ca91-4ac0-8c2b-179c44d30403
@@ -211,7 +211,7 @@ tasks:
       id: 6b8b1d0c-fae5-4779-83a2-9b0e5edbd983
       iscommand: false
       name: Get Agent info from ePO
-      scriptName: EPOFindSystem
+      script: EPOFindSystem
       type: regular
       version: -1
     taskid: 6b8b1d0c-fae5-4779-83a2-9b0e5edbd983

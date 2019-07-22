@@ -549,7 +549,7 @@ tasks:
       id: f6627718-5952-4240-8fba-104c1350e79b
       iscommand: false
       name: Detonate File - JoeSecurity
-      playbookName: Detonate File - JoeSecurity
+      playbookId: detonatefile_-_joesecurity
       type: playbook
       version: -1
     taskid: f6627718-5952-4240-8fba-104c1350e79b
@@ -611,7 +611,7 @@ tasks:
       id: c04567fa-641d-4b51-8c94-561516554b3d
       iscommand: false
       name: ATD - Detonate File
-      playbookName: ATD - Detonate File
+      playbookId: ATD - Detonate File
       type: playbook
       version: -1
     taskid: c04567fa-641d-4b51-8c94-561516554b3d
@@ -660,7 +660,7 @@ tasks:
       id: e82f2557-2a9d-4e13-81b1-ad3f4d685f3d
       iscommand: false
       name: Detonate File - ThreatGrid
-      playbookName: Detonate File - ThreatGrid
+      playbookId: detonate_file_-_threatgrid
       type: playbook
       version: -1
     taskid: e82f2557-2a9d-4e13-81b1-ad3f4d685f3d
@@ -706,7 +706,7 @@ tasks:
       id: f1c56438-d1b6-4848-8608-c6292f3905b9
       iscommand: false
       name: CrowdStrike Falcon Sandbox - Detonate file
-      playbookName: CrowdStrike Falcon Sandbox - Detonate file
+      playbookId: CrowdStrike Falcon Sandbox - Detonate file
       type: playbook
       version: -1
     taskid: f1c56438-d1b6-4848-8608-c6292f3905b9
@@ -748,7 +748,7 @@ tasks:
       id: 0a805640-8d5e-46d4-87f2-04a0781a6ca5
       iscommand: false
       name: WildFire - Detonate file
-      playbookName: WildFire - Detonate file
+      playbookId: WildFire - Detonate file
       type: playbook
       version: -1
     taskid: 0a805640-8d5e-46d4-87f2-04a0781a6ca5
@@ -790,7 +790,7 @@ tasks:
       id: d8093197-7aa9-4b18-8774-563225e8c72b
       iscommand: false
       name: Detonate File - Lastline
-      playbookName: Detonate File - Lastline
+      playbookId: Detonate File - Lastline
       type: playbook
       version: -1
     taskid: d8093197-7aa9-4b18-8774-563225e8c72b
@@ -824,7 +824,7 @@ tasks:
       id: 0e879eba-0377-44bf-81c4-83468555fec4
       iscommand: false
       name: Detonate File - Cuckoo
-      playbookName: Detonate File - Cuckoo
+      playbookId: Detonate File - Cuckoo
       type: playbook
       version: -1
     taskid: 0e879eba-0377-44bf-81c4-83468555fec4
@@ -863,7 +863,7 @@ tasks:
       id: e69051d8-12bd-440c-85de-3f3c713d1556
       iscommand: false
       name: Detonate File - SNDBOX
-      playbookName: Detonate File - SNDBOX
+      playbookId: Detonate File - SNDBOX
       type: playbook
       version: -1
     taskid: e69051d8-12bd-440c-85de-3f3c713d1556
@@ -890,7 +890,7 @@ tasks:
       id: 8bcf20e7-7f82-434b-8b21-200f3423a0ce
       iscommand: false
       name: Detonate File - HybridAnalysis
-      playbookName: Detonate File - HybridAnalysis
+      playbookId: Detonate File - HybridAnalysis
       type: playbook
       version: -1
     taskid: 8bcf20e7-7f82-434b-8b21-200f3423a0ce
@@ -917,7 +917,7 @@ tasks:
       id: 11d549c4-31e9-4cd9-8983-9e1a1c7c4baf
       iscommand: false
       name: Detonate File - ANYRUN
-      playbookName: Detonate File - ANYRUN
+      playbookId: Detonate File - ANYRUN
       type: playbook
       version: -1
     taskid: 11d549c4-31e9-4cd9-8983-9e1a1c7c4baf
@@ -956,7 +956,7 @@ tasks:
       id: 3727eda2-2c84-4730-8739-b54bc07a36c3
       iscommand: false
       name: Detonate File - FireEye AX
-      playbookName: Detonate File - FireEye AX
+      playbookId: Detonate File - FireEye AX
       type: playbook
       version: -1
     taskid: 3727eda2-2c84-4730-8739-b54bc07a36c3
@@ -1004,7 +1004,7 @@ tasks:
       id: 77b7e144-a6a2-4e93-8e69-1160f9921573
       iscommand: false
       name: Detonate File - VMRay
-      playbookName: Detonate File - VMRay
+      playbookId: 79b5d8a6-2636-480c-8e1c-a3ab2e58ffb5
       type: playbook
       version: -1
     taskid: 77b7e144-a6a2-4e93-8e69-1160f9921573

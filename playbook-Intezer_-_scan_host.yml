@@ -88,7 +88,7 @@ tasks:
       id: 85dde700-9f3a-41c8-8e00-028cf4b91808
       iscommand: false
       name: Add the endpoint as a System to this incident
-      scriptName: IncidentAddSystem
+      script: IncidentAddSystem
       type: regular
       version: -1
     taskid: 85dde700-9f3a-41c8-8e00-028cf4b91808
@@ -123,7 +123,7 @@ tasks:
       id: 24cabd05-fad2-4940-8241-3ee3763d4f8d
       iscommand: false
       name: d2 agent - Scan host by Intezer
-      scriptName: IntezerScanHost
+      script: IntezerScanHost
       type: regular
       version: -1
     taskid: 24cabd05-fad2-4940-8241-3ee3763d4f8d
@@ -156,7 +156,7 @@ tasks:
       id: 33071f86-45fc-4c71-8fa3-ad933acbe3a8
       iscommand: false
       name: Does 'Host' input exist?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 33071f86-45fc-4c71-8fa3-ad933acbe3a8
@@ -215,7 +215,7 @@ tasks:
       id: 2e1213d1-3ff8-41c7-8ec9-d1c50ced85e8
       iscommand: false
       name: Is the OS type Windows?
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: 2e1213d1-3ff8-41c7-8ec9-d1c50ced85e8
@@ -272,7 +272,7 @@ tasks:
       id: 98eeed9c-3ef1-4a28-8347-537ae2c48945
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: 98eeed9c-3ef1-4a28-8347-537ae2c48945

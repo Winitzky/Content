@@ -216,7 +216,7 @@ tasks:
       id: 3331390f-9148-4775-85f9-882c131a20ab
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: 3331390f-9148-4775-85f9-882c131a20ab

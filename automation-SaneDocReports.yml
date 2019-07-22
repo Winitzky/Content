@@ -8,7 +8,7 @@ commonfields:
   id: SaneDocReports
   version: -1
 deprecated: true
-dockerimage: demisto/sane-doc-reports:1.0.0.789
+dockerimage: demisto/sane-doc-reports:1.0.0.356
 enabled: true
 name: SaneDocReports
 runas: DBotWeakRole

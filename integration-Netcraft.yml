@@ -4,25 +4,20 @@ commonfields:
   version: -1
 configuration:
 - defaultvalue: ""
-  display: Credentials
-  name: credentials
-  required: true
-  type: 9
+  display: Use system proxy
+  name: proxy
+  required: false
+  type: 8
 - defaultvalue: "100"
   display: The maximum number of entries (takedowns/notes) to return. Default is 100.
   name: limit
   required: false
   type: 0
 - defaultvalue: ""
-  display: Use system proxy settings
-  name: proxy
-  required: false
-  type: 8
-- defaultvalue: ""
-  display: Trust any certificate (not secure)
-  name: unsecure
-  required: false
-  type: 8
+  display: Credentials
+  name: credentials
+  required: true
+  type: 9
 description: An integration for Netcraft, allowing you to open and handle takedown
   requests.
 display: Netcraft
@@ -685,7 +680,7 @@ script:
 
 
     @logger
-    def report_attack(malicious_site_url, comment, is_test_request=False):
+    def report_malicious_site(malicious_site_url, comment, is_test_request=False):
         data_for_request = {
             "attack": malicious_site_url,
             "comment": comment
@@ -698,10 +693,10 @@ script:
         return request_result
 
 
-    def report_attack_command():
+    def report_malicious_site_command():
         args = demisto.args()
         entry_context: dict = {}
-        response_lines_array = report_attack(args["attack"], args["comment"])
+        response_lines_array = report_malicious_site(args["malicious_site_url"], args["comment"])
         result_answer = response_lines_array[0]
         if result_answer == MALICIOUS_REPORT_SUCCESS:
             new_takedown_id = response_lines_array[1]
@@ -728,7 +723,7 @@ script:
         """
         Performs basic get request to get item samples
         """
-        test_result = report_attack("https://www.test.com", "test", True)
+        test_result = report_malicious_site("https://www.test.com", "test", True)
         if test_result[0] != MALICIOUS_REPORT_SUCCESS:
             raise Exception("Test request failed.")
         demisto.results("ok")
@@ -741,8 +736,8 @@ script:
     try:
         if demisto.command() == 'test-module':
             test_module()
-        elif demisto.command() == 'netcraft-report-attack':
-            report_attack_command()
+        elif demisto.command() == 'netcraft-report-malicious-site':
+            report_malicious_site_command()
         elif demisto.command() == 'netcraft-get-takedown-info':
             get_takedown_info_command()
         elif demisto.command() == 'netcraft-get-takedown-notes':

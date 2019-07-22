@@ -142,7 +142,7 @@ tasks:
       id: c4b25dd8-ef84-429f-8edc-a162b3dbf000
       iscommand: false
       name: Account Enrichment - Generic
-      playbookName: Account Enrichment - Generic
+      playbookId: account_enrichment_-_generic
       type: playbook
       version: -1
     taskid: c4b25dd8-ef84-429f-8edc-a162b3dbf000
@@ -414,7 +414,7 @@ tasks:
       id: 0e9d5518-3755-4d4b-8254-631b021ad18a
       iscommand: false
       name: Request user to confirm account activity
-      scriptName: EmailAskUser
+      script: EmailAskUser
       type: regular
       version: -1
     taskid: 0e9d5518-3755-4d4b-8254-631b021ad18a
@@ -530,7 +530,7 @@ tasks:
       id: 6ba49d12-a2e7-40bb-85d2-2a7849adc774
       iscommand: false
       name: Get manager's info
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: 6ba49d12-a2e7-40bb-85d2-2a7849adc774
@@ -567,7 +567,7 @@ tasks:
       id: 160c3d44-9b6f-4207-8df9-69f7c6ac3eb7
       iscommand: false
       name: IP Enrichment - Generic
-      playbookName: IP Enrichment - Generic
+      playbookId: ip_enrichment_generic
       type: playbook
       version: -1
     taskid: 160c3d44-9b6f-4207-8df9-69f7c6ac3eb7
@@ -604,7 +604,7 @@ tasks:
       id: 74b00019-68dc-4e52-8b6e-8eb97721b8cb
       iscommand: false
       name: IP Enrichment - Generic
-      playbookName: IP Enrichment - Generic
+      playbookId: ip_enrichment_generic
       type: playbook
       version: -1
     taskid: 74b00019-68dc-4e52-8b6e-8eb97721b8cb
@@ -955,7 +955,7 @@ tasks:
       id: b914ceed-2615-4c1b-8d64-74b2a8da5cd0
       iscommand: false
       name: Assign to analyst
-      scriptName: AssignAnalystToIncident
+      script: AssignAnalystToIncident
       type: regular
       version: -1
     taskid: b914ceed-2615-4c1b-8d64-74b2a8da5cd0

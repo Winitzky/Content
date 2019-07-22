@@ -149,7 +149,7 @@ tasks:
       id: 777ec369-d05d-4f8f-8c43-8068566e3ed0
       iscommand: false
       name: IP Enrichment - External - Generic v2
-      playbookName: IP Enrichment - External - Generic v2
+      playbookId: IP Enrichment - External - Generic v2
       type: playbook
       version: -1
     taskid: 777ec369-d05d-4f8f-8c43-8068566e3ed0
@@ -202,7 +202,7 @@ tasks:
       id: 6d0d48a2-7a07-400b-8f98-9c832a56ff8f
       iscommand: false
       name: IP Enrichment - Internal - Generic v2
-      playbookName: IP Enrichment - Internal - Generic v2
+      playbookId: IP Enrichment - Internal - Generic v2
       type: playbook
       version: -1
     taskid: 6d0d48a2-7a07-400b-8f98-9c832a56ff8f

@@ -13,7 +13,6 @@ configuration:
   name: useProxy
   required: false
   type: 8
-deprecated: true
 description: Analyzes suspicious domains and IP addresses
 detaileddescription: |
   Analyzes suspicious domains and IP addresses.

@@ -111,7 +111,7 @@ tasks:
       id: 1d8b490b-45a3-4155-8773-a55a106aab5e
       iscommand: false
       name: Get domain Reputation
-      scriptName: DomainReputation
+      script: DomainReputation
       type: regular
       version: -1
     taskid: 1d8b490b-45a3-4155-8773-a55a106aab5e

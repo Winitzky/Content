@@ -44,7 +44,7 @@ tasks:
       id: 4575847d-6979-4a86-8f77-ad7afcda5b01
       iscommand: false
       name: ""
-      playbookName: Carbon black Protection Rapid IOC Hunting
+      playbookId: playbook17
       type: playbook
       version: -1
     taskid: 4575847d-6979-4a86-8f77-ad7afcda5b01
@@ -67,7 +67,7 @@ tasks:
       id: ea507294-262f-4b30-879a-7a0d33944a0f
       iscommand: false
       name: ""
-      playbookName: Carbon Black Rapid IOC Hunting
+      playbookId: Carbon Black Rapid IOC Hunting
       type: playbook
       version: -1
     taskid: ea507294-262f-4b30-879a-7a0d33944a0f
@@ -90,7 +90,7 @@ tasks:
       id: 69cac33b-55de-4223-84f4-dea5ccca44e9
       iscommand: false
       name: ""
-      playbookName: CrowdStrike Rapid IOC Hunting
+      playbookId: playbook16
       type: playbook
       version: -1
     taskid: 69cac33b-55de-4223-84f4-dea5ccca44e9
@@ -113,7 +113,7 @@ tasks:
       id: e977184e-8358-4c0e-88f5-9a0bb3b41bb6
       iscommand: false
       name: ""
-      playbookName: TIE - IOC Hunt
+      playbookId: TIE - IOC Hunt
       type: playbook
       version: -1
     taskid: e977184e-8358-4c0e-88f5-9a0bb3b41bb6

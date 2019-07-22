@@ -156,7 +156,7 @@ tasks:
       id: ebe7bb7e-6956-4392-83fd-265b59ba73cb
       iscommand: false
       name: Find duplicates by text
-      scriptName: FindSimilarIncidentsByText
+      script: FindSimilarIncidentsByText
       type: regular
       version: -1
     taskid: ebe7bb7e-6956-4392-83fd-265b59ba73cb
@@ -241,7 +241,7 @@ tasks:
       id: 15ca6629-8830-44ec-84d4-4f3bcef19011
       iscommand: false
       name: Find similar incidents by rules
-      scriptName: FindSimilarIncidents
+      script: FindSimilarIncidents
       type: regular
       version: -1
     taskid: 15ca6629-8830-44ec-84d4-4f3bcef19011
@@ -285,7 +285,7 @@ tasks:
       id: ee12b870-3892-4dd8-8635-0c5f13b30ea3
       iscommand: false
       name: Find duplicates by ml
-      scriptName: GetDuplicatesMlv2
+      script: GetDuplicatesMlv2
       type: regular
       version: -1
     taskid: ee12b870-3892-4dd8-8635-0c5f13b30ea3
@@ -316,7 +316,7 @@ tasks:
       id: 857267ed-a8bf-4d65-8a80-967656990b57
       iscommand: false
       name: Close investigation as duplicate
-      scriptName: CloseInvestigationAsDuplicate
+      script: CloseInvestigationAsDuplicate
       type: regular
       version: -1
     taskid: 857267ed-a8bf-4d65-8a80-967656990b57

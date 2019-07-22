@@ -174,7 +174,7 @@ tasks:
       id: b5ea6e49-a7eb-49d7-8398-3087829d7aee
       iscommand: false
       name: 'Is Rasterize integration enabled? '
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: b5ea6e49-a7eb-49d7-8398-3087829d7aee
@@ -337,7 +337,7 @@ tasks:
       id: c1f28ba3-01a8-49c1-8526-f019649a5400
       iscommand: false
       name: Verify SSL for URLs
-      scriptName: URLSSLVerification
+      script: URLSSLVerification
       type: regular
       version: -1
     taskid: c1f28ba3-01a8-49c1-8526-f019649a5400

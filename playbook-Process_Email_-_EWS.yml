@@ -166,7 +166,7 @@ tasks:
       id: 86c8a1a4-96d2-4d5b-8d24-7710318ac280
       iscommand: false
       name: Set email context key
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 86c8a1a4-96d2-4d5b-8d24-7710318ac280

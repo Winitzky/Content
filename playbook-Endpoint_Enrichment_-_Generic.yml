@@ -116,7 +116,7 @@ tasks:
       id: 69d20bc5-f201-440f-8d93-6054c33af852
       iscommand: false
       name: Is ePO enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 69d20bc5-f201-440f-8d93-6054c33af852
@@ -207,7 +207,7 @@ tasks:
       id: c91a3fdb-160c-42d9-87ef-5fb240ad2565
       iscommand: false
       name: Get host information from ePO
-      scriptName: EPOFindSystem
+      script: EPOFindSystem
       type: regular
       version: -1
     taskid: c91a3fdb-160c-42d9-87ef-5fb240ad2565
@@ -257,7 +257,7 @@ tasks:
       id: 7a3a4170-f604-471b-8962-87590bb2d505
       iscommand: false
       name: Is SentinelOne enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 7a3a4170-f604-471b-8962-87590bb2d505
@@ -374,7 +374,7 @@ tasks:
       id: 2b7a6a53-6c8d-4dce-8ce6-56ae0da3a917
       iscommand: false
       name: Is Carbon Black Enterprise Response enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 2b7a6a53-6c8d-4dce-8ce6-56ae0da3a917
@@ -498,7 +498,7 @@ tasks:
       id: 86a1a174-c652-4d82-8f00-2f72d718ac7f
       iscommand: false
       name: Is CrowdStrike Falcon Host enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 86a1a174-c652-4d82-8f00-2f72d718ac7f
@@ -548,7 +548,7 @@ tasks:
       id: feb95688-7d7c-4ed4-8eb8-5a37ed9101cf
       iscommand: false
       name: Is Cylance Protect enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: feb95688-7d7c-4ed4-8eb8-5a37ed9101cf
@@ -769,7 +769,7 @@ tasks:
       id: f9ed7e73-031c-41e3-8da7-ec396363d74e
       iscommand: false
       name: Is Active Directory enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: f9ed7e73-031c-41e3-8da7-ec396363d74e
@@ -805,7 +805,7 @@ tasks:
       id: b73cced2-42a6-4e86-8b30-3c0f21e44dfa
       iscommand: false
       name: Get host information from Active Directory
-      scriptName: ADGetComputer
+      script: ADGetComputer
       type: regular
       version: -1
     taskid: b73cced2-42a6-4e86-8b30-3c0f21e44dfa
@@ -863,7 +863,7 @@ tasks:
       id: b743dbf9-c2c0-4529-8dad-92ffe5647134
       iscommand: false
       name: CrowdStrike Endpoint Enrichment
-      playbookName: CrowdStrike Endpoint Enrichment
+      playbookId: crowdstrike_endpoint_enrichment
       type: playbook
       version: -1
     taskid: b743dbf9-c2c0-4529-8dad-92ffe5647134

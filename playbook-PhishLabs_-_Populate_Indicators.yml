@@ -86,7 +86,7 @@ tasks:
       id: ab28c63c-ea49-480e-858b-c6537c5f11c0
       iscommand: false
       name: Populate indicators
-      scriptName: PhishLabsPopulateIndicators
+      script: 73f6af4b-6e5b-4aff-88fb-e18c8cfa1154
       type: regular
       version: -1
     taskid: ab28c63c-ea49-480e-858b-c6537c5f11c0

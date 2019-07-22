@@ -204,7 +204,7 @@ tasks:
       id: 58c8b53f-8817-4aaa-8231-823b45d96671
       iscommand: false
       name: Build EWS query
-      scriptName: BuildEWSQuery
+      script: BuildEWSQuery
       type: regular
       version: -1
     taskid: 58c8b53f-8817-4aaa-8231-823b45d96671

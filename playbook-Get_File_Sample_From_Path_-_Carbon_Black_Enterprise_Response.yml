@@ -82,7 +82,7 @@ tasks:
       id: 40ec070b-2ab3-432a-86fa-eb02b381398a
       iscommand: false
       name: Is Carbon Black Enterprise Response enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 40ec070b-2ab3-432a-86fa-eb02b381398a
@@ -138,7 +138,7 @@ tasks:
       id: 6361a341-4a5c-4735-8ffe-ce13d9539b91
       iscommand: false
       name: Get File
-      scriptName: CBLiveGetFile
+      script: CBLiveGetFile
       type: regular
       version: -1
     taskid: 6361a341-4a5c-4735-8ffe-ce13d9539b91

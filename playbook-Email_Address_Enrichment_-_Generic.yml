@@ -205,7 +205,7 @@ tasks:
       id: 3291020c-5ec9-4f58-8814-27c07a575dc0
       iscommand: false
       name: Check Email addresses  reputation
-      scriptName: EmailReputation
+      script: EmailReputation
       type: regular
       version: -1
     taskid: 3291020c-5ec9-4f58-8814-27c07a575dc0
@@ -241,7 +241,7 @@ tasks:
       id: 550ff29a-79f5-4274-847f-fabf4193d2a7
       iscommand: false
       name: Mark Email addresses as internal or external
-      scriptName: IsEmailAddressInternal
+      script: IsEmailAddressInternal
       type: regular
       version: -1
     taskid: 550ff29a-79f5-4274-847f-fabf4193d2a7
@@ -343,7 +343,7 @@ tasks:
       id: e66c5a66-3272-4ef8-8283-b0bc74af7cd0
       iscommand: false
       name: Get Email addresses info from Active Directory
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: e66c5a66-3272-4ef8-8283-b0bc74af7cd0
@@ -386,7 +386,7 @@ tasks:
       id: f335c2d8-9c33-4b5e-8cf6-d8ab05f9cb9a
       iscommand: false
       name: Are there external email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: f335c2d8-9c33-4b5e-8cf6-d8ab05f9cb9a
@@ -429,7 +429,7 @@ tasks:
       id: 882a4290-4166-4b8a-81f9-b5d163f34f06
       iscommand: false
       name: Are there internal email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 882a4290-4166-4b8a-81f9-b5d163f34f06
@@ -475,7 +475,7 @@ tasks:
       id: ab84c271-880d-4dc8-8feb-e73c2d4004e0
       iscommand: false
       name: Check Email addresses DomainSquatting Reputation
-      scriptName: EmailDomainSquattingReputation
+      script: EmailDomainSquattingReputation
       type: regular
       version: -1
     taskid: ab84c271-880d-4dc8-8feb-e73c2d4004e0
@@ -551,7 +551,7 @@ tasks:
       id: a030b50a-b7ba-4aba-89db-eb2a50d29e4d
       iscommand: false
       name: Is Active Directory enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a030b50a-b7ba-4aba-89db-eb2a50d29e4d
@@ -583,7 +583,7 @@ tasks:
       id: 2a3f300c-f84f-43ac-8ec7-c98afd558416
       iscommand: false
       name: Is there a domain list input?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 2a3f300c-f84f-43ac-8ec7-c98afd558416

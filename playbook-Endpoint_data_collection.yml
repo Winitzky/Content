@@ -62,7 +62,7 @@ tasks:
       id: b2c6a043-bedf-40e9-8b34-064891fa6597
       iscommand: false
       name: Use D2 agent?
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: b2c6a043-bedf-40e9-8b34-064891fa6597
@@ -108,7 +108,7 @@ tasks:
       id: 8c9dec86-a668-4e3e-8824-075fe18330ac
       iscommand: false
       name: D2 - Endpoint data collection
-      playbookName: D2 - Endpoint data collection
+      playbookId: D2 - Endpoint data collection
       type: playbook
       version: -1
     taskid: 8c9dec86-a668-4e3e-8824-075fe18330ac
@@ -189,7 +189,7 @@ tasks:
       id: e70f5c75-4cb1-430c-8660-b01ad288ddec
       iscommand: false
       name: MAR - Endpoint data collection
-      playbookName: MAR - Endpoint data collection
+      playbookId: MAR - Endpoint data collection
       type: playbook
       version: -1
     taskid: 3359e593-8218-4132-8a69-d48fc9aa78a7
@@ -222,7 +222,7 @@ tasks:
       id: 121a30fb-c5ea-41d3-86db-e9753c08ada7
       iscommand: false
       name: Sentinel One - Endpoint data collection
-      playbookName: Sentinel One - Endpoint data collection
+      playbookId: Sentinel One - Endpoint data collection
       type: playbook
       version: -1
     taskid: 121a30fb-c5ea-41d3-86db-e9753c08ada7

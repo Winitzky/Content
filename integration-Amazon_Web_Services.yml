@@ -18,7 +18,6 @@ configuration:
   name: secretAccessKey
   required: true
   type: 4
-deprecated: true
 description: AWS - amazon public cloud , EC2 service
 detaileddescription: |-
   Url must be of the form : https://ec2.region.amazonaws.com/ (like https://ec2.eu-central-1.amazonaws.com/)

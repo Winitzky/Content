@@ -60,7 +60,7 @@ tasks:
       id: 5bf410a0-bb6f-4278-80a9-aaf0e6122344
       iscommand: false
       name: Whitelist false positives
-      scriptName: PhishLabsPopulateIndicators
+      script: 73f6af4b-6e5b-4aff-88fb-e18c8cfa1154
       type: regular
       version: -1
     taskid: 5bf410a0-bb6f-4278-80a9-aaf0e6122344

@@ -49,7 +49,7 @@ tasks:
       id: ee3ec982-b1ea-4c96-81d6-6b1ea068cfb4
       iscommand: false
       name: Search observed hashes in the Bit9 file catalog
-      scriptName: CBPCatalogFindHash
+      script: CBPCatalogFindHash
       type: regular
       version: -1
     taskid: ee3ec982-b1ea-4c96-81d6-6b1ea068cfb4
@@ -82,7 +82,7 @@ tasks:
       id: 0f461a0b-6e31-4537-8b10-564d6c2e0dfa
       iscommand: false
       name: Check if the hashes are included in any Bit9 rules
-      scriptName: CBPFindRule
+      script: CBPFindRule
       type: regular
       version: -1
     taskid: 0f461a0b-6e31-4537-8b10-564d6c2e0dfa
@@ -115,7 +115,7 @@ tasks:
       id: ec572e1b-78cf-4daf-8185-688d7b04041b
       iscommand: false
       name: Is CarbonBlack Protection enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: ec572e1b-78cf-4daf-8185-688d7b04041b
@@ -171,7 +171,7 @@ tasks:
       id: 71e0a3f7-355e-41b2-8623-b6a606e9e79f
       iscommand: false
       name: Do we have files to hunt?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 71e0a3f7-355e-41b2-8623-b6a606e9e79f

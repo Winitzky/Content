@@ -387,7 +387,7 @@ tasks:
       id: f779358d-7e46-4afd-8b42-b48167adb764
       iscommand: false
       name: Retrieve CVE reputation
-      scriptName: cveReputation
+      script: b695f044-fbdd-4d4b-89ce-9066cb0e165a
       type: regular
       version: -1
     taskid: f779358d-7e46-4afd-8b42-b48167adb764

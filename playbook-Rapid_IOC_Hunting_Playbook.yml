@@ -80,7 +80,7 @@ tasks:
       id: 7e822405-36be-4341-857e-bcc4e6b98402
       iscommand: false
       name: Need to Load data from attached text files?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 7e822405-36be-4341-857e-bcc4e6b98402
@@ -109,7 +109,7 @@ tasks:
       id: ef989693-4e8e-472e-84bf-bf6566ef1851
       iscommand: false
       name: Extract hashes from text file
-      scriptName: ExtractHash
+      script: ExtractHash
       type: regular
       version: -1
     taskid: ef989693-4e8e-472e-84bf-bf6566ef1851
@@ -138,7 +138,7 @@ tasks:
       id: 43ddbd9e-84f5-42c1-8398-e94851c85cff
       iscommand: false
       name: Extract IP address from text file
-      scriptName: ExtractIP
+      script: ExtractIP
       type: regular
       version: -1
     taskid: 43ddbd9e-84f5-42c1-8398-e94851c85cff
@@ -195,7 +195,7 @@ tasks:
       id: 37fc767e-b23c-463a-84da-40a94e6b1b6a
       iscommand: false
       name: Collect Hashes from incident
-      scriptName: ExtractHash
+      script: ExtractHash
       type: regular
       version: -1
     taskid: 37fc767e-b23c-463a-84da-40a94e6b1b6a
@@ -227,7 +227,7 @@ tasks:
       id: 7845e26f-f375-4a41-8720-0d186a052382
       iscommand: false
       name: Collect IPs from incident
-      scriptName: ExtractIP
+      script: ExtractIP
       type: regular
       version: -1
     taskid: 7845e26f-f375-4a41-8720-0d186a052382
@@ -257,7 +257,7 @@ tasks:
       id: 5e13d196-7f69-48e0-88d8-e9347d2b0567
       iscommand: false
       name: Load contents of attached textual files
-      scriptName: ReadFile
+      script: ReadFile
       type: regular
       version: -1
     taskid: 5e13d196-7f69-48e0-88d8-e9347d2b0567
@@ -289,7 +289,7 @@ tasks:
       id: 41007d8b-b092-4c62-8bb4-9176b3b8ad62
       iscommand: false
       name: Collect URLs from incident
-      scriptName: ExtractURL
+      script: ExtractURL
       type: regular
       version: -1
     taskid: 41007d8b-b092-4c62-8bb4-9176b3b8ad62
@@ -315,7 +315,7 @@ tasks:
       id: 80ca226e-af97-4a74-818b-5cbc2f74e7e5
       iscommand: false
       name: Analyst work - hunt manually
-      scriptName: Print
+      script: Print
       type: regular
       version: -1
     taskid: 80ca226e-af97-4a74-818b-5cbc2f74e7e5
@@ -341,7 +341,7 @@ tasks:
       id: 235f1662-0f0d-45fa-8e3f-18ee2419e1c1
       iscommand: false
       name: ""
-      playbookName: Hunt for bad IOCs
+      playbookId: Hunt for bad IOCs
       type: playbook
       version: -1
     taskid: 235f1662-0f0d-45fa-8e3f-18ee2419e1c1

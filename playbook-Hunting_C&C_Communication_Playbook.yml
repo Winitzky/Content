@@ -390,7 +390,7 @@ tasks:
       id: 69cd0199-8b53-4358-89ed-63677ad5c20c
       iscommand: false
       name: Is PassiveTotal Available?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 69cd0199-8b53-4358-89ed-63677ad5c20c
@@ -449,7 +449,7 @@ tasks:
       id: 0d2eda66-3682-4884-892e-82d33324855d
       iscommand: false
       name: Is CrowdStrike Intel Available?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 0d2eda66-3682-4884-892e-82d33324855d
@@ -766,7 +766,7 @@ tasks:
       id: 00d3bb90-f069-4f86-8b0d-b68573ec9ddc
       iscommand: false
       name: Is Slack Available?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 00d3bb90-f069-4f86-8b0d-b68573ec9ddc
@@ -823,7 +823,7 @@ tasks:
       id: 9f4c6dba-dd4b-4673-86a8-19de7b29b237
       iscommand: false
       name: Is Twilio Available?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 9f4c6dba-dd4b-4673-86a8-19de7b29b237
@@ -1083,7 +1083,7 @@ tasks:
       id: a80fd4c5-d1b2-4095-88a8-242e4ae17db5
       iscommand: false
       name: Is Slack Available?
-      scriptName: IsIntegrationAvailable
+      script: IsIntegrationAvailable
       type: condition
       version: -1
     taskid: a80fd4c5-d1b2-4095-88a8-242e4ae17db5
@@ -1140,7 +1140,7 @@ tasks:
       id: 18edd09f-be16-4da9-872c-3934845a255d
       iscommand: false
       name: Is Twilio Available?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 18edd09f-be16-4da9-872c-3934845a255d

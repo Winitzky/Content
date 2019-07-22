@@ -164,7 +164,7 @@ tasks:
       id: 70863b9a-af3f-4f0a-8e91-cae2c88f5488
       iscommand: false
       name: Do we have original emails attached?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 70863b9a-af3f-4f0a-8e91-cae2c88f5488
@@ -199,7 +199,7 @@ tasks:
       id: 0dd910be-f198-4b5d-8dbb-8d7170049463
       iscommand: false
       name: Add original email details to context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 0dd910be-f198-4b5d-8dbb-8d7170049463
@@ -240,7 +240,7 @@ tasks:
       id: 4ac2b332-b76d-463e-824e-717895c5b644
       iscommand: false
       name: Add original email attachments to context
-      scriptName: ParseEmailFiles
+      script: ParseEmailFiles
       type: regular
       version: -1
     taskid: 4ac2b332-b76d-463e-824e-717895c5b644
@@ -263,11 +263,6 @@ tasks:
                 accessor: HTML
                 root: Email
           operator: isExists
-      - - left:
-            iscontext: true
-            value:
-              simple: Email.HTML
-          operator: isNotEmpty
       label: "yes"
     id: "4"
     ignoreworker: false
@@ -280,12 +275,12 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      id: d6f90ffe-1111-447a-8755-65189ec1f6d5
+      id: be6f6daf-0497-423e-8a48-d669ccad567f
       iscommand: false
       name: Is there an HTML label in the email?
       type: condition
       version: -1
-    taskid: d6f90ffe-1111-447a-8755-65189ec1f6d5
+    taskid: be6f6daf-0497-423e-8a48-d669ccad567f
     timertriggers: []
     type: condition
     view: |-
@@ -314,7 +309,7 @@ tasks:
     separatecontext: false
     task:
       brand: Rasterize
-      id: 3a4baebb-0463-442c-8971-3f681d240366
+      id: c18ef7a3-f278-4255-86ac-5b127f991302
       iscommand: true
       name: Render HTML to an image
       script: Rasterize|||rasterize-email
@@ -322,7 +317,7 @@ tasks:
       - email_html_image
       type: regular
       version: -1
-    taskid: 3a4baebb-0463-442c-8971-3f681d240366
+    taskid: c18ef7a3-f278-4255-86ac-5b127f991302
     timertriggers: []
     type: regular
     view: |-
@@ -783,7 +778,7 @@ tasks:
       id: e6915e5d-bdca-4d59-8636-2e65b2e680e1
       iscommand: false
       name: Get Original Email - Generic
-      playbookName: Get Original Email - Generic
+      playbookId: get_original_email_-_generic
       type: playbook
       version: -1
     taskid: e6915e5d-bdca-4d59-8636-2e65b2e680e1

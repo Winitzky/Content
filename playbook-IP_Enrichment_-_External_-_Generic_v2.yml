@@ -255,7 +255,7 @@ tasks:
       id: 583bdb15-2ba1-4818-8040-960105e9c247
       iscommand: false
       name: Determine whether the IP address is internal or external
-      scriptName: IsIPInRanges
+      script: IsIPInRanges
       type: regular
       version: -1
     taskid: 583bdb15-2ba1-4818-8040-960105e9c247
@@ -349,7 +349,7 @@ tasks:
       id: 9a9092a5-a173-4c8d-8a0c-f63960c42451
       iscommand: false
       name: IP to Hostname (DNS)
-      scriptName: IPToHost
+      script: ip_to_host
       type: regular
       version: -1
     taskid: 9a9092a5-a173-4c8d-8a0c-f63960c42451

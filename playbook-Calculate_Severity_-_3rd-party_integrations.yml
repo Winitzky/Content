@@ -69,7 +69,7 @@ tasks:
       id: 5f92bc72-085f-4c03-8404-82f83dac6c62
       iscommand: false
       name: Set severity to "High"
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 5f92bc72-085f-4c03-8404-82f83dac6c62
@@ -256,7 +256,7 @@ tasks:
       id: 89c78898-8fef-4807-8a3d-1c4f042c4eb2
       iscommand: false
       name: Set severity to "Medium"
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 89c78898-8fef-4807-8a3d-1c4f042c4eb2
@@ -289,7 +289,7 @@ tasks:
       id: 84f71501-bcb9-481c-85d5-2efa59f1c1a4
       iscommand: false
       name: Set severity to "Low"
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 84f71501-bcb9-481c-85d5-2efa59f1c1a4

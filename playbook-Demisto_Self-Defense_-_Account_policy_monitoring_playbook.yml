@@ -343,7 +343,7 @@ tasks:
       id: 99688ee1-63c3-4e75-8148-952305bcd890
       iscommand: false
       name: Close
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: 99688ee1-63c3-4e75-8148-952305bcd890

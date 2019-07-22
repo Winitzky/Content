@@ -103,7 +103,7 @@ tasks:
       id: 2e0a1bd6-0e9a-4906-843c-e4652ed671f2
       iscommand: false
       name: Auto-respond to acknowledge receipt
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: 2e0a1bd6-0e9a-4906-843c-e4652ed671f2
@@ -132,7 +132,7 @@ tasks:
       id: b2b1f385-7cff-427a-8882-2c18875c9a2e
       iscommand: false
       name: Extract IP Addresses from email
-      scriptName: ExtractIP
+      script: ExtractIP
       type: regular
       version: -1
     taskid: b2b1f385-7cff-427a-8882-2c18875c9a2e
@@ -161,7 +161,7 @@ tasks:
       id: a846334e-5ccc-4d95-8244-d57ec36d6e2f
       iscommand: false
       name: Extract URLs from email
-      scriptName: ExtractURL
+      script: ExtractURL
       type: regular
       version: -1
     taskid: a846334e-5ccc-4d95-8244-d57ec36d6e2f
@@ -252,7 +252,7 @@ tasks:
       id: 7f2d8700-472f-4cfa-87e4-97681e5309fa
       iscommand: false
       name: Check sender domain distance
-      scriptName: CheckSenderDomainDistance
+      script: CheckSenderDomainDistance
       type: regular
       version: -1
     taskid: 7f2d8700-472f-4cfa-87e4-97681e5309fa
@@ -462,7 +462,7 @@ tasks:
       id: aafb8c0f-765a-4bbb-81c9-b1435b795f2e
       iscommand: false
       name: Send email to user notifying them this email is safe
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: aafb8c0f-765a-4bbb-81c9-b1435b795f2e
@@ -491,7 +491,7 @@ tasks:
       id: abf517ab-27b6-49a9-853d-41e56650a92a
       iscommand: false
       name: Close the phishing investigation
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: abf517ab-27b6-49a9-853d-41e56650a92a
@@ -534,7 +534,7 @@ tasks:
       id: 8a9ba010-09e1-4aa6-810f-859ae66768e6
       iscommand: false
       name: Send email to user notifying them it's a malicious email
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: 8a9ba010-09e1-4aa6-810f-859ae66768e6
@@ -570,7 +570,7 @@ tasks:
       id: 9892f321-ad3e-45ed-8abe-a4f29f29068a
       iscommand: false
       name: Did we find an attachment inside the email and extract its hash?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 9892f321-ad3e-45ed-8abe-a4f29f29068a
@@ -674,7 +674,7 @@ tasks:
       id: 5359d876-c7b6-495c-8249-fd87d30d5663
       iscommand: false
       name: Was any malicious indicator found?
-      scriptName: IsMaliciousIndicatorFound
+      script: IsMaliciousIndicatorFound
       type: condition
       version: -1
     taskid: 5359d876-c7b6-495c-8249-fd87d30d5663
@@ -705,7 +705,7 @@ tasks:
       id: a2f77d09-4dc1-431a-8d7f-538f3b285e56
       iscommand: false
       name: Is the distance really small
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a2f77d09-4dc1-431a-8d7f-538f3b285e56
@@ -760,7 +760,7 @@ tasks:
       id: bff69be5-924f-4eda-8264-83e9c2246ab6
       iscommand: false
       name: Store the sending account
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: bff69be5-924f-4eda-8264-83e9c2246ab6
@@ -786,7 +786,7 @@ tasks:
       id: 286c067d-78e0-4d90-8107-eec5625b4b82
       iscommand: false
       name: ""
-      playbookName: Enrichment Playbook
+      playbookId: Enrichment Playbook
       type: playbook
       version: -1
     taskid: 286c067d-78e0-4d90-8107-eec5625b4b82
@@ -812,7 +812,7 @@ tasks:
       id: 6104b475-bee7-42aa-87c4-07c6e433a350
       iscommand: false
       name: ""
-      playbookName: Account Enrichment
+      playbookId: Account Enrichment
       type: playbook
       version: -1
     taskid: 6104b475-bee7-42aa-87c4-07c6e433a350
@@ -838,7 +838,7 @@ tasks:
       id: abdcdddf-7b08-4c4a-8f29-842890ee1351
       iscommand: false
       name: ""
-      playbookName: Process Email
+      playbookId: Process Email
       type: playbook
       version: -1
     taskid: abdcdddf-7b08-4c4a-8f29-842890ee1351
@@ -864,7 +864,7 @@ tasks:
       id: 27922299-5a0b-4525-8465-7c2efd9503b5
       iscommand: false
       name: ""
-      playbookName: Detonate File - Generic
+      playbookId: Detonate File - Generic
       type: playbook
       version: -1
     taskid: 27922299-5a0b-4525-8465-7c2efd9503b5
@@ -890,7 +890,7 @@ tasks:
       id: 16dd2965-30b6-47dc-80bf-48f322e21e9c
       iscommand: false
       name: ""
-      playbookName: Hunt for bad IOCs
+      playbookId: Hunt for bad IOCs
       type: playbook
       version: -1
     taskid: 16dd2965-30b6-47dc-80bf-48f322e21e9c

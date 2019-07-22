@@ -65,7 +65,7 @@ tasks:
       id: ad7dff09-2373-43ba-8a87-645fa98ca5cb
       iscommand: false
       name: Hunt MD5 Hash
-      scriptName: CBFindHash
+      script: CBFindHash
       type: regular
       version: -1
     taskid: ad7dff09-2373-43ba-8a87-645fa98ca5cb
@@ -232,7 +232,7 @@ tasks:
       id: 09e186f8-7d8d-4f32-84f8-5960a2e943af
       iscommand: false
       name: Set hostname
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 09e186f8-7d8d-4f32-84f8-5960a2e943af

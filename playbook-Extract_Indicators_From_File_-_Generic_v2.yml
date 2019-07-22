@@ -63,12 +63,11 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      description: Start
-      id: 7820586b-f2e6-4673-8dd8-08caab0d1173
+      id: 7c475fe8-ef6f-4203-8649-88c8ee1355a4
       iscommand: false
       name: ""
       version: -1
-    taskid: 7820586b-f2e6-4673-8dd8-08caab0d1173
+    taskid: 7c475fe8-ef6f-4203-8649-88c8ee1355a4
     timertriggers: []
     type: start
     view: |-
@@ -102,12 +101,12 @@ tasks:
       brand: ""
       description: |
         Checks if there is a file in the playbook input.
-      id: 7872ce6f-5e06-4c00-846b-6de0d54307b1
+      id: 7d301230-7301-4a9c-879f-2e3b4366a3d7
       iscommand: false
       name: Is there a file?
       type: condition
       version: -1
-    taskid: 7872ce6f-5e06-4c00-846b-6de0d54307b1
+    taskid: 7d301230-7301-4a9c-879f-2e3b4366a3d7
     timertriggers: []
     type: condition
     view: |-
@@ -136,13 +135,13 @@ tasks:
     task:
       brand: ""
       description: Set the input file into local context.
-      id: e06408f8-c0cb-4516-87c0-014108497f20
+      id: 864c6f5e-7214-4a36-8c37-80f7057bd36e
       iscommand: false
       name: Set file to local context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
-    taskid: e06408f8-c0cb-4516-87c0-014108497f20
+    taskid: 864c6f5e-7214-4a36-8c37-80f7057bd36e
     timertriggers: []
     type: regular
     view: |-
@@ -159,13 +158,12 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      description: Done
-      id: 832242ed-942e-4094-8cf4-003921e7ef7a
+      id: cc0c7ac6-f764-47df-8f1e-cfbdcbd25c4e
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 832242ed-942e-4094-8cf4-003921e7ef7a
+    taskid: cc0c7ac6-f764-47df-8f1e-cfbdcbd25c4e
     timertriggers: []
     type: title
     view: |-
@@ -187,13 +185,12 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      description: Extracts indicators from files
-      id: ab59c7dd-3e82-4efe-8e36-d3065d88a590
+      id: 94a70634-4521-42ed-8830-9673d9b25e1b
       iscommand: false
       name: Extract Indicators From Files
       type: title
       version: -1
-    taskid: ab59c7dd-3e82-4efe-8e36-d3065d88a590
+    taskid: 94a70634-4521-42ed-8830-9673d9b25e1b
     timertriggers: []
     type: title
     view: |-
@@ -221,14 +218,6 @@ tasks:
                     right:
                       value:
                         simple: ASCII text
-                  - left:
-                      iscontext: true
-                      value:
-                        simple: File.Type
-                    operator: containsString
-                    right:
-                      value:
-                        simple: Rich Text Format
                 - - left:
                       iscontext: true
                       value:
@@ -287,12 +276,12 @@ tasks:
       brand: ""
       description: Checks if there is a text-based file in context. Skips MSG and
         EML files.
-      id: 6bc85e4c-1f70-41b7-8bec-3c6410c9ad53
+      id: 5e2997db-65a5-49a7-8f9a-87892701e8fe
       iscommand: false
       name: Is there a text-based file?
       type: condition
       version: -1
-    taskid: 6bc85e4c-1f70-41b7-8bec-3c6410c9ad53
+    taskid: 5e2997db-65a5-49a7-8f9a-87892701e8fe
     timertriggers: []
     type: condition
     view: |-
@@ -324,14 +313,6 @@ tasks:
               right:
                 value:
                   simple: ASCII text
-            - left:
-                iscontext: true
-                value:
-                  simple: File.Type
-              operator: containsString
-              right:
-                value:
-                  simple: Rich Text Format
           - - left:
                 iscontext: true
                 value:
@@ -380,19 +361,19 @@ tasks:
     task:
       brand: ""
       description: Extracts indicators from text-based files.
-      id: d2c83c31-2092-4c86-81ad-359fcf0ee1e6
+      id: ded29993-f01d-4b33-8a4a-9d2453eaab31
       iscommand: false
       name: Extract indicators from text-based file
-      scriptName: ExtractIndicatorsFromTextFile
+      script: ExtractIndicatorsFromTextFile
       type: regular
       version: -1
-    taskid: d2c83c31-2092-4c86-81ad-359fcf0ee1e6
+    taskid: ded29993-f01d-4b33-8a4a-9d2453eaab31
     timertriggers: []
     type: regular
     view: |-
       {
         "position": {
-          "x": 82.5,
+          "x": 92.5,
           "y": 950
         }
       }
@@ -440,12 +421,12 @@ tasks:
     task:
       brand: ""
       description: Checks if there is a PDF file in context.
-      id: 79feacf1-749d-4213-85ce-9b87809c59cf
+      id: 542f7e7a-6978-480e-8356-cc7cda51a6d7
       iscommand: false
       name: Is there a PDF file?
       type: condition
       version: -1
-    taskid: 79feacf1-749d-4213-85ce-9b87809c59cf
+    taskid: 542f7e7a-6978-480e-8356-cc7cda51a6d7
     timertriggers: []
     type: condition
     view: |-
@@ -494,13 +475,13 @@ tasks:
     task:
       brand: ""
       description: Load a PDF file's content and metadata into context.
-      id: f954fb51-0ed0-44d2-837a-64f852f3dd9d
+      id: dbdad3fa-957f-490b-8fb5-3a827687360b
       iscommand: false
       name: Extract indicators from PDF file
-      scriptName: ReadPDFFileV2
+      script: ReadPDFFileV2
       type: regular
       version: -1
-    taskid: f954fb51-0ed0-44d2-837a-64f852f3dd9d
+    taskid: dbdad3fa-957f-490b-8fb5-3a827687360b
     timertriggers: []
     type: regular
     view: |-
@@ -612,12 +593,12 @@ tasks:
     task:
       brand: ""
       description: Checks if there is a Word file (DOC, DOCX) in context.
-      id: 596a82ed-b1a5-4a82-8eca-c351ae07e8c3
+      id: 6a791d6e-4678-44c7-8783-dad7ff0afdd3
       iscommand: false
       name: Is there a Word file?
       type: condition
       version: -1
-    taskid: 596a82ed-b1a5-4a82-8eca-c351ae07e8c3
+    taskid: 6a791d6e-4678-44c7-8783-dad7ff0afdd3
     timertriggers: []
     type: condition
     view: |-
@@ -637,13 +618,12 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      description: No File To Parse
-      id: 371fb092-fd79-4550-8b2e-d3c945d2cc10
+      id: c552720b-f6fc-49be-8c2a-1beb7178c737
       iscommand: false
       name: No File To Parse
       type: title
       version: -1
-    taskid: 371fb092-fd79-4550-8b2e-d3c945d2cc10
+    taskid: c552720b-f6fc-49be-8c2a-1beb7178c737
     timertriggers: []
     type: title
     view: |-
@@ -682,6 +662,22 @@ tasks:
               right:
                 value:
                   simple: Microsoft Word
+            - left:
+                iscontext: true
+                value:
+                  simple: File.Info
+              operator: isEqualString
+              right:
+                value:
+                  simple: doc
+            - left:
+                iscontext: true
+                value:
+                  simple: File.Info
+              operator: isEqualString
+              right:
+                value:
+                  simple: docx
           - - ignorecase: true
               left:
                 iscontext: true
@@ -749,13 +745,13 @@ tasks:
     task:
       brand: ""
       description: Extracts indicators from word files (DOC, DOCX).
-      id: e08be4df-5efa-4f1a-834d-05a15f8fd63f
+      id: 9fe7f253-7529-438f-871b-5eba2873f43d
       iscommand: false
       name: Extract indicators from Word file
-      scriptName: ExtractIndicatorsFromWordFile
+      script: ExtractIndicatorsFromWordFile
       type: regular
       version: -1
-    taskid: e08be4df-5efa-4f1a-834d-05a15f8fd63f
+    taskid: 9fe7f253-7529-438f-871b-5eba2873f43d
     timertriggers: []
     type: regular
     view: |-
@@ -826,12 +822,12 @@ tasks:
     task:
       brand: ""
       description: Checks whether images were extracted from PDF files.
-      id: 01853d00-5297-4e59-83fa-1aec87f7b3aa
+      id: 89a330ac-fde1-4324-8802-a6bd17d9375d
       iscommand: false
       name: Were images extracted?
       type: condition
       version: -1
-    taskid: 01853d00-5297-4e59-83fa-1aec87f7b3aa
+    taskid: 89a330ac-fde1-4324-8802-a6bd17d9375d
     timertriggers: []
     type: condition
     view: |-
@@ -873,12 +869,12 @@ tasks:
       brand: ""
       description: Checks whether there is an active instance of the Image OCR integration
         enabled.
-      id: 60827e91-7450-4f79-8e82-863488b15371
+      id: 2d1ba725-7a79-4ea0-8c84-94ce9007608b
       iscommand: false
       name: Is Image OCR enabled?
       type: condition
       version: -1
-    taskid: 60827e91-7450-4f79-8e82-863488b15371
+    taskid: 2d1ba725-7a79-4ea0-8c84-94ce9007608b
     timertriggers: []
     type: condition
     view: |-
@@ -946,13 +942,13 @@ tasks:
       brand: ""
       description: Extracts text from PNG, JPEG, and GIF image files, and uses auto-extract
         to get reputation for indicators.
-      id: 19fe4f88-c55b-4f13-814c-1ad0aae31cae
+      id: 9a4d578f-2723-4b9e-82c0-97bb5f7afccf
       iscommand: true
       name: Extract text from images
       script: '|||image-ocr-extract-text'
       type: regular
       version: -1
-    taskid: 19fe4f88-c55b-4f13-814c-1ad0aae31cae
+    taskid: 9a4d578f-2723-4b9e-82c0-97bb5f7afccf
     timertriggers: []
     type: regular
     view: |-

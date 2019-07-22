@@ -84,7 +84,7 @@ tasks:
       id: bb196c7a-ff84-44c7-81fd-625038a5bcf4
       iscommand: false
       name: Is Cylance V2 Protect enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: bb196c7a-ff84-44c7-81fd-625038a5bcf4
@@ -138,7 +138,7 @@ tasks:
       id: 283e4157-b249-4d36-8a57-c2983a3d61d4
       iscommand: false
       name: Do we have a SHA256?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 283e4157-b249-4d36-8a57-c2983a3d61d4
@@ -206,7 +206,7 @@ tasks:
       id: a2dfc6e8-e78a-4cc0-8de5-be4a8c155931
       iscommand: false
       name: Did we get a download link?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a2dfc6e8-e78a-4cc0-8de5-be4a8c155931
@@ -251,7 +251,7 @@ tasks:
       id: d12daf11-c3b1-4079-8b6d-4bbc6023cc4d
       iscommand: false
       name: Download File (ZIP format)
-      scriptName: http
+      script: http
       type: regular
       version: -1
     taskid: d12daf11-c3b1-4079-8b6d-4bbc6023cc4d
@@ -295,7 +295,7 @@ tasks:
       id: 917958d1-9c25-4f8d-84f3-5e272848d939
       iscommand: false
       name: Did we successfully download the ZIP file?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 917958d1-9c25-4f8d-84f3-5e272848d939
@@ -344,7 +344,7 @@ tasks:
       id: 5492c4d0-b0c3-4245-8c14-e43fc3ce553f
       iscommand: false
       name: Unzip File
-      scriptName: UnzipFile
+      script: UnzipFile
       type: regular
       version: -1
     taskid: 5492c4d0-b0c3-4245-8c14-e43fc3ce553f
@@ -394,7 +394,7 @@ tasks:
       id: 1a5cf78a-2b23-487e-8520-980ffc50bdf7
       iscommand: false
       name: Is Cylance V1 Protect enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 1a5cf78a-2b23-487e-8520-980ffc50bdf7
@@ -426,7 +426,7 @@ tasks:
       id: 9a83a232-86f0-419b-8c7d-f441b6f6c46e
       iscommand: false
       name: Do we have a SHA256?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 9a83a232-86f0-419b-8c7d-f441b6f6c46e
@@ -495,7 +495,7 @@ tasks:
       id: a5416443-e7db-45d3-86eb-86810cc208d6
       iscommand: false
       name: Did we get a download link?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a5416443-e7db-45d3-86eb-86810cc208d6
@@ -540,7 +540,7 @@ tasks:
       id: 98e64df6-7105-455f-8298-9101e96b04a9
       iscommand: false
       name: Download File (ZIP format)
-      scriptName: http
+      script: http
       type: regular
       version: -1
     taskid: 98e64df6-7105-455f-8298-9101e96b04a9
@@ -584,7 +584,7 @@ tasks:
       id: 1f0dd602-7af3-4cf2-8d52-92fe5ab4ead0
       iscommand: false
       name: Did we successfully download the ZIP file?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 1f0dd602-7af3-4cf2-8d52-92fe5ab4ead0
@@ -633,7 +633,7 @@ tasks:
       id: 7e6d9805-2917-46d9-891c-a944aa45b1f8
       iscommand: false
       name: Unzip File
-      scriptName: UnzipFile
+      script: UnzipFile
       type: regular
       version: -1
     taskid: 7e6d9805-2917-46d9-891c-a944aa45b1f8

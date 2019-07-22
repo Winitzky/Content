@@ -294,7 +294,7 @@ tasks:
       id: 8189698a-475c-433b-8fbf-20275b3b2084
       iscommand: false
       name: File Enrichment - Generic v2
-      playbookName: File Enrichment - Generic v2
+      playbookId: File Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: 8189698a-475c-433b-8fbf-20275b3b2084
@@ -334,7 +334,7 @@ tasks:
       id: b00cb02f-d44b-4e40-8c27-281d17a94723
       iscommand: false
       name: URL Enrichment - Generic v2
-      playbookName: URL Enrichment - Generic v2
+      playbookId: URL Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: b00cb02f-d44b-4e40-8c27-281d17a94723
@@ -374,7 +374,7 @@ tasks:
       id: a0821297-87be-4b3b-86a3-c073e6bbc0bd
       iscommand: false
       name: Domain Enrichment - Generic v2
-      playbookName: Domain Enrichment - Generic v2
+      playbookId: Domain Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: a0821297-87be-4b3b-86a3-c073e6bbc0bd
@@ -420,7 +420,7 @@ tasks:
       id: 0ba8dffe-9aac-40a7-8303-ff40de2d91f9
       iscommand: false
       name: Email Address Enrichment - Generic v2.1
-      playbookName: Email Address Enrichment - Generic v2.1
+      playbookId: Email Address Enrichment - Generic v2.1
       type: playbook
       version: -1
     taskid: 0ba8dffe-9aac-40a7-8303-ff40de2d91f9
@@ -464,7 +464,7 @@ tasks:
       id: f8fb676b-42d5-4d3a-8513-bfc235733742
       iscommand: false
       name: IP Enrichment - External - Generic v2
-      playbookName: IP Enrichment - External - Generic v2
+      playbookId: IP Enrichment - External - Generic v2
       type: playbook
       version: -1
     taskid: f8fb676b-42d5-4d3a-8513-bfc235733742

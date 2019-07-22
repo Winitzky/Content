@@ -152,7 +152,7 @@ tasks:
       id: 5176c141-e27d-4814-8bfd-5cd510f2373a
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: 5176c141-e27d-4814-8bfd-5cd510f2373a
@@ -398,7 +398,7 @@ tasks:
       id: 1662b04a-4594-48d7-8045-cbc5ab3e1d62
       iscommand: false
       name: Polling Timeout
-      scriptName: PrintErrorEntry
+      script: PrintErrorEntry
       type: regular
       version: -1
     taskid: 1662b04a-4594-48d7-8045-cbc5ab3e1d62

@@ -327,7 +327,7 @@ tasks:
       id: 0357cc1e-4fed-4d34-8672-c44dde656382
       iscommand: false
       name: File Enrichment - Virus Total private API
-      playbookName: File Enrichment - Virus Total Private API
+      playbookId: file_enrichment_-_virus_total_private_api
       type: playbook
       version: -1
     taskid: 0357cc1e-4fed-4d34-8672-c44dde656382
@@ -368,7 +368,7 @@ tasks:
       id: 52857fb4-234a-41b3-863e-acedeb1b02b3
       iscommand: false
       name: File Enrichment - File reputation
-      playbookName: File Enrichment - File reputation
+      playbookId: file_enrichment_-_file_reputation
       type: playbook
       version: -1
     taskid: 52857fb4-234a-41b3-863e-acedeb1b02b3

@@ -694,7 +694,7 @@ tasks:
       id: b179ce1d-07e6-4381-8799-7ec819c5ed4c
       iscommand: false
       name: Generate breach report
-      scriptName: GenerateInvestigationSummaryReport
+      script: GenerateInvestigationSummaryReport
       type: regular
       version: -1
     taskid: b179ce1d-07e6-4381-8799-7ec819c5ed4c
@@ -764,7 +764,7 @@ tasks:
       id: aa3b5159-9eeb-49b7-88d8-f7fcfc17ae80
       iscommand: false
       name: Breach is documented in Demisto
-      scriptName: Print
+      script: Print
       type: regular
       version: -1
     taskid: aa3b5159-9eeb-49b7-88d8-f7fcfc17ae80
@@ -1363,7 +1363,7 @@ tasks:
       id: f1ffbfe2-fcd1-45df-818e-c7f206d48a98
       iscommand: false
       name: Get Authority Contact details
-      scriptName: GDPRContactAuthorities
+      script: GDPRContactAuthorities
       type: regular
       version: -1
     taskid: f1ffbfe2-fcd1-45df-818e-c7f206d48a98

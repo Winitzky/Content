@@ -134,7 +134,7 @@ tasks:
       id: 88dfca43-623f-4ab4-8b4a-c76e522c7f5f
       iscommand: false
       name: Prepare phishing data
-      scriptName: DBotPreparePhishingData
+      script: DBotPreparePhishingData
       type: regular
       version: -1
     taskid: 88dfca43-623f-4ab4-8b4a-c76e522c7f5f
@@ -167,7 +167,7 @@ tasks:
       id: ee891512-2e90-40eb-8e62-46242df2a75f
       iscommand: false
       name: Train model
-      scriptName: DBotTrainTextClassifier
+      script: DBotTrainTextClassifier
       type: regular
       version: -1
     taskid: ee891512-2e90-40eb-8e62-46242df2a75f
@@ -213,7 +213,7 @@ tasks:
       id: 47b24192-7505-4410-838d-4036ab392f2b
       iscommand: false
       name: 'Model evaluation '
-      scriptName: DBotPredictPhishingEvaluation
+      script: DBotPredictPhishingEvaluation
       type: regular
       version: -1
     taskid: 47b24192-7505-4410-838d-4036ab392f2b
@@ -340,7 +340,7 @@ tasks:
       id: c87ef0d3-71bc-4d0d-8110-e8fc6e838cfa
       iscommand: false
       name: Get historical file
-      scriptName: Base64ListToFile
+      script: Base64ListToFile
       type: regular
       version: -1
     taskid: c87ef0d3-71bc-4d0d-8110-e8fc6e838cfa

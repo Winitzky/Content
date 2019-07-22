@@ -73,7 +73,6 @@ configuration:
   name: APItoken
   required: false
   type: 0
-deprecated: true
 description: Issue tracking product, developed by Atlassian
 detaileddescription: |
   For fetching incidents, please update the query param according to [JQL documentation](https://confluence.atlassian.com/jirasoftwarecloud/advanced-searching-764478330.html)
@@ -100,7 +99,6 @@ script:
       name: maxResults
     - description: Headers to display in Human readable format
       name: headers
-    deprecated: true
     description: Query Jira issues (Deprecated)
     name: jira-issue-query
     outputs:
@@ -123,7 +121,6 @@ script:
       required: true
     - description: Headers to display in Human readable format
       name: headers
-    deprecated: true
     description: Fetch issue from Jira (Deprecated)
     name: jira-get-issue
     outputs:
@@ -169,7 +166,6 @@ script:
       name: parentIssueKey
     - description: Parent issue ID if you create a sub-task
       name: parentIssueId
-    deprecated: true
     description: Create a new issue on Jira (Deprecated)
     name: jira-create-issue
     outputs:
@@ -183,7 +179,6 @@ script:
       required: true
     - description: Entry id to upload
       name: upload
-    deprecated: true
     description: Upload a file attachments to an issue (Deprecated)
     name: jira-issue-upload-file
   - arguments:
@@ -196,7 +191,6 @@ script:
       required: true
     - description: Make comment visible only to a certain role - like Administrators
       name: visibility
-    deprecated: true
     description: Add new comment to existing Jira issue (Deprecated)
     name: jira-issue-add-comment
   - arguments:
@@ -216,7 +210,6 @@ script:
     - description: Issue Id
       name: issueId
       required: true
-    deprecated: true
     description: Creates (or updates) issue link (Deprecated)
     name: jira-issue-add-link
   - arguments:
@@ -239,7 +232,6 @@ script:
       name: assignee
     - description: status name
       name: status
-    deprecated: true
     description: Edit JIRA issue (Deprecated)
     name: jira-edit-issue
     outputs:
@@ -259,7 +251,6 @@ script:
     - description: The issue id to get comments of
       name: issueId
       required: true
-    deprecated: true
     description: Gets the comments added to a ticket (Deprecated)
     name: jira-get-comments
     outputs:
@@ -276,7 +267,6 @@ script:
     - description: issue ID or Key
       name: issueIdOrKey
       required: true
-    deprecated: true
     description: deletes an issue (Deprecated)
     name: jira-delete-issue
   isfetch: true

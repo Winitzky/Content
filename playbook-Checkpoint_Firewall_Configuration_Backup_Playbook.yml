@@ -79,7 +79,7 @@ tasks:
       id: 6eb6a468-79cc-460b-8e2c-cada1799b034
       iscommand: false
       name: Trigger backup on each device
-      scriptName: CPCreateBackup
+      script: CPCreateBackup
       type: regular
       version: -1
     taskid: 6eb6a468-79cc-460b-8e2c-cada1799b034
@@ -112,7 +112,7 @@ tasks:
       id: 143e5bcf-7746-409b-8c53-ff761a2d4b99
       iscommand: false
       name: Show status for initiated backup tasks
-      scriptName: CPShowBackupStatus
+      script: CPShowBackupStatus
       type: regular
       version: -1
     taskid: 143e5bcf-7746-409b-8c53-ff761a2d4b99
@@ -143,7 +143,7 @@ tasks:
       id: 1e1e3c6f-5703-47ea-8d70-871327266a2b
       iscommand: false
       name: Have any backups failed?
-      scriptName: UtilAnyResults
+      script: UtilAnyResults
       type: condition
       version: -1
     taskid: 1e1e3c6f-5703-47ea-8d70-871327266a2b
@@ -177,7 +177,7 @@ tasks:
       id: 3fb51d97-0e06-4b4d-8d3d-44a10e657cc4
       iscommand: false
       name: Open ticket on ServiceNow with list of problematic devices
-      scriptName: SNOpenTicket
+      script: SNOpenTicket
       type: regular
       version: -1
     taskid: 3fb51d97-0e06-4b4d-8d3d-44a10e657cc4
@@ -206,7 +206,7 @@ tasks:
       id: 36723772-43f0-4619-872f-f54d53770054
       iscommand: false
       name: Retrieve the backup files from the devices
-      scriptName: SCPPullFiles
+      script: SCPPullFiles
       type: regular
       version: -1
     taskid: 36723772-43f0-4619-872f-f54d53770054
@@ -242,7 +242,7 @@ tasks:
       id: d187c4cc-630c-4edd-8048-40678669101b
       iscommand: false
       name: Email a report of backup results
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: d187c4cc-630c-4edd-8048-40678669101b
@@ -269,7 +269,7 @@ tasks:
       id: 65e21959-2a73-48ab-8b31-0aa8b55e66d9
       iscommand: false
       name: CloseInvestigation
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: 65e21959-2a73-48ab-8b31-0aa8b55e66d9

@@ -372,7 +372,7 @@ tasks:
       id: 7e800325-00ed-4c5a-8838-a40f28680299
       iscommand: false
       name: Block IP with Palo Alto Networks Panorama
-      scriptName: PanoramaBlockIP
+      script: PanoramaBlockIP
       type: regular
       version: -1
     taskid: 7e800325-00ed-4c5a-8838-a40f28680299
@@ -409,7 +409,7 @@ tasks:
       id: dbee1e60-454a-4043-8676-7f5bb3006b00
       iscommand: false
       name: Add Indicator to Miner - Minemeld
-      playbookName: Add Indicator to Miner - Palo Alto MineMeld
+      playbookId: add_indicator_to_miner_-_palo_alto_mineMeld
       type: playbook
       version: -1
     taskid: dbee1e60-454a-4043-8676-7f5bb3006b00

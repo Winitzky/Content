@@ -93,7 +93,7 @@ tasks:
       id: 6c68450d-d32f-4a07-8978-8df36190ada6
       iscommand: false
       name: Find duplicate incidents
-      scriptName: FindSimilarIncidents
+      script: FindSimilarIncidents
       type: regular
       version: -1
     taskid: 6c68450d-d32f-4a07-8978-8df36190ada6
@@ -123,7 +123,7 @@ tasks:
       id: bced6173-64c6-457c-85bd-2adf6be16c4c
       iscommand: false
       name: Close as duplicate
-      scriptName: CloseInvestigationAsDuplicate
+      script: CloseInvestigationAsDuplicate
       type: regular
       version: -1
     taskid: bced6173-64c6-457c-85bd-2adf6be16c4c

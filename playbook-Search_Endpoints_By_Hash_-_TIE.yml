@@ -305,7 +305,7 @@ tasks:
       id: 101e3e85-0246-4bd4-80be-2df713ee96e6
       iscommand: false
       name: Get Agent info from ePO
-      scriptName: EPOFindSystem
+      script: EPOFindSystem
       type: regular
       version: -1
     taskid: 101e3e85-0246-4bd4-80be-2df713ee96e6

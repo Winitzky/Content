@@ -137,7 +137,7 @@ tasks:
       id: 8fcb9133-0893-4133-8602-a26947510691
       iscommand: false
       name: Get URLs reputation
-      scriptName: URLReputation
+      script: URLReputation
       type: regular
       version: -1
     taskid: 8fcb9133-0893-4133-8602-a26947510691
@@ -209,7 +209,7 @@ tasks:
       id: 3d331702-e1e3-4106-86dc-d88714dfc19f
       iscommand: false
       name: 'Is Rasterize integration enabled? '
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 3d331702-e1e3-4106-86dc-d88714dfc19f
@@ -416,7 +416,7 @@ tasks:
       id: e0e0aaf2-da6f-4b4c-8fc0-87b0474c5707
       iscommand: false
       name: URL SSL Verification
-      scriptName: URLSSLVerification
+      script: URLSSLVerification
       type: regular
       version: -1
     taskid: e0e0aaf2-da6f-4b4c-8fc0-87b0474c5707

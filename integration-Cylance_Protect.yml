@@ -48,12 +48,11 @@ configuration:
   name: incidentType
   required: false
   type: 13
-deprecated: true
 description: Manage Endpoints using Cylance protect
 detaileddescription: |-
   For more information regarding the integration's specific fields and filters, please see Cylance API Guide for version 1.7.
   Extended Filter example: {"Field":"last_found","Operator":"IsGreaterThan","Value":"2000-01-01T00:00:00Z"}.
-display: Cylance Protect (Deprecated)
+display: Cylance Protect
 image: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAiCAYAAACUcR1DAAADTUlEQVR4Ae3ZA+xcSxTH8fe3nm3bthU826ht27Zt/q3atqPGtW1Pv0kmyWRyseqmtzlJPovZc2dmz2+91ymlxDXMuCIkYCEBCwlYSMBCAhYSsJCAJeAqG95Pw614HEMwHz3xNB5GgjQygAHrAAdjMwbhJyhDWxzEanTDvdLQYAVcAqWNwzdQ2hm0gDJ0l4YGK+BFUNpol4DPQWljQlnwwQcfTEa6ixSzNsT5MoPYePadgXQtTUvREhzqUyLpm1fA86G0UfjWJ+CRIdypP1CIHAf56GjVf4kuSHCZrx76W2P18XwUjX8T2RiK2z3qbsEwFOEpl5pn0NgaexyTkYsc5KIA+cjGRDxqHVPBo28FaBZtwBPwJZR2Hs1x3g7YpyFL8AYewEMO7raOuQ3jkI8bjfFE9MV03G8dMw4fRhhuFhbhSzTDUI/a6hiAX7EC9zvUvINsa6wfmls9eEx7HI8h1ai/D0vxvEvfHsad0Qa8DU9hLRRWowdUGAE/jPwIG98ei/EwkpGPUUh1qB2O9yJcpwF66ctJmIO3XWrbopy+XAbzcbNV8xbGWmMj8VEYe3oGOf61EQZsmIgXsRU9sCvMgB/UwSRH2PxyWIlP8YdzXeQBc8xdWIR7jLGvke9S3wqVjeuNUIwUn4CH44sw9vUUJuE21ERdrQZujV3AQCt8gWNQcQzYbGpvfT3WAXdDfYfxbHzjF7Ae64FRcQz4llgGfB6r8APqQ8XpJdqcoyJ6+dSMxOthzvs0ZiPL4bbXMB2pfgHr8bHooi+/hPFX60v0YijDUJTiBF7GaCjD2BA+ZC32+ZB1l88cNdHfp2YI6nus8aD1MpqE0fjdY85+qGaNdUANh9o0lKIhymC0w1zN/PYX5oesOyIJuABK24T2UNpaPIN9UFrnWH9Ncjj+W1Txe0kzvn7kWHIxCQ8Z9Q9gMBI85nwEg63G/4OvXepvwkgU4BXrtscwyWN/2Q5fk8pfia9Jj2EWFEqRB2V4BWuhMB53xOGHjkh/SDClIcF6BieGMF8KEuKxv7j80KFDTkYzTMBcKMPbyEZZXS+C+nchId6EIVCGF5ER/CZIwObfhnUxF/8gMfgNkICFBCwkYCEBCwlYSMBCApaAhQQsAuMypEm2YIZjn78AAAAASUVORK5CYII=
 name: Cylance Protect
 script:
@@ -79,7 +78,6 @@ script:
       name: filters
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: 'Gets one of two Global Lists: Safe List and Global Quarantine List'
     name: cylance-protect-get-list
     outputs:
@@ -114,7 +112,6 @@ script:
       name: filters
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Gets information about all the devices with CylancePROTECT Agent
       installed
     name: cylance-protect-get-devices
@@ -144,7 +141,6 @@ script:
       name: filters
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Gets information about Cylance protect threats
     name: cylance-protect-get-threats
   - arguments:
@@ -152,7 +148,6 @@ script:
       description: The required sha256
       name: sha256
       required: true
-    deprecated: true
     description: Download a file according to it's sha256
     name: cylance-protect-download-threat
     outputs:
@@ -187,7 +182,6 @@ script:
       required: true
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Get details about a specific threat according to it's sha256
     name: cylance-protect-get-threat-details
   - arguments:
@@ -195,7 +189,6 @@ script:
       description: The device serial number
       name: serial_number
       required: true
-    deprecated: true
     description: Removes a device from Cylance protect
     name: cylance-protect-device-delete
   - arguments:
@@ -215,7 +208,6 @@ script:
       name: filters
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Gets threats for a specific device
     name: cylance-protect-get-device-threats
     outputs:
@@ -286,14 +278,12 @@ script:
       required: true
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Updates threats of a device
     name: cylance-protect-update-device-threats
   - arguments:
     - description: A list or single value of hash/es
       name: sha256
       required: true
-    deprecated: true
     description: Delete hashes from lists
     name: cylance-protect-delete-hash-from-lists
   - arguments:
@@ -323,7 +313,6 @@ script:
     - description: The reason why the file is in the list (65 chars limited)
       name: reason
       required: true
-    deprecated: true
     description: Update hash in the lists
     name: cylance-protect-update-hash-at-lists
   - arguments:
@@ -331,7 +320,6 @@ script:
       description: A list or single value of hash/es
       name: sha256
       required: true
-    deprecated: true
     description: Allows to create an Upload request for a set of hashes that will
       be executed by endpoints eventually (not synced)
     name: cylance-protect-upload-threat
@@ -352,7 +340,6 @@ script:
       name: filters
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Given a threat, retrieve a list of all devices on which the threat
       was found
     name: cylance-protect-get-threated-devices
@@ -412,7 +399,6 @@ script:
   - arguments:
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Retrieves all zones
     name: cylance-protect-get-zones
     outputs:
@@ -435,7 +421,6 @@ script:
       name: zone_criticality
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Create a zone
     name: cylance-protect-create-zone
     outputs:
@@ -471,7 +456,6 @@ script:
       name: apply_policy_change_to_devices
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Update a zone
     name: cylance-protect-update-zone
     outputs:
@@ -480,7 +464,6 @@ script:
     - contextPath: Cylance.Zone.Name
       description: Zone Name
   - arguments: []
-    deprecated: true
     description: Get all policies
     name: cylance-protect-get-policies
     outputs:
@@ -496,7 +479,6 @@ script:
       name: policy_name
     - description: The headers columns to show by order
       name: headers
-    deprecated: true
     description: Get a specific policy details. If no args supplied, default policy
       is retrieved
     name: cylance-protect-get-policy-details

@@ -151,7 +151,7 @@ tasks:
       id: 2d0fc7d4-b827-43c9-8b7a-bf592e7a1c1f
       iscommand: false
       name: Add Indicator to Miner - Minemeld
-      playbookName: Add Indicator to Miner - Palo Alto MineMeld
+      playbookId: add_indicator_to_miner_-_palo_alto_mineMeld
       type: playbook
       version: -1
     taskid: 2d0fc7d4-b827-43c9-8b7a-bf592e7a1c1f

@@ -58,7 +58,7 @@ tasks:
       id: 528a058d-8c60-46dc-80b0-8139b45eeafd
       iscommand: false
       name: is ePO enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 528a058d-8c60-46dc-80b0-8139b45eeafd
@@ -87,7 +87,7 @@ tasks:
       id: 5c61873e-d9e2-4967-8776-82db5c05628b
       iscommand: false
       name: Get host info from ePO
-      scriptName: EPOFindSystem
+      script: EPOFindSystem
       type: regular
       version: -1
     taskid: 5c61873e-d9e2-4967-8776-82db5c05628b
@@ -140,7 +140,7 @@ tasks:
       id: 71f42a72-b2e7-479a-86e7-bc6ff218671e
       iscommand: false
       name: is MAR enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 71f42a72-b2e7-479a-86e7-bc6ff218671e

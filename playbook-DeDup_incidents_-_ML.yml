@@ -73,7 +73,7 @@ tasks:
       id: 19915cbc-3042-425d-8254-c3be9c291076
       iscommand: false
       name: Find duplicate incidents
-      scriptName: GetDuplicatesMlv2
+      script: GetDuplicatesMlv2
       type: regular
       version: -1
     taskid: 19915cbc-3042-425d-8254-c3be9c291076
@@ -140,7 +140,7 @@ tasks:
       id: 4a8be468-2af6-4427-8ee8-a71d450260ee
       iscommand: false
       name: Print candidate
-      scriptName: Print
+      script: Print
       type: regular
       version: -1
     taskid: 4a8be468-2af6-4427-8ee8-a71d450260ee
@@ -166,7 +166,7 @@ tasks:
       id: 91676756-8dd8-41fc-801e-b19c98a5b048
       iscommand: false
       name: No duplicates found
-      scriptName: Print
+      script: Print
       type: regular
       version: -1
     taskid: 91676756-8dd8-41fc-801e-b19c98a5b048
@@ -194,7 +194,7 @@ tasks:
       id: fd106344-04d3-429b-8fb4-dced0a7a085f
       iscommand: false
       name: Close investigation as duplicate
-      scriptName: CloseInvestigationAsDuplicate
+      script: CloseInvestigationAsDuplicate
       type: regular
       version: -1
     taskid: fd106344-04d3-429b-8fb4-dced0a7a085f

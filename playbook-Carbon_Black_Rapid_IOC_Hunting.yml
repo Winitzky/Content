@@ -50,7 +50,7 @@ tasks:
       id: 1a3ea7e1-aaf3-4df0-89f6-70e2680bda7a
       iscommand: false
       name: CBFindHash
-      scriptName: CBFindHash
+      script: CBFindHash
       type: regular
       version: -1
     taskid: 1a3ea7e1-aaf3-4df0-89f6-70e2680bda7a
@@ -83,7 +83,7 @@ tasks:
       id: c687c04f-ba90-4572-800a-923193bacc32
       iscommand: false
       name: Is Carbon Black enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: c687c04f-ba90-4572-800a-923193bacc32
@@ -139,7 +139,7 @@ tasks:
       id: a4a842fc-727c-4a64-883d-873968708ded
       iscommand: false
       name: Do we have files to hunt?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a4a842fc-727c-4a64-883d-873968708ded

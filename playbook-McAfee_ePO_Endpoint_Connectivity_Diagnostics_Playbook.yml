@@ -232,7 +232,7 @@ tasks:
       id: f35617e9-0a55-4967-8a2e-1c878e4711a0
       iscommand: false
       name: CloseInvestigation
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       version: -1
     taskid: f35617e9-0a55-4967-8a2e-1c878e4711a0
     timertriggers: []
@@ -262,7 +262,7 @@ tasks:
       id: 4a32bb9b-8d01-48f5-8685-c754b5067c09
       iscommand: false
       name: Check connectivity for each endpoint using ping
-      scriptName: Ping
+      script: Ping
       type: regular
       version: -1
     taskid: 4a32bb9b-8d01-48f5-8685-c754b5067c09
@@ -371,7 +371,7 @@ tasks:
       id: b5f717be-a4a8-4ba2-86ca-6f6e4024236c
       iscommand: false
       name: Store list of unmanaged endpoints to context key epoUnmanagedEndpoint
-      scriptName: commentsToContext
+      script: 120c861a-e0ae-417e-8dcf-c3ee1dc15a42
       type: regular
       version: -1
     taskid: b5f717be-a4a8-4ba2-86ca-6f6e4024236c
@@ -409,7 +409,7 @@ tasks:
       id: 3da5d5ef-6d6a-4099-8d83-d5a33d6ef515
       iscommand: false
       name: Store non-communicating endpoints to context key epoNonCommunicatingEndpoint
-      scriptName: commentsToContext
+      script: 120c861a-e0ae-417e-8dcf-c3ee1dc15a42
       type: regular
       version: -1
     taskid: 3da5d5ef-6d6a-4099-8d83-d5a33d6ef515

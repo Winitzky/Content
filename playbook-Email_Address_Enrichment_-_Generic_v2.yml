@@ -218,7 +218,7 @@ tasks:
       id: 17c82691-cc28-445a-8aea-129217f589d6
       iscommand: false
       name: Classify email addresses as internal or external
-      scriptName: IsEmailAddressInternal
+      script: IsEmailAddressInternal
       type: regular
       version: -1
     taskid: 17c82691-cc28-445a-8aea-129217f589d6
@@ -324,7 +324,7 @@ tasks:
       id: 5499e24d-dd70-4b65-88af-eeca45b06f9f
       iscommand: false
       name: Get email address info from Active Directory
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: 5499e24d-dd70-4b65-88af-eeca45b06f9f
@@ -371,7 +371,7 @@ tasks:
       id: 2d740d11-a326-4913-83f1-8df803c0a3eb
       iscommand: false
       name: Are there any external email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 2d740d11-a326-4913-83f1-8df803c0a3eb
@@ -418,7 +418,7 @@ tasks:
       id: e521733d-b152-4a1f-8050-e7658405a187
       iscommand: false
       name: Are there any internal email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: e521733d-b152-4a1f-8050-e7658405a187
@@ -470,7 +470,7 @@ tasks:
       id: 14d9b7c3-73b3-49e7-887a-82c080a62d38
       iscommand: false
       name: Check email addresses for domain-squatting
-      scriptName: EmailDomainSquattingReputation
+      script: EmailDomainSquattingReputation
       type: regular
       version: -1
     taskid: 14d9b7c3-73b3-49e7-887a-82c080a62d38
@@ -524,7 +524,7 @@ tasks:
       id: 252874b2-867f-4406-8442-cc3999fac864
       iscommand: false
       name: Is Active Directory enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 252874b2-867f-4406-8442-cc3999fac864
@@ -559,7 +559,7 @@ tasks:
       id: 1f1a6cd8-5aaa-4b0a-8147-e91dc6beec49
       iscommand: false
       name: Is there a domain list input?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 1f1a6cd8-5aaa-4b0a-8147-e91dc6beec49

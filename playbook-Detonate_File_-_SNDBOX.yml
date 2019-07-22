@@ -196,7 +196,7 @@ tasks:
       id: cf1337d2-c99c-450b-8901-49614b2d9c39
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: cf1337d2-c99c-450b-8901-49614b2d9c39
@@ -456,7 +456,7 @@ tasks:
       id: 3814f559-a639-4e80-8d6e-c74b9e96e495
       iscommand: false
       name: Set File to context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 3814f559-a639-4e80-8d6e-c74b9e96e495
@@ -527,7 +527,7 @@ tasks:
       id: 4076e5e1-d0fc-4bb0-8008-409053367a9e
       iscommand: false
       name: Set Context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 4076e5e1-d0fc-4bb0-8008-409053367a9e

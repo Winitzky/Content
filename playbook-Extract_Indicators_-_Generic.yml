@@ -78,7 +78,7 @@ tasks:
       id: d693465a-260b-4aac-8a18-4a11c047481e
       iscommand: false
       name: Collect Hashes from Incident
-      scriptName: ExtractHash
+      script: ExtractHash
       type: regular
       version: -1
     taskid: d693465a-260b-4aac-8a18-4a11c047481e
@@ -108,7 +108,7 @@ tasks:
       id: 963c3996-3eaf-457c-8c93-abee20d891e2
       iscommand: false
       name: Collect URLs from Incident
-      scriptName: ExtractURL
+      script: ExtractURL
       type: regular
       version: -1
     taskid: 963c3996-3eaf-457c-8c93-abee20d891e2
@@ -137,7 +137,7 @@ tasks:
       id: 4fe3f22e-7bec-4ed5-841c-9cd5808daf42
       iscommand: false
       name: Collect IPs from Incident
-      scriptName: ExtractIP
+      script: ExtractIP
       type: regular
       version: -1
     taskid: 4fe3f22e-7bec-4ed5-841c-9cd5808daf42
@@ -193,7 +193,7 @@ tasks:
       id: e4a19d6b-98be-49af-8202-fca71cfde7cd
       iscommand: false
       name: Collect Domains from Incident
-      scriptName: ExtractDomain
+      script: ExtractDomain
       type: regular
       version: -1
     taskid: e4a19d6b-98be-49af-8202-fca71cfde7cd
@@ -222,7 +222,7 @@ tasks:
       id: 16f55051-63fa-467b-8533-163b68f310b5
       iscommand: false
       name: Collect Email Addresses from Incident
-      scriptName: ExtractEmail
+      script: ExtractEmail
       type: regular
       version: -1
     taskid: 16f55051-63fa-467b-8533-163b68f310b5

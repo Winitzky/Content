@@ -38,7 +38,6 @@ configuration:
   name: cloud
   required: false
   type: 8
-deprecated: true
 description: At the heart of the solution, the Metadefender multi-scanning engine
   uses 30+ anti-malware engines to scan files for threats, significantly increasing
   malware detection.

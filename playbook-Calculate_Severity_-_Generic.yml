@@ -557,7 +557,7 @@ tasks:
       id: 1850d92e-938e-4f29-827a-ff8dd4d1da40
       iscommand: false
       name: Calculate Severity - Critical assets
-      playbookName: Calculate Severity - Critical assets
+      playbookId: calculate_severity_-_critical_assets
       type: playbook
       version: -1
     taskid: 1850d92e-938e-4f29-827a-ff8dd4d1da40
@@ -601,7 +601,7 @@ tasks:
       id: 09ef8f5b-0c54-4f0d-8d15-44daa61c60d5
       iscommand: false
       name: Calculate Severity - DBotScore
-      playbookName: Calculate Severity - Indicators DBotScore
+      playbookId: calculate_severity_-_indicators_dbotscore
       type: playbook
       version: -1
     taskid: 09ef8f5b-0c54-4f0d-8d15-44daa61c60d5
@@ -749,7 +749,7 @@ tasks:
       id: e628aa74-143a-4068-8a75-3abd96479000
       iscommand: false
       name: Calculate Severity - 3rd-party integrations
-      playbookName: Calculate Severity - 3rd-party integrations
+      playbookId: calculate_severity_-_3rd-party_integrations
       type: playbook
       version: -1
     taskid: e628aa74-143a-4068-8a75-3abd96479000

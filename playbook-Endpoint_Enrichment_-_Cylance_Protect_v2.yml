@@ -169,7 +169,7 @@ tasks:
       id: ec7a9e06-60d0-4c25-8ed4-1cb9d0fe92f6
       iscommand: false
       name: Set enriched device details
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: ec7a9e06-60d0-4c25-8ed4-1cb9d0fe92f6
@@ -214,7 +214,7 @@ tasks:
       id: 83e2be36-d5ef-43df-80b3-c77e95e19780
       iscommand: false
       name: Set device list
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 83e2be36-d5ef-43df-80b3-c77e95e19780

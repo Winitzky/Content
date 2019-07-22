@@ -186,7 +186,7 @@ tasks:
       id: 17c82691-cc28-445a-8aea-129217f589d6
       iscommand: false
       name: Classify email addresses as internal or external
-      scriptName: IsEmailAddressInternal
+      script: IsEmailAddressInternal
       type: regular
       version: -1
     taskid: 17c82691-cc28-445a-8aea-129217f589d6
@@ -338,7 +338,7 @@ tasks:
       id: 2d740d11-a326-4913-83f1-8df803c0a3eb
       iscommand: false
       name: Are there any external email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 2d740d11-a326-4913-83f1-8df803c0a3eb
@@ -385,7 +385,7 @@ tasks:
       id: e521733d-b152-4a1f-8050-e7658405a187
       iscommand: false
       name: Are there internal email addresses?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: e521733d-b152-4a1f-8050-e7658405a187
@@ -438,7 +438,7 @@ tasks:
       id: 7d4c6562-651c-487d-834e-f3921527c76e
       iscommand: false
       name: Check email addresses for domain-squatting
-      scriptName: EmailDomainSquattingReputation
+      script: EmailDomainSquattingReputation
       type: regular
       version: -1
     taskid: 7d4c6562-651c-487d-834e-f3921527c76e
@@ -492,7 +492,7 @@ tasks:
       id: 71e0fb34-e1c8-4606-8462-1f83a0a2cb56
       iscommand: false
       name: Is Active Directory Query v2 enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 71e0fb34-e1c8-4606-8462-1f83a0a2cb56
@@ -527,7 +527,7 @@ tasks:
       id: 1f1a6cd8-5aaa-4b0a-8147-e91dc6beec49
       iscommand: false
       name: Is there a domain list input?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 1f1a6cd8-5aaa-4b0a-8147-e91dc6beec49

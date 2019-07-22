@@ -58,7 +58,7 @@ tasks:
       id: cdd77c13-ca81-4c68-8679-19d08de8fb71
       iscommand: false
       name: Confirm failed login with user
-      scriptName: SlackAskUser
+      script: SlackAskUser
       type: regular
       version: -1
     taskid: cdd77c13-ca81-4c68-8679-19d08de8fb71
@@ -122,7 +122,7 @@ tasks:
       id: ce32bc35-0679-4b9b-842f-e4b0c942a157
       iscommand: false
       name: Raise Incident Severity to High
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: ce32bc35-0679-4b9b-842f-e4b0c942a157
@@ -157,7 +157,7 @@ tasks:
       id: 987f04ae-98f1-4e27-8ef3-1a4f459acaa2
       iscommand: false
       name: Ask user should we reset her password
-      scriptName: SlackAskUser
+      script: SlackAskUser
       type: regular
       version: -1
     taskid: 987f04ae-98f1-4e27-8ef3-1a4f459acaa2
@@ -225,7 +225,7 @@ tasks:
       id: a12faaf4-cbbe-49ce-8539-f4ed61279deb
       iscommand: false
       name: Expire Password
-      scriptName: ADExpirePassword
+      script: ADExpirePassword
       type: regular
       version: -1
     taskid: a12faaf4-cbbe-49ce-8539-f4ed61279deb
@@ -290,7 +290,7 @@ tasks:
       id: abd944e7-152b-4e45-8e2f-92cd19ea6bb4
       iscommand: false
       name: Close the incident
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: abd944e7-152b-4e45-8e2f-92cd19ea6bb4

@@ -4,17 +4,17 @@ commonfields:
   version: -1
 configuration:
 - defaultvalue: ""
-  display: Server URL
+  display: ""
   name: URL
   required: true
   type: 0
 - defaultvalue: ""
-  display: Username
+  display: ""
   name: Username
   required: true
   type: 0
 - defaultvalue: ""
-  display: API Key
+  display: ""
   name: APIKey
   required: true
   type: 4
@@ -28,11 +28,6 @@ configuration:
   name: incidentType
   required: false
   type: 13
-- defaultvalue: ""
-  display: Trust any certificate (not secure)
-  name: insecure
-  required: false
-  type: 8
 - defaultvalue: "true"
   display: Use system proxy settings
   name: proxy
@@ -49,7 +44,7 @@ configuration:
   required: false
   type: 0
 description: Freeing the analyst with autonomous decisions
-detaileddescription: |
+detaileddescription: |-
   You can retrieve your personal API key from the following URL under the "Profile" tab:
   https://[CUSTOMER].portal.jask.ai/config
 display: Jask
@@ -313,7 +308,7 @@ script:
       description: The risk score of the entity
       type: number
   - arguments: []
-    description: Get the whitelisted entities.
+    description: 'Get the whitelisted entities. '
     name: jask-get-whitelisted-entities
     outputs:
     - contextPath: Jask.Whitelisted.EntityList.Id
@@ -367,7 +362,7 @@ script:
       name: time-from
     - description: The end time for the search in the following string format -  MM/DD/YYYY
       name: time-to
-    description: Search insights using the given filters.
+    description: 'Search insights using the given filters. '
     name: jask-search-insights
     outputs:
     - contextPath: Jask.Insight.Id
@@ -433,7 +428,7 @@ script:
       name: time-from
     - description: The end time for the search in the following string format -  MM/DD/YYYY
       name: time-to
-    description: Search signals using the given filters.
+    description: 'Search signals using the given filters. '
     name: jask-search-signals
     outputs:
     - contextPath: Jask.Signal.Id
@@ -530,32 +525,42 @@ script:
       type: string
   isfetch: true
   runonce: false
-  script: |2-
-
-
-
+  script: |
+    import requests
     import json
     from datetime import datetime
-    import requests
 
-    # Disable insecure warnings
-    requests.packages.urllib3.disable_warnings()
+    if not demisto.getParam('proxy'):
+        del os.environ['HTTP_PROXY']
+        del os.environ['HTTPS_PROXY']
+        del os.environ['http_proxy']
+        del os.environ['https_proxy']
 
     URL = demisto.getParam('URL')
     if URL[-1] != '/':
         URL += '/'
     QUERY = {'username': demisto.getParam('Username'), 'api_key': demisto.getParam('APIKey')}
     FETCH_LIMIT = int(demisto.params().get('fetchLimit', 100))
-    USE_SSL = not demisto.params().get('insecure', False)
+
+    def return_error(data):
+        """
+        Return error as result and exit
+        """
+        demisto.results({
+            'Type': entryTypes['error'],
+            'ContentsFormat': formats['text'],
+            'Contents': data
+        })
+        sys.exit(0)
 
 
     def req(method, path, query):
         """
         Send the request to JASK and return the JSON response
         """
-        r = requests.request(method, URL + path, params=query, verify=USE_SSL)
+        r = requests.request(method, URL + path, params=query)
         if r.status_code != requests.codes.ok:
-            return_error('Error in API call to Jask service - %s' % r.text)
+            return_error('Error in API call to Jask service - %s' % (r.text))
         if not r.text:
             return {}
         return r.json()
@@ -566,54 +571,48 @@ script:
         Convert object properties to nice title readable
         """
         res = {}
-        if o:
-            for f in fields:
-                if o.get(f):
-                    if translated.get(f):
-                        res[translated.get(f)] = o.get(f)
-                    else:
-                        res[f.title().replace('_', '')] = o.get(f)
+        for f in fields:
+            if o.get(f):
+                if translated.get(f):
+                    res[translated.get(f)] = o.get(f)
+                else:
+                    res[f.title().replace('_', '')] = o.get(f)
         return res
 
 
-    def entity_to_readable(entity_json):
+    def entity_to_readable(entityJSON):
         """
         Convert entity response JSON to nicely formatted object
         """
-        entity = to_readable(entity_json,
-                             ['id', 'name', 'source', 'hostname', 'risk_score', 'is_whitelisted', 'groups', 'asset_type',
-                              'firstSeen', 'lastSeen'],
-                             {'asset_type': 'EntityType', 'firstSeen': 'FirstSeen', 'lastSeen': 'LastSeen'})
-        entity['PrimaryEntityType'] = demisto.get(entity_json, 'current_entity.primary_asset_type')
+        entity = to_readable(entityJSON, ['id', 'name', 'source', 'hostname', 'risk_score', 'is_whitelisted', 'groups', 'asset_type', 'firstSeen', 'lastSeen'],
+            {'asset_type': 'EntityType', 'firstSeen': 'FirstSeen', 'lastSeen': 'LastSeen'})
+        entity['PrimaryEntityType'] = demisto.get(entityJSON, 'current_entity.primary_asset_type')
         return entity
 
 
-    def signal_to_readable(signal_json):
+    def signal_to_readable(signalJSON):
         """
         Convert signal response JSON to nicely formatted object
         """
-        signal = to_readable(
-            signal_json, ['id', 'name', 'category', 'description', 'score', 'source_type', 'timestamp'], {})
-        threat_indicators = demisto.get(signal_json, 'threat_indicators')
+        signal = to_readable(signalJSON, ['id', 'name', 'category', 'description', 'score', 'source_type', 'timestamp'], {})
+        threat_indicators = demisto.get(signalJSON, 'threat_indicators')
         if threat_indicators and isinstance(threat_indicators, dict):
-            signal['ThreatIndicators'] = [{
+             signal['ThreatIndicators'] = [{
                 'IndicatorType': ti.get('indicator_type'),
                 'Value': ti.get('value')
             } for ti in threat_indicators]
         return signal
 
 
-    def insight_to_readable(insight_json):
+    def insight_to_readable(insightJSON):
         """
         Convert insight response JSON to nicely formatted object
         """
-        insight = to_readable(insight_json,
-                              ['id', 'name', 'action', 'assigned_to', 'description', 'last_updated_by', 'last_updated',
-                               'severity', 'workflow_status'], {})
-        if insight_json.get('record_start_time'):
-            insight['InsightTime'] = datetime.utcfromtimestamp(insight_json.get('record_start_time')).isoformat()
-        if demisto.get(insight_json, 'ip') and demisto.get(insight_json['ip'], 'address'):
-            insight['IpAddress'] = demisto.get(insight_json['ip'], 'address')
+        insight = to_readable(insightJSON, ['id', 'name', 'action', 'assigned_to', 'description', 'last_updated_by', 'last_updated', 'severity', 'workflow_status'], {})
+        if insightJSON.get('record_start_time'):
+            insight['InsightTime'] = datetime.utcfromtimestamp(insightJSON.get('record_start_time')).isoformat()
+        if demisto.get(insightJSON, 'ip') and demisto.get(insightJSON['ip'], 'address'):
+            insight['IpAddress'] = demisto.get(insightJSON['ip'], 'address')
         return insight
 
 
@@ -633,24 +632,19 @@ script:
         resp_json = req('GET', 'alert/' + alert_id, QUERY)
         ec = insight_to_readable(resp_json)
 
-        details_md = tableToMarkdown('Insight Details:', [ec],
-                                     ['Id', 'Name', 'Action', 'AssignedTo', 'Description', 'IpAddress', 'LastUpdated',
-                                      'LastUpdatedBy', 'Severity', 'InsightTime', 'WorkflowStatus'])
+        details_md = tableToMarkdown('Insight Details:', [ec], ['Id', 'Name','Action','AssignedTo','Description','IpAddress','LastUpdated','LastUpdatedBy','Severity','InsightTime','WorkflowStatus'])
 
         entity_display = entity_to_readable(resp_json.get('asset_details'))
         entity_display.update({'IpAddress': demisto.get(resp_json['asset_details']['ip'], 'address')})
         ec['EntityDetails'] = entity_display
         entity_display['Id'] = resp_json.get('id')
 
-        entity_markdown = tableToMarkdown('Insight\'s Main Entity Details:', [entity_display],
-                                          ['Id', 'EntityType', 'Hostname', 'Groups', 'FirstSeen', 'LastSeen', 'IpAddress',
-                                           'IsWhitelisted', 'RiskScore', 'Source'])
+        entity_markdown = tableToMarkdown('Insight\'s Main Entity Details:', [entity_display], ['Id', 'EntityType', 'Hostname', 'Groups', 'FirstSeen', 'LastSeen', 'IpAddress', 'IsWhitelisted', 'RiskScore', 'Source'])
 
         related_assets_json = resp_json.get('related_assets') or []
         results_assets_list = []
         for rel_asset in related_assets_json:
-            results_asset = to_readable(rel_asset, ['id', 'is_whitelisted', 'risk_score', 'source', 'asset_type'],
-                                        {'asset_type': 'EntityType'})
+            results_asset = to_readable(rel_asset, ['id', 'is_whitelisted', 'risk_score', 'source', 'asset_type'], {'asset_type': 'EntityType'})
             if rel_asset.get('asset_type') == 'hostname':
                 results_asset['Name'] = rel_asset.get('hostname')
             elif rel_asset.get('asset_type') == 'username':
@@ -661,8 +655,7 @@ script:
 
             results_assets_list.append(results_asset)
         ec['RelatedEntityList'] = results_assets_list
-        rel_assets_md = tableToMarkdown('Related Entities:', results_assets_list,
-                                        ['Id', 'EntityType', 'IpAddress', 'Name', 'IsWhitelisted', 'RiskScore', 'Source'])
+        rel_assets_md = tableToMarkdown('Related Entities:', results_assets_list, ['Id', 'EntityType', 'IpAddress', 'Name', 'IsWhitelisted', 'RiskScore', 'Source'])
 
         signal_list_json = resp_json.get('signals') or []
         signal_list = []
@@ -679,8 +672,7 @@ script:
                 anomalies += 1
             signal_list.append(result_signal)
         ec['SignalList'] = signal_list
-        signals_md = tableToMarkdown('Related Signals:', signal_list,
-                                     ['Id', 'Name', 'Description', 'Category', 'SourceType'])
+        signals_md = tableToMarkdown('Related Signals:', signal_list, ['Id', 'Name', 'Description', 'Category', 'SourceType'])
         ec['SignalListMetadata'] = {
             'Patterns': {
                 'Count': patterns
@@ -693,11 +685,8 @@ script:
             }
         }
         final_ec = {'Jask.Insight(val.Id === obj.Id)': ec}
-        signal_metadata_md = tableToMarkdown('Signal Metadata:', [
-            {'Pattern Count': patterns, 'Anomaly Count': anomalies, 'Threat Intel Count': threat_intel}],
-            ['Pattern Count', 'Anomaly Count', 'Threat Intel Count'])
-        combined_md = details_md + '\n\n' + entity_markdown + '\n\n' + rel_assets_md +\
-            '\n\n' + signals_md + '\n\n' + signal_metadata_md
+        signal_metadata_md = tableToMarkdown('Signal Metadata:', [{'Pattern Count': patterns, 'Anomaly Count': anomalies, 'Threat Intel Count': threat_intel}], ['Pattern Count', 'Anomaly Count', 'Threat Intel Count'])
+        combined_md = details_md + '\n\n' + entity_markdown + '\n\n' + rel_assets_md + '\n\n' + signals_md + '\n\n' + signal_metadata_md
         link = URL.replace('/api/', '/insight/') + alert_id
         md_link = "[" + link + "](" + link + ")"
         combined_md += '\n\n' + md_link
@@ -716,11 +705,9 @@ script:
         """
         alert_id = demisto.getArg('insight-id')
         resp_json = req('GET', 'alert/%s/comments' % alert_id, QUERY)
-        comments = [to_readable(comment, ['id', 'alert_id', 'author', 'body', 'last_updated', 'timestamp'],
-                                {'alert_id': 'InsightId'}) for comment in resp_json['objects']]
+        comments = [to_readable(comment, ['id', 'alert_id', 'author', 'body', 'last_updated', 'timestamp'], {'alert_id': 'InsightId'}) for comment in resp_json['objects']]
         ec = {'Jask.Insight(val.Id == "%s").CommentList': comments}
-        md = tableToMarkdown('Insight Comments:', comments,
-                             ['Id', 'InsightId', 'Author', 'Body', 'LastUpdated', 'Timestamp'])
+        md = tableToMarkdown('Insight Comments:', comments, ['Id', 'InsightId', 'Author', 'Body', 'LastUpdated', 'Timestamp'])
         demisto.results({
             'Type': entryTypes['note'],
             'EntryContext': ec,
@@ -737,8 +724,7 @@ script:
         alert_id = demisto.getArg('signal-id')
         resp_json = req('GET', 'signal/' + alert_id, QUERY)
         signal = signal_to_readable(resp_json)
-        md = tableToMarkdown('Insight Signal Details:', [signal],
-                             ['Id', 'Name', 'Category', 'Description', 'Score', 'SourceType', 'Timestamp'])
+        md = tableToMarkdown('Insight Signal Details:', [signal], ['Id', 'Name', 'Category', 'Description', 'Score', 'SourceType', 'Timestamp'])
 
         flow = 0
         notice = 0
@@ -751,12 +737,10 @@ script:
                     flow += 1
                 elif record.get('type') == 'notice':
                     notice += 1
-        record_types = [{'RecordType': 'flow', 'RecordCount': flow}, {'RecordType': 'notice', 'RecordCount': notice},
-                        {'RecordType': 'http', 'RecordCount': http}]
+        record_types = [{'RecordType' : 'flow', 'RecordCount': flow}, {'RecordType': 'notice', 'RecordCount': notice}, {'RecordType': 'http', 'RecordCount': http}]
         if signal.get('ThreatIndicators'):
             md = md + tableToMarkdown('Threat Indicators', signal.get('ThreatIndicators'), ['IndicatorType', 'Value'])
-        md = md + tableToMarkdown('Record Metadata', {'Flow Count': flow, 'Notice Count': notice, 'Http Count': http},
-                                  ['Flow Count', 'Notice Count', 'Http Count'])
+        md = md + tableToMarkdown('Record Metadata', {'Flow Count': flow, 'Notice Count': notice, 'Http Count': http}, ['Flow Count', 'Notice Count', 'Http Count'])
         signal['Metadata'] = record_types
         ec = {'Jask.Signal(val.Id === obj.Id)': signal}
         demisto.results({
@@ -775,9 +759,7 @@ script:
         entity_id = demisto.getArg('entity-id')
         resp_json = req('GET', 'asset/' + entity_id, QUERY)
         entity = entity_to_readable(resp_json)
-        md = tableToMarkdown('Entity Details:', [entity],
-                             ['Id', 'Name', 'FirstSeen', 'LastSeen', 'Source', 'EntityType', 'PrimaryEntityType',
-                              'Hostname', 'RiskScore', 'IsWhitelisted', 'Groups'])
+        md = tableToMarkdown('Entity Details:', [entity], ['Id', 'Name', 'FirstSeen', 'LastSeen', 'Source', 'EntityType', 'PrimaryEntityType', 'Hostname', 'RiskScore', 'IsWhitelisted', 'Groups'])
         demisto.results({
             'Type': entryTypes['note'],
             'EntryContext': {'Jask.Entity': entity},
@@ -791,23 +773,18 @@ script:
         """
         Get related entities
         """
+        resultsList = []
         entity_id = demisto.getArg('entity-id')
         resp_json = req('GET', 'asset/%s/related_assets' % entity_id, QUERY)
-        entities = [
-            to_readable(e,
-                        ['id', 'name', 'email', 'source', 'username', 'hostname', 'active', 'admin', 'asset_type',
-                         'created_ts', 'firstSeen', 'given_name', 'is_whitelisted', 'lastSeen', 'last_name', 'risk_score',
-                         'groups'],
-                        {
-                            'asset_type': 'EntityType', 'created_ts': 'CreatedTimestamp', 'firstSeen': 'FirstSeen',
-                            'lastSeen': 'LastSeen'
-                        }) for e in resp_json['objects']
-        ]
+        entities = [to_readable(e, [
+            'id', 'name', 'email', 'source', 'username', 'hostname', 'active', 'admin', 'asset_type',
+            'created_ts', 'firstSeen', 'given_name', 'is_whitelisted', 'lastSeen', 'last_name', 'risk_score', 'groups'], {
+                'asset_type': 'EntityType', 'created_ts': 'CreatedTimestamp', 'firstSeen': 'FirstSeen', 'lastSeen': 'LastSeen'
+            }) for e in resp_json['objects']]
 
         ec = {'Jask.RelatedEntityList(val.Id === obj.Id)': entities}
         md = tableToMarkdown('Related Entities:', entities, ['Id', 'Name', 'EntityType', 'FirstSeen', 'LastSeen', 'Source',
-                                                             'Hostname', 'Username', 'GivenName', 'Email', 'RiskScore',
-                                                             'IsWhitelisted', 'Groups', 'CreatedTimestamp', 'Admin'])
+            'Hostname', 'Username', 'GivenName', 'Email', 'RiskScore', 'IsWhitelisted', 'Groups','CreatedTimestamp','Admin'])
         demisto.results({
             'Type': entryTypes['note'],
             'EntryContext': ec,
@@ -829,12 +806,9 @@ script:
             w['Timestamp'] = demisto.get(whitelisted_item, 'history.timestamp')
             w['UserName'] = demisto.get(whitelisted_item, 'history.username')
             items.append(w)
-        ec = {
-            'Jask.WhiteListed.EntityList(val.Id === obj.Id)': items,
-            'Jask.WhiteListed.Metadata.TotalCount': len(items)
-        }
-        md = tableToMarkdown('Whitelisted:', items,
-                             ['Id', 'Name', 'ModelId', 'Timestamp', 'UserName']) + '\n' + '### Count: ' + str(len(items))
+        ec = {'Jask.WhiteListed.EntityList(val.Id === obj.Id)': items}
+        ec['Jask.WhiteListed.Metadata.TotalCount'] = len(items)
+        md = tableToMarkdown('Whitelisted:', items, ['Id', 'Name', 'ModelId', 'Timestamp', 'UserName']) + '\n' + '### Count: ' + str(len(items))
         demisto.results({
             'Type': entryTypes['note'],
             'EntryContext': ec,
@@ -888,15 +862,16 @@ script:
         time_to = demisto.getArg('time-to')
         if last_seen:
             if time_from or time_to:
-                return_error('You cannot specify absolute times [time-to, time-from] with relative time [last-seen]')
+                return_error('You cannot specify absolute times [time-to, time-from] ' +
+                    'with relative time [last-seen]')
             else:
                 if translate_last_seen(last_seen) != '':
                     q += ' AND ' + translate_last_seen(last_seen)
         elif time_from and time_to:
-            q += ' AND timestamp:[%d TO %d]' % (
-                convert_string_date_to_unix(time_from), convert_string_date_to_unix(time_to))
+            q += ' AND timestamp:[%d TO %d]' % (convert_string_date_to_unix(time_from), convert_string_date_to_unix(time_to))
         elif time_from or time_to:
-            return_error('You must specify both absolute times [time-to, time-from] or relative time [last-seen]')
+            return_error('You must specify both absolute times [time-to, time-from] ' +
+                'or relative time [last-seen]')
         return q
 
 
@@ -905,8 +880,7 @@ script:
         Search insights using available filters
         """
         q = _add_time_to_q('*')
-        q = _add_list_to_q(q, {'workflow_status': 'status', 'rating': 'rating', 'group_assigned_to': 'assigned_team',
-                               'assigned_to': 'assigned-user'})
+        q = _add_list_to_q(q, {'workflow_status':'status', 'rating': 'rating', 'group_assigned_to': 'assigned_team', 'assigned_to': 'assigned-user'})
         query = QUERY.copy()
         query['q'] = q
         query['offset'] = demisto.getArg('offset')
@@ -925,9 +899,7 @@ script:
             'ContentsFormat': formats['json'],
             'Contents': resp_json,
             'EntryContext': ec,
-            'HumanReadable': tableToMarkdown('Insights', insights,
-                                             ['Id', 'Name', 'Action', 'AssignedTo', 'Description', 'IpAddress',
-                                              'LastUpdated', 'LastUpdatedBy', 'Severity', 'InsightTime', 'WorkflowStatus'])
+            'HumanReadable': tableToMarkdown('Insights', insights, ['Id', 'Name', 'Action', 'AssignedTo', 'Description', 'IpAddress', 'LastUpdated', 'LastUpdatedBy', 'Severity', 'InsightTime', 'WorkflowStatus'])
         })
 
 
@@ -950,9 +922,7 @@ script:
             'ContentsFormat': formats['json'],
             'Contents': resp_json,
             'EntryContext': ec,
-            'HumanReadable': tableToMarkdown('Signals', signals,
-                                             ['Id', 'Name', 'Category', 'Description', 'Score', 'SourceType', 'Timestamp',
-                                              'ThreatIndicators'])
+            'HumanReadable': tableToMarkdown('Signals', signals, ['Id', 'Name', 'Category', 'Description', 'Score', 'SourceType', 'Timestamp', 'ThreatIndicators'])
         })
 
 
@@ -980,8 +950,7 @@ script:
             'Contents': resp_json,
             'EntryContext': ec,
             'HumanReadable': tableToMarkdown('Entities', entities, [
-                'Id', 'Name', 'FirstSeen', 'LastSeen', 'Source', 'EntityType', 'PrimaryEntityType', 'Hostname', 'RiskScore',
-                'IsWhitelisted', 'Groups', 'IpAddress'
+                'Id', 'Name', 'FirstSeen', 'LastSeen', 'Source', 'EntityType', 'PrimaryEntityType', 'Hostname', 'RiskScore', 'IsWhitelisted', 'Groups', 'IpAddress'
             ])
         })
 
@@ -1021,10 +990,7 @@ script:
         for a in resp_json['objects']:
             current_fetch = a.get('timestamp')
             if current_fetch:
-                try:
-                    current_fetch = datetime.strptime(current_fetch, "%Y-%m-%dT%H:%M:%S")
-                except ValueError:
-                    current_fetch = datetime.strptime(current_fetch, "%Y-%m-%dT%H:%M:%S.%f")
+                current_fetch = datetime.strptime(current_fetch, "%Y-%m-%dT%H:%M:%S")
                 current_fetch = convert_date_to_unix(current_fetch)
                 if current_fetch > last_run:
                     incidents.append({
@@ -1040,43 +1006,30 @@ script:
         demisto.incidents(incidents)
         demisto.setLastRun({'time': next_fetch})
 
-
-    def main():
-        try:
-            handle_proxy()
-            if demisto.command() == 'test-module':
-                req('GET', 'asset/whitelisted', QUERY)
-                demisto.results('ok')
-            elif demisto.command() == 'jask-get-insight-details':
-                get_insight_details()
-            elif demisto.command() == 'jask-get-insight-comments':
-                get_insight_comments()
-            elif demisto.command() == 'jask-get-signal-details':
-                get_signal_details()
-            elif demisto.command() == 'jask-get-entity-details':
-                get_entity_details()
-            elif demisto.command() == 'jask-get-related-entities':
-                get_related_entities()
-            elif demisto.command() == 'jask-get-whitelisted-entities':
-                get_whitelisted_entities()
-            elif demisto.command() == 'jask-search-insights':
-                search_insights()
-            elif demisto.command() == 'jask-search-entities':
-                search_entities()
-            elif demisto.command() == 'jask-search-signals':
-                search_signals()
-            elif demisto.command() == 'fetch-incidents':
-                fetch_incidents()
-            else:
-                return_error('Unrecognized command: ' + demisto.command())
-        except Exception as e:
-            LOG(e)
-            LOG.print_log(False)
-            return_error(e.message)
-
-
-    # python2 uses __builtin__ python3 uses builtins
-    if __name__ == "__builtin__" or __name__ == "builtins":
-        main()
+    if demisto.command() == 'test-module':
+        req('GET', 'asset/whitelisted', QUERY)
+        demisto.results('ok')
+    elif demisto.command() == 'jask-get-insight-details':
+        get_insight_details()
+    elif demisto.command() == 'jask-get-insight-comments':
+        get_insight_comments()
+    elif demisto.command() == 'jask-get-signal-details':
+        get_signal_details()
+    elif demisto.command() == 'jask-get-entity-details':
+        get_entity_details()
+    elif demisto.command() == 'jask-get-related-entities':
+        get_related_entities()
+    elif demisto.command() == 'jask-get-whitelisted-entities':
+        get_whitelisted_entities()
+    elif demisto.command() == 'jask-search-insights':
+        search_insights()
+    elif demisto.command() == 'jask-search-entities':
+        search_entities()
+    elif demisto.command() == 'jask-search-signals':
+        search_signals()
+    elif demisto.command() == 'fetch-incidents':
+        fetch_incidents()
+    else:
+        return_error('Unrecognized command: ' + demisto.command())
   type: python
 system: true

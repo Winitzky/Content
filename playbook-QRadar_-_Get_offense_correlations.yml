@@ -203,7 +203,7 @@ tasks:
       id: bbe06f8f-78a7-4de5-81ff-ff16aa98f5b6
       iscommand: false
       name: Get Offense correlations
-      scriptName: QRadarGetOffenseCorrelations
+      script: QRadarGetOffenseCorrelations
       type: regular
       version: -1
     taskid: bbe06f8f-78a7-4de5-81ff-ff16aa98f5b6
@@ -247,7 +247,7 @@ tasks:
       id: 324f9756-1ddb-4d58-8d45-26f892ba6759
       iscommand: false
       name: Get correlations' logs
-      scriptName: QRadarGetCorrelationLogs
+      script: QRadarGetCorrelationLogs
       type: regular
       version: -1
     taskid: 324f9756-1ddb-4d58-8d45-26f892ba6759

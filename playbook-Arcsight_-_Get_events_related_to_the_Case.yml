@@ -141,7 +141,7 @@ tasks:
       id: 3371774c-a2ba-4ea3-8acb-aaeeae8195f7
       iscommand: false
       name: Is FetchID set?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 3371774c-a2ba-4ea3-8acb-aaeeae8195f7
@@ -172,7 +172,7 @@ tasks:
       id: a8d523d4-a25e-45a9-8553-fccb9b49d585
       iscommand: false
       name: Is ID label included?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a8d523d4-a25e-45a9-8553-fccb9b49d585
@@ -203,7 +203,7 @@ tasks:
       id: 00fc9870-1af2-47d1-828b-24dbbd6f02cc
       iscommand: false
       name: User - please insert Arcsight Case Resource ID
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 00fc9870-1af2-47d1-828b-24dbbd6f02cc
@@ -291,7 +291,7 @@ tasks:
       id: 29025200-cf8e-4d69-80f1-166eb6b3a034
       iscommand: false
       name: Does Case included IDs for related Events?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 29025200-cf8e-4d69-80f1-166eb6b3a034
@@ -344,7 +344,7 @@ tasks:
       id: 6b37cdf2-9072-49ae-848c-ea00e953a603
       iscommand: false
       name: Do we have IDs for underlying base events?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 6b37cdf2-9072-49ae-848c-ea00e953a603

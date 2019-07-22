@@ -75,7 +75,7 @@ tasks:
       id: c4e87e26-a8fc-473a-8f84-e63335a552e8
       iscommand: false
       name: Assign to analyst
-      scriptName: AssignAnalystToIncident
+      script: AssignAnalystToIncident
       type: regular
       version: -1
     taskid: c4e87e26-a8fc-473a-8f84-e63335a552e8
@@ -101,7 +101,7 @@ tasks:
       id: c3cd10bc-d79e-4471-8b28-82613ac05418
       iscommand: false
       name: ""
-      playbookName: Calculate Severity - Generic
+      playbookId: Calculate Severity - Generic
       type: playbook
       version: -1
     taskid: c3cd10bc-d79e-4471-8b28-82613ac05418
@@ -226,7 +226,7 @@ tasks:
       id: 1a99d7e1-2c84-4d57-80be-0ec42482d952
       iscommand: false
       name: Store the email address of the reporting user
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 1a99d7e1-2c84-4d57-80be-0ec42482d952
@@ -299,7 +299,7 @@ tasks:
       id: ca8ce4fe-c164-447f-872e-7a4ecf2cdbcd
       iscommand: false
       name: Email Address Enrichment - Generic
-      playbookName: Email Address Enrichment - Generic
+      playbookId: email_address_enrichment_-_generic
       type: playbook
       version: -1
     taskid: ca8ce4fe-c164-447f-872e-7a4ecf2cdbcd
@@ -386,7 +386,7 @@ tasks:
       id: ac0d8fe7-8ec0-49b8-8947-75d3bb87437c
       iscommand: false
       name: Update  the user that the reported email is safe
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: ac0d8fe7-8ec0-49b8-8947-75d3bb87437c
@@ -483,7 +483,7 @@ tasks:
       id: d24700ff-dc15-4f52-8faa-ab74f7d65ae3
       iscommand: false
       name: Detonate File - Generic
-      playbookName: Detonate File - Generic
+      playbookId: Detonate File - Generic
       type: playbook
       version: -1
     taskid: d24700ff-dc15-4f52-8faa-ab74f7d65ae3
@@ -509,7 +509,7 @@ tasks:
       id: ecff99fe-b6cf-4306-8609-9ca00a5dcc8f
       iscommand: false
       name: Entity Enrichment - Generic
-      playbookName: Entity Enrichment - Generic
+      playbookId: entity_enrichment_generic
       type: playbook
       version: -1
     taskid: ecff99fe-b6cf-4306-8609-9ca00a5dcc8f
@@ -536,7 +536,7 @@ tasks:
       id: 87a23c95-84b5-4343-8a01-d70c6f97702a
       iscommand: false
       name: Process Email - Generic
-      playbookName: Process Email - Generic
+      playbookId: process_email_-_generic
       type: playbook
       version: -1
     taskid: 87a23c95-84b5-4343-8a01-d70c6f97702a
@@ -587,7 +587,7 @@ tasks:
       id: 2f89f21c-0088-460a-81b2-b0c3f021b89c
       iscommand: false
       name: Search And Delete Emails - Generic
-      playbookName: Search And Delete Emails - Generic
+      playbookId: search_and_delete_emails_-_generic
       type: playbook
       version: -1
     taskid: 2f89f21c-0088-460a-81b2-b0c3f021b89c
@@ -742,7 +742,7 @@ tasks:
       id: cd577642-8baf-4aba-87d9-29f0366aa173
       iscommand: false
       name: Extract Indicators From File - Generic
-      playbookName: Extract Indicators From File - Generic
+      playbookId: extract_indicators_from_file_-_generic
       type: playbook
       version: -1
     taskid: cd577642-8baf-4aba-87d9-29f0366aa173
@@ -862,7 +862,7 @@ tasks:
       id: cfb76a8d-e926-41a3-8036-6d4d54abf96d
       iscommand: false
       name: Block Indicators - Generic
-      playbookName: Block Indicators - Generic
+      playbookId: block_indicators_-_generic
       type: playbook
       version: -1
     taskid: cfb76a8d-e926-41a3-8036-6d4d54abf96d

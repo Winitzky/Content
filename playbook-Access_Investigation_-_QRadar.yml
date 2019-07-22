@@ -88,7 +88,7 @@ tasks:
       id: 6f12a822-db6c-40b7-813d-714a77e77f1f
       iscommand: false
       name: QRadar - Get offense correlations
-      playbookName: QRadar - Get offense correlations
+      playbookId: 'QRadar - Get offense correlations '
       type: playbook
       version: -1
     taskid: 6f12a822-db6c-40b7-813d-714a77e77f1f
@@ -137,7 +137,7 @@ tasks:
       id: 552536df-def5-4b43-862d-27dfd4fc368b
       iscommand: false
       name: Access Investigation - Generic
-      playbookName: Access Investigation - Generic
+      playbookId: access_investigation_-_generic
       type: playbook
       version: -1
     taskid: 552536df-def5-4b43-862d-27dfd4fc368b

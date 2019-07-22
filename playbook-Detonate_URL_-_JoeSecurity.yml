@@ -246,7 +246,7 @@ tasks:
       id: dba7628f-dc23-4f39-8024-fe36dcd71e94
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: dba7628f-dc23-4f39-8024-fe36dcd71e94
@@ -470,7 +470,7 @@ tasks:
       id: 9c83e0a7-8cce-4a67-8320-90f35a40d2ef
       iscommand: false
       name: Set Context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 9c83e0a7-8cce-4a67-8320-90f35a40d2ef

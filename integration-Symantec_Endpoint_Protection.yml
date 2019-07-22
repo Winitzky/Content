@@ -28,7 +28,6 @@ configuration:
   name: proxy
   required: false
   type: 8
-deprecated: true
 description: Query the Symantec Endpoint Protection Manager using the official REST
   API- DEPRECATED. Please use Symantec Endpoint Protection V2 integration instead.
 detaileddescription: Integration with Symantec Endpoint Protection Manager using the

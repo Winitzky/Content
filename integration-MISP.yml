@@ -23,7 +23,6 @@ configuration:
   name: insecure
   required: false
   type: 8
-deprecated: true
 description: Malware Information Sharing Platform and Threat Sharing (This integration
   is deprecated, use MISP V2 instead)
 display: MISP (Deprecated)
@@ -65,7 +64,6 @@ script:
     - description: This will populate the comment field of any attribute created using
         this API.
       name: comment
-    deprecated: true
     description: Upload file sample to MISP
     execution: true
     name: internal-misp-upload-sample
@@ -101,7 +99,6 @@ script:
     - description: The returned events must include an attribute with the given UUID,
         or alternatively the event's UUID must match the value(s) passed.
       name: uuid
-    deprecated: true
     description: Search for events in misp
     name: misp-search
     outputs:
@@ -159,7 +156,6 @@ script:
         responses.
       name: file
       required: true
-    deprecated: true
     description: Check file reputation of the given hash
     name: file
     outputs:
@@ -185,7 +181,6 @@ script:
     - description: URL to be checked
       name: url
       required: true
-    deprecated: true
     description: Check if url is in MISP events
     name: url
     outputs:
@@ -207,7 +202,6 @@ script:
     - description: IP address to check
       name: ip
       required: true
-    deprecated: true
     description: Check IP Reputation
     name: ip
     outputs:
@@ -239,7 +233,6 @@ script:
       predefined:
       - "1"
       - "0"
-    deprecated: true
     description: Download malware sample by hash
     name: internal-misp-download-sample
   - arguments:
@@ -277,7 +270,6 @@ script:
     - defaultValue: "1"
       description: MISP Threat level id
       name: threat_level_id
-    deprecated: true
     description: Create new MISP event
     name: internal-misp-create-event
     outputs:
@@ -308,7 +300,6 @@ script:
     - description: Value of the attribute
       name: value
       required: true
-    deprecated: true
     description: Add attribute to existing MISP event
     name: internal-misp-add-attribute
   runonce: false

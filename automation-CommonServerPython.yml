@@ -41,7 +41,6 @@ script: |2-
       'plagroundError': 8,
       'playgroundError': 8,
       'entryInfoFile': 9,
-      'warning': 11,
       'map': 15,
       'widget': 17
   }
@@ -1342,7 +1341,7 @@ script: |2-
       demisto.results(return_entry)
 
 
-  def return_error(message, error='', outputs=None):
+  def return_error(message, error=''):
       """
           Returns error entry with given message and exits the script
 
@@ -1351,9 +1350,6 @@ script: |2-
 
           :type error: ``str``
           :param error: The raw error message to log (optional)
-
-          :type outputs: ``dict or None``
-          :param outputs: the outputs that will be returned to playbook/investigation context (optional)
 
           :return: Error entry object
           :rtype: ``dict``
@@ -1365,8 +1361,7 @@ script: |2-
       demisto.results({
           'Type': entryTypes['error'],
           'ContentsFormat': formats['text'],
-          'Contents': str(message),
-          "EntryContext": outputs
+          'Contents': str(message)
       })
       sys.exit(0)
 

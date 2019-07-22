@@ -52,7 +52,7 @@ tasks:
       id: be4d8a4d-14b5-4541-8d40-1df25ef145c6
       iscommand: false
       name: Is AD configured?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: be4d8a4d-14b5-4541-8d40-1df25ef145c6
@@ -93,7 +93,7 @@ tasks:
       id: c7455a4b-be90-45c3-83be-a290e2660432
       iscommand: false
       name: Query AD to get user details
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: c7455a4b-be90-45c3-83be-a290e2660432
@@ -147,7 +147,7 @@ tasks:
       id: 7e9ec3ab-29e0-458a-8a61-7ca559f4b428
       iscommand: false
       name: Check if there is an Email address
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 7e9ec3ab-29e0-458a-8a61-7ca559f4b428

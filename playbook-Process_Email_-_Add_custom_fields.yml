@@ -137,7 +137,7 @@ tasks:
       id: 0c93975e-3aef-49f0-8c4e-ca0e5b837898
       iscommand: false
       name: Set "Email Subject"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: 0c93975e-3aef-49f0-8c4e-ca0e5b837898
@@ -260,7 +260,7 @@ tasks:
       id: fa753dda-6035-42bb-8d90-18af31bd895a
       iscommand: false
       name: Set "To"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: fa753dda-6035-42bb-8d90-18af31bd895a
@@ -309,7 +309,7 @@ tasks:
       id: ec368e0b-8b64-49c3-8b8c-af1d7a773ad4
       iscommand: false
       name: Set "CC"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: ec368e0b-8b64-49c3-8b8c-af1d7a773ad4
@@ -395,7 +395,7 @@ tasks:
       id: f6b002e9-c9fe-43e6-8319-669a6697a7c6
       iscommand: false
       name: Set "From"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: f6b002e9-c9fe-43e6-8319-669a6697a7c6
@@ -481,7 +481,7 @@ tasks:
       id: 4ca85e8d-5140-4bc6-8ed3-07cddb3c1eb1
       iscommand: false
       name: Set "Body HTML"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: 4ca85e8d-5140-4bc6-8ed3-07cddb3c1eb1
@@ -567,7 +567,7 @@ tasks:
       id: 8712254a-0732-41a4-813a-504bc8def0e4
       iscommand: false
       name: Set "Body"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: 8712254a-0732-41a4-813a-504bc8def0e4
@@ -653,7 +653,7 @@ tasks:
       id: db38aa5c-6c21-48b1-8289-eaabee90a7b4
       iscommand: false
       name: Set "Body Format"
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: db38aa5c-6c21-48b1-8289-eaabee90a7b4

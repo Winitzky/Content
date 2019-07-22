@@ -86,7 +86,7 @@ tasks:
       id: ffd5619d-eb26-4f14-8d71-b62e1e6bc97d
       iscommand: false
       name: Add the endpoint as a System to this incident
-      scriptName: IncidentAddSystem
+      script: IncidentAddSystem
       type: regular
       version: -1
     taskid: ffd5619d-eb26-4f14-8d71-b62e1e6bc97d
@@ -116,7 +116,7 @@ tasks:
       id: a3cd0e59-5d57-4782-8795-0ea3811ec4d6
       iscommand: false
       name: d2 agent - Get process list
-      scriptName: D2ExecuteCommand
+      script: D2ExecuteCommand
       type: regular
       version: -1
     taskid: a3cd0e59-5d57-4782-8795-0ea3811ec4d6
@@ -147,7 +147,7 @@ tasks:
       id: 7411d33a-9c1c-494f-8422-c972b524abe2
       iscommand: false
       name: d2 agent - Get hardware details
-      scriptName: D2ExecuteCommand
+      script: D2ExecuteCommand
       type: regular
       version: -1
     taskid: 7411d33a-9c1c-494f-8422-c972b524abe2
@@ -173,7 +173,7 @@ tasks:
       id: 34499d4a-e00a-4886-8882-e5bcddf3a892
       iscommand: false
       name: d2 agent - Get active users
-      scriptName: ActiveUsersD2
+      script: ActiveUsersD2
       type: regular
       version: -1
     taskid: 34499d4a-e00a-4886-8882-e5bcddf3a892
@@ -206,7 +206,7 @@ tasks:
       id: bfdb339a-a8b5-4b46-822c-23b4d515787e
       iscommand: false
       name: Does 'Host' input exist?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: bfdb339a-a8b5-4b46-822c-23b4d515787e
@@ -237,7 +237,7 @@ tasks:
       id: 51867be7-4781-4482-87aa-2181e138b651
       iscommand: false
       name: Any files on endpoint that we should collect?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 51867be7-4781-4482-87aa-2181e138b651
@@ -267,7 +267,7 @@ tasks:
       id: 6289197b-4aa9-4e44-8b96-d5abd1a9dbb3
       iscommand: false
       name: d2 agent - Collect file from endpoint
-      scriptName: FetchFileD2
+      script: FetchFileD2
       type: regular
       version: -1
     taskid: 6289197b-4aa9-4e44-8b96-d5abd1a9dbb3
@@ -350,7 +350,7 @@ tasks:
       id: 3a82031b-c9ed-4dff-8336-12c8279afc02
       iscommand: false
       name: Is the OS type Windows?
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: 3a82031b-c9ed-4dff-8336-12c8279afc02

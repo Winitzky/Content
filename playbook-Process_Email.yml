@@ -55,7 +55,7 @@ tasks:
       id: 0a3b6760-ffc7-4a5f-8042-47e9a15402ee
       iscommand: false
       name: Do we have original emails attached?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 0a3b6760-ffc7-4a5f-8042-47e9a15402ee
@@ -85,7 +85,7 @@ tasks:
       id: 3ad45b93-5373-4303-8a74-fcaeba4c3344
       iscommand: false
       name: Add original email details to context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 3ad45b93-5373-4303-8a74-fcaeba4c3344
@@ -116,7 +116,7 @@ tasks:
       id: b7f50774-0497-4821-8910-02df73f2c91d
       iscommand: false
       name: Add original email attachments to context
-      scriptName: ParseEmailFiles
+      script: ParseEmailFiles
       type: regular
       version: -1
     taskid: b7f50774-0497-4821-8910-02df73f2c91d

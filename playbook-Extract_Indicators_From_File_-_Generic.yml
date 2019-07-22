@@ -138,7 +138,7 @@ tasks:
       id: 864c6f5e-7214-4a36-8c37-80f7057bd36e
       iscommand: false
       name: Set file to local context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 864c6f5e-7214-4a36-8c37-80f7057bd36e
@@ -364,7 +364,7 @@ tasks:
       id: e077b5e8-a546-4da5-86ea-fb327ead5a2e
       iscommand: false
       name: Extract indicators from text-based file
-      scriptName: ExtractIndicatorsFromTextFile
+      script: ExtractIndicatorsFromTextFile
       type: regular
       version: -1
     taskid: e077b5e8-a546-4da5-86ea-fb327ead5a2e
@@ -477,7 +477,7 @@ tasks:
       id: 34c98942-d6e9-4db6-81e9-a04339cdf58c
       iscommand: false
       name: Extract indicators from PDF file
-      scriptName: ReadPDFFile
+      script: ReadPDFFile
       type: regular
       version: -1
     taskid: 34c98942-d6e9-4db6-81e9-a04339cdf58c
@@ -730,7 +730,7 @@ tasks:
       id: cf8a2830-ba83-43b2-802a-1b4e3281e834
       iscommand: false
       name: Extract indicators from Word file
-      scriptName: ExtractIndicatorsFromWordFile
+      script: ExtractIndicatorsFromWordFile
       type: regular
       version: -1
     taskid: cf8a2830-ba83-43b2-802a-1b4e3281e834

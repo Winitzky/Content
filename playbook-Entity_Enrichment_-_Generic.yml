@@ -215,7 +215,7 @@ tasks:
       id: 92a63802-d111-4add-8e92-03f485d20bab
       iscommand: false
       name: IP Enrichment - Generic
-      playbookName: IP Enrichment - Generic
+      playbookId: ip_enrichment_generic
       type: playbook
       version: -1
     taskid: 92a63802-d111-4add-8e92-03f485d20bab
@@ -249,7 +249,7 @@ tasks:
       id: 427040f6-9903-4122-8537-bd72d6fcdab2
       iscommand: false
       name: URL Enrichment - Generic
-      playbookName: URL Enrichment - Generic
+      playbookId: url_enrichment_-_generic
       type: playbook
       version: -1
     taskid: 427040f6-9903-4122-8537-bd72d6fcdab2
@@ -284,7 +284,7 @@ tasks:
       id: 7ea079dc-c904-4088-878d-908e7b5b1ab3
       iscommand: false
       name: Email Address Enrichment - Generic
-      playbookName: Email Address Enrichment - Generic
+      playbookId: email_address_enrichment_-_generic
       type: playbook
       version: -1
     taskid: 7ea079dc-c904-4088-878d-908e7b5b1ab3
@@ -318,7 +318,7 @@ tasks:
       id: 06158760-6f5f-466e-8e57-d37f7ec29066
       iscommand: false
       name: Endpoint Enrichment - Generic
-      playbookName: Endpoint Enrichment - Generic
+      playbookId: endpoint_enrichment_-_generic
       type: playbook
       version: -1
     taskid: 06158760-6f5f-466e-8e57-d37f7ec29066
@@ -352,7 +352,7 @@ tasks:
       id: 5799a021-f77c-457b-85bc-e362b7ff4b43
       iscommand: false
       name: Domain Enrichment - Generic
-      playbookName: Domain Enrichment - Generic
+      playbookId: domain_enrichment_generic
       type: playbook
       version: -1
     taskid: 5799a021-f77c-457b-85bc-e362b7ff4b43
@@ -386,7 +386,7 @@ tasks:
       id: f9ef04ef-5311-4cd3-8c5e-eff47f95b3d3
       iscommand: false
       name: Account Enrichment - Generic
-      playbookName: Account Enrichment - Generic
+      playbookId: account_enrichment_-_generic
       type: playbook
       version: -1
     taskid: f9ef04ef-5311-4cd3-8c5e-eff47f95b3d3
@@ -424,7 +424,7 @@ tasks:
       id: 07d8b6e7-df26-4c17-80f0-e8bd093720e0
       iscommand: false
       name: File Enrichment - Generic
-      playbookName: File Enrichment - Generic
+      playbookId: File Enrichment - Generic
       type: playbook
       version: -1
     taskid: 07d8b6e7-df26-4c17-80f0-e8bd093720e0

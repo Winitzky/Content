@@ -50,7 +50,7 @@ tasks:
       id: 285982a4-a0f0-44b9-8730-79b07de3cb70
       iscommand: false
       name: Collect hashes from the incident
-      scriptName: ExtractHash
+      script: ExtractHash
       type: regular
       version: -1
     taskid: 285982a4-a0f0-44b9-8730-79b07de3cb70
@@ -79,7 +79,7 @@ tasks:
       id: de780391-3d5e-452d-8da0-53075cc3770d
       iscommand: false
       name: Collect IPs from the incident
-      scriptName: ExtractIP
+      script: ExtractIP
       type: regular
       version: -1
     taskid: de780391-3d5e-452d-8da0-53075cc3770d
@@ -108,7 +108,7 @@ tasks:
       id: cccb4d19-7cc7-46ee-85bd-4283b03ba932
       iscommand: false
       name: Collect URLs from the incident
-      scriptName: ExtractURL
+      script: ExtractURL
       type: regular
       version: -1
     taskid: cccb4d19-7cc7-46ee-85bd-4283b03ba932
@@ -131,7 +131,7 @@ tasks:
       id: cb6e468c-f551-41d4-82c5-25891ed171d7
       iscommand: false
       name: ""
-      playbookName: Enrichment Playbook
+      playbookId: Enrichment Playbook
       type: playbook
       version: -1
     taskid: cb6e468c-f551-41d4-82c5-25891ed171d7

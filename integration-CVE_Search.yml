@@ -49,8 +49,7 @@ script:
             {
                 Method: 'GET',
                 Headers: {
-                    Accept: ['application/json'],
-                    'User-Agent': ['Demisto CVE Integration']
+                    Accept: ['application/json']
                 }
             }
         );

@@ -63,7 +63,7 @@ tasks:
       id: e3fbf02a-78a1-4329-837e-a6116bcf92af
       iscommand: false
       name: Block File - Carbon Black Response
-      playbookName: Block File - Carbon Black Response
+      playbookId: block_file_-_carbon_black_response
       type: playbook
       version: -1
     taskid: e3fbf02a-78a1-4329-837e-a6116bcf92af

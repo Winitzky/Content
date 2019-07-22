@@ -334,7 +334,7 @@ tasks:
       id: 8b9983e7-0454-4087-8dee-e85b4cda4ba4
       iscommand: false
       name: Close the investigation
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: 8b9983e7-0454-4087-8dee-e85b4cda4ba4
@@ -398,7 +398,7 @@ tasks:
       id: 370580ad-016e-4515-8a0e-e76cd0e55373
       iscommand: false
       name: Store system names to context key outdatedEndpoints
-      scriptName: commentsToContext
+      script: 120c861a-e0ae-417e-8dcf-c3ee1dc15a42
       type: regular
       version: -1
     taskid: 370580ad-016e-4515-8a0e-e76cd0e55373
@@ -434,7 +434,7 @@ tasks:
       id: 2ea4d150-6e57-4bb3-812c-2b18efa693e6
       iscommand: false
       name: Store system names to context key endpointsToIsolate
-      scriptName: commentsToContext
+      script: 120c861a-e0ae-417e-8dcf-c3ee1dc15a42
       type: regular
       version: -1
     taskid: 2ea4d150-6e57-4bb3-812c-2b18efa693e6
@@ -472,7 +472,7 @@ tasks:
       id: ce5e0dfc-c502-4f3c-8569-38e2b4c7baee
       iscommand: false
       name: Set incident severity to High
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: ce5e0dfc-c502-4f3c-8569-38e2b4c7baee

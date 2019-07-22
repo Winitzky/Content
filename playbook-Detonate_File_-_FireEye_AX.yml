@@ -194,7 +194,7 @@ tasks:
       id: 2dbe8904-3a0e-421d-8dd6-28d64963f65d
       iscommand: false
       name: Set file to context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 2dbe8904-3a0e-421d-8dd6-28d64963f65d
@@ -405,7 +405,7 @@ tasks:
       id: 75d77278-0907-4f26-87dc-ad51c40cb28c
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: 75d77278-0907-4f26-87dc-ad51c40cb28c

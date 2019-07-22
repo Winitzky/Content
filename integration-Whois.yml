@@ -3,9 +3,9 @@ commonfields:
   id: Whois
   version: -1
 configuration:
-- defaultvalue: ""
-  display: Return Errors
-  name: with_error
+- defaultvalue: "false"
+  display: Use system proxy settings
+  name: proxy
   required: false
   type: 8
 description: Provides data enrichment for domains and IP addresses.
@@ -23,125 +23,128 @@ script:
     description: Provides data enrichment for Domains, URLs, and IP addresses.
     name: whois
     outputs:
-    - contextPath: Domain.Whois.Name
-      description: Domain name
+    - contextPath: Whois.Domain
+      description: Domain
       type: string
-    - contextPath: Domain.Whois.DomainStatus
+    - contextPath: Whois.DomainStatus
       description: Domain Status
       type: string
-    - contextPath: Domain.Whois.DNSSec
+    - contextPath: Whois.DNSSec
       description: DNSSEC
       type: string
-    - contextPath: Domain.Whois.NameServers
+    - contextPath: Whois.NameServers
       description: Name Servers
       type: string
-    - contextPath: Domain.Whois.CreationDate
+    - contextPath: Whois.CreationDate
       description: Creation Date
       type: date
-    - contextPath: Domain.Whois.UpdatedDate
+    - contextPath: Whois.UpdatedDate
       description: Updated Date
       type: date
-    - contextPath: Domain.Whois.ExpirationDate
+    - contextPath: Whois.ExpirationDate
       description: Expiration Date
       type: date
-    - contextPath: Domain.Whois.Registrar.Name
+    - contextPath: Whois.Registrar.Name
       description: Registrar's Name
       type: string
-    - contextPath: Domain.Whois.Emails
+    - contextPath: Whois.Emails
       description: Abuse Emails
       type: string
-    - contextPath: Domain.Whois.Registrar.AbuseEmail
+    - contextPath: Whois.Registrar.AbuseEmail
       description: Registrar's Abuse Email
       type: string
-    - contextPath: Domain.Whois.Registrant.name
+    - contextPath: Whois.Registrant.Name
       description: Registrant's Name
       type: string
-    - contextPath: Domain.Whois.Registrant.email
+    - contextPath: Whois.Registrant.Email
       description: Registrant's Email
       type: string
-    - contextPath: Domain.Whois.Raw
+    - contextPath: DNS.Name
+      description: Domain Name
+      type: string
+    - contextPath: DNS.RiskScore
+      description: Risk Score
+      type: number
+    - contextPath: Whois.Raw
       description: Raw Output
       type: string
-    - contextPath: Domain.Whois.Administrator.country
+    - contextPath: Whois.Administrator.Country
       description: The country of domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.name
+    - contextPath: Whois.Administrator.Name
       description: The name of domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.state
+    - contextPath: Whois.Administrator.State
       description: The state of domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.email
+    - contextPath: Whois.Administrator.Email
       description: The email of the domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.organization
+    - contextPath: Whois.Administrator.Organization
       description: The organization of the domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.postalcode
+    - contextPath: Whois.Administrator.Postalcode
       description: The post code of the domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.street
+    - contextPath: Whois.Administrator.Street
       description: The street of the domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.phone
+    - contextPath: Whois.Administrator.Phone
       description: The phone of the domain admin
       type: string
-    - contextPath: Domain.Whois.Administrator.city
+    - contextPath: Whois.Administrator.City
       description: The city of the domain admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.country
+    - contextPath: Whois.TechAdmin.Country
       description: The country of tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.name
+    - contextPath: Whois.TechAdmin.Name
       description: The name of tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.state
+    - contextPath: Whois.TechAdmin.State
       description: The state of tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.email
+    - contextPath: Whois.TechAdmin.Email
       description: The email of the tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.organization
+    - contextPath: Whois.TechAdmin.Organization
       description: The organization of the tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.postalcode
+    - contextPath: Whois.TechAdmin.Postalcode
       description: The post code of the tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.street
+    - contextPath: Whois.TechAdmin.Street
       description: The street of the tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.phone
+    - contextPath: Whois.TechAdmin.Phone
       description: The phone of the tech admin
       type: string
-    - contextPath: Domain.Whois.TechAdmin.city
+    - contextPath: Whois.TechAdmin.City
       description: The city of the tech admin
       type: string
-    - contextPath: Domain.Whois.Registrant.country
+    - contextPath: Whois.Registrant.Country
       description: The country of registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.state
+    - contextPath: Whois.Registrant.State
       description: The state of the registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.organization
+    - contextPath: Whois.Registrant.Organization
       description: The organization of the registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.postalcode
+    - contextPath: Whois.Registrant.Postalcode
       description: The post code of the registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.street
+    - contextPath: Whois.Registrant.Street
       description: The street of the registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.phone
+    - contextPath: Whois.Registrant.Phone
       description: The phone of the registrant
       type: string
-    - contextPath: Domain.Whois.Registrant.city
+    - contextPath: Whois.Registrant.City
       description: The city of the registrant
       type: string
-    - contextPath: Domain.Whois.ID
+    - contextPath: Whois.ID
       description: ID of the domain
-      type: string
-    - contextPath: Domain.Whois.QueryStatus
-      description: The result of the command(Success/Failed).
       type: string
   dockerimage: demisto/ippysocks
   runonce: false
@@ -153,8 +156,6 @@ script:
     import socket
     import sys
     from codecs import encode, decode
-
-    ENTRY_TYPE = entryTypes['error'] if demisto.params().get('with_error', False) else entryTypes['warning']
 
     # flake8: noqa
 
@@ -7353,70 +7354,28 @@ script:
 
         if ext in tlds.keys():
             entry = tlds[ext]
-            try:
-                host = entry["host"]
-            except KeyError:
-                context = ({
-                    outputPaths['domain']: {
-                        'Name': domain,
-                        'Whois': {
-                            'QueryStatus': 'Failed'
-                        }
-                    },
-                })
-                demisto.results({
-                    'ContentsFormat': 'text',
-                    'Type': ENTRY_TYPE,
-                    'Contents': 'The domain - {} - is not supported by the Whois service'.format(domain),
-                    'EntryContext': context
-                })
-                sys.exit(-1)
-
-            return host
-
+            return entry["host"]
         else:
             raise WhoisException("No root WHOIS server found for domain.")
 
 
     def whois_request(domain, server, port=43):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((server, port))
+        sock.send(("%s\r\n" % domain).encode("utf-8"))
+        buff = b""
+        while True:
+            data = sock.recv(1024)
+            if len(data) == 0:
+                break
+            buff += data
+        sock.close()
         try:
-            sock.connect((server, port))
-        except socket.error as msg:
-            context = ({
-                outputPaths['domain']: {
-                    'Name': domain,
-                    'Whois': {
-                        'QueryStatus': 'Failed'
-                    }
-                },
-            })
+            d = buff.decode("utf-8")
+        except UnicodeDecodeError:
+            d = buff.decode("latin-1")
 
-            demisto.results(
-                {
-                    'ContentsFormat': 'text',
-                    'Type': ENTRY_TYPE,
-                    'Contents': 'Whois returned - Couldnt connect with the socket-server: {}'.format(msg),
-                    'EntryContext': context
-                }
-            )
-            sys.exit(-1)
-
-        else:
-            sock.send(("%s\r\n" % domain).encode("utf-8"))
-            buff = b""
-            while True:
-                data = sock.recv(1024)
-                if len(data) == 0:
-                    break
-                buff += data
-            sock.close()
-            try:
-                d = buff.decode("utf-8")
-            except UnicodeDecodeError:
-                d = buff.decode("latin-1")
-
-            return d
+        return d
 
 
     airports = {} # type: dict
@@ -8390,11 +8349,8 @@ script:
 
 
     def whois_command():
-
         domain = demisto.args().get('query')
-
         whois_result = get_whois(domain)
-
         md = {'Name': domain}
         ec = {'Name': domain}
         if 'status' in whois_result:
@@ -8405,7 +8361,6 @@ script:
         if 'nameservers' in whois_result:
             ec['NameServers'] = whois_result.get('nameservers')
             md['NameServers'] = whois_result.get('nameservers')
-
         try:
             if 'creation_date' in whois_result:
                 ec['CreationDate'] = whois_result.get('creation_date')[0].strftime('%d-%m-%Y')
@@ -8442,14 +8397,11 @@ script:
             ec['Emails'] = whois_result.get('emails')
             md['Emails'] = whois_result.get('emails')
 
-        ec['QueryStatus'] = 'Success'
-        md['QueryStatus'] = 'Success'
-
         context = ({
-            outputPaths['domain']: {
-                'Name': domain,
-                'Whois': ec
+            'Domain': {
+                'Name': domain
             },
+            'Domain.Whois(val.Name && val.Name == obj.Name)': ec
         })
 
         demisto.results({
@@ -8473,13 +8425,12 @@ script:
     ''' EXECUTION CODE '''
     LOG('command is {}'.format(str(demisto.command())))
     try:
-        handle_proxy()
         if demisto.command() == 'test-module':
             test_command()
         elif demisto.command() == 'whois':
             whois_command()
     except Exception as e:
         LOG(e)
-        return_error(str(e))
+        return_error(e.message)
   type: python
 system: true

@@ -323,7 +323,7 @@ tasks:
       id: ea86d0cc-f9dc-4496-812c-bd3f5c52d08c
       iscommand: false
       name: Set context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: ea86d0cc-f9dc-4496-812c-bd3f5c52d08c
@@ -417,7 +417,7 @@ tasks:
       id: 4bf99d41-0f5c-4f08-8c98-785cb0e5503d
       iscommand: false
       name: Set context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 4bf99d41-0f5c-4f08-8c98-785cb0e5503d
@@ -453,7 +453,7 @@ tasks:
       id: 4dbd3cc6-ae7c-4de5-89d2-b3e1b47acec5
       iscommand: false
       name: Delete old context
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: 4dbd3cc6-ae7c-4de5-89d2-b3e1b47acec5
@@ -489,7 +489,7 @@ tasks:
       id: 7e75aef4-9998-407c-8ace-b342f3ef812f
       iscommand: false
       name: Set context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 7e75aef4-9998-407c-8ace-b342f3ef812f
@@ -603,7 +603,7 @@ tasks:
       id: 7c1f40cb-1a0e-44dd-8d87-ff2fd67e572c
       iscommand: false
       name: Set output
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 7c1f40cb-1a0e-44dd-8d87-ff2fd67e572c

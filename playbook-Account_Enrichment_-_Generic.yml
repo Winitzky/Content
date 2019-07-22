@@ -178,7 +178,7 @@ tasks:
       id: 64684715-e0fd-44e4-8ba8-973e87eec920
       iscommand: false
       name: Is Active Directory enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 64684715-e0fd-44e4-8ba8-973e87eec920
@@ -221,7 +221,7 @@ tasks:
       id: 1f64970f-99a7-477e-83c0-f54dc2e7e4ec
       iscommand: false
       name: Get Account info from Active Directory
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: 1f64970f-99a7-477e-83c0-f54dc2e7e4ec
@@ -272,7 +272,7 @@ tasks:
       id: 34d20cba-51b1-4f99-8689-7b1bf0e108f4
       iscommand: false
       name: Is Active Directory v2 enabled?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: 34d20cba-51b1-4f99-8689-7b1bf0e108f4

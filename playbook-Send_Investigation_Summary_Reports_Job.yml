@@ -56,7 +56,7 @@ tasks:
       id: ee47ccea-fdc2-4982-8b8e-77cc37a36129
       iscommand: false
       name: Clear Context
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: ee47ccea-fdc2-4982-8b8e-77cc37a36129
@@ -111,7 +111,7 @@ tasks:
       id: cf10b50c-b332-4c19-8961-c5ba96381228
       iscommand: false
       name: Send Investigation Summary Reports
-      playbookName: Send Investigation Summary Reports
+      playbookId: Send Investigation Summary Reports
       type: playbook
       version: -1
     taskid: cf10b50c-b332-4c19-8961-c5ba96381228

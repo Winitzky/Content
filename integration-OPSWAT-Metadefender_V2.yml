@@ -108,19 +108,19 @@ script:
 
     ''' HELPER FUNCTIONS '''
     def http_req(method='GET', url_suffix='', file=None, parse_json=True):
-        data = None
+        files = None
         url = BASE_URL + url_suffix
         headers = DEFAULT_HEADERS
         if USE_CLOUD:
             headers['apikey'] = API_KEY
         if file:
             headers['filename'] = file['file_name']
-            headers['content-type'] = 'application/json'
-            data=file['data']
+            files = {file['file_name']:file['file']}
+        LOG(f'running request with url={url}\n\tfiles={files}')
         if method.upper() == 'GET':
             res = requests.get(url, verify=USE_SSL, headers=headers)
         elif method.upper() == 'POST':
-            res = requests.post(url, verify=USE_SSL, data=data, headers=headers)
+            res = requests.post(url, verify=USE_SSL, files=files, headers=headers)
         else:
             return_error(f'Got unsupporthed http method: {method}')
             return ''
@@ -144,8 +144,7 @@ script:
         shutil.copy(file_entry['path'], file_name)
         try:
             with open(file_name, 'rb') as f:
-                fileContent = f.read()
-                res = http_req(method='POST', url_suffix='file', file={'file_name': file_name, 'data':fileContent})
+                res = http_req(method='POST', url_suffix='file', file={'file_name': file_name, 'file':f})
         finally:
             shutil.rmtree(file_name, ignore_errors=True)
         return res, file_name
@@ -172,15 +171,8 @@ script:
             scan_results = res['scan_results']
             file_type_description = file_info['file_type_description']
             scan_all_result_a = scan_results['scan_all_result_a']
+            total_detected_avs = scan_results['total_detected_avs']
             total_avs = scan_results['total_avs']
-            scan_details = scan_results['scan_details']
-            total_detected_avs = 0
-            if 'total_detected_avs' in scan_results:
-                    total_detected_avs = scan_results['total_detected_avs']
-            else:
-                for key in scan_details:
-                    if scan_details[key]['threat_found'] != '':
-                        total_detected_avs = total_detected_avs +1
 
             md += f'File name: {display_name}\n';
             md += f'File description: {file_type_description}\n';
@@ -189,7 +181,8 @@ script:
             md += 'AV Name|Def Time|Threat Name Found\n';
             md += '---|---|---\n';
 
-            for key, scan in scan_details.items():
+            avRes = scan_results['scan_details']
+            for key, scan in avRes.items():
                 def_time = scan['def_time']
                 threat_found = scan['threat_found']
                 md += f'{key}|{def_time}|{threat_found}\n'
@@ -321,7 +314,7 @@ script:
         if demisto.command() == 'opswat-scan-result':
             get_scan_result_command()
     except Exception as e:
-        message = f'Unexpected error: {e}'
+        message = f'Unexpected error: {e}, traceback: {traceback.print_exc()}'
         LOG(str(e))
         LOG.print_log()
         return_error(message)

@@ -45,8 +45,8 @@ configuration:
   required: false
   type: 13
 - defaultvalue: ""
-  display: |-
-    ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
+  display: |2-
+     ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
 
     ‎                                           Manual Mode
 
@@ -70,8 +70,8 @@ configuration:
   required: false
   type: 8
 - defaultvalue: ""
-  display: |-
-    ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
+  display: |2-
+     ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
 
     ‎                                         Advanced Mode
 
@@ -85,7 +85,7 @@ configuration:
   required: false
   type: 0
 description: Exchange Web Services and Office 365 (mail)
-detaileddescription: |
+detaileddescription: |-
   For additional information go to:
   [https://support.demisto.com/hc/en-us/articles/360002253814-EWSv2](https://support.demisto.com/hc/en-us/articles/360002253814-EWSv2)
 display: EWS v2
@@ -142,7 +142,6 @@ script:
       type: string
     - contextPath: EWS.Items.ItemAttachments.headers
       description: The attached email headers.
-      type: Unknown
     - contextPath: EWS.Items.ItemAttachments.hasAttachments
       description: Is attached email has attachments?
       type: boolean
@@ -151,7 +150,6 @@ script:
       type: string
     - contextPath: EWS.Items.ItemAttachments.toRecipients
       description: The attached email to recipients addresses (list)
-      type: Unknown
     - contextPath: EWS.Items.ItemAttachments.body
       description: The attached email body (as HTML).
       type: string
@@ -246,7 +244,6 @@ script:
       type: string
     - contextPath: EWS.Items.toRecipients
       description: Email to recipients addresses (list).
-      type: Unknown
     - contextPath: EWS.Items.sender
       description: Sender email address
       type: string
@@ -350,7 +347,6 @@ script:
       type: date
     - contextPath: EWS.Items.headers
       description: Email headers (list).
-      type: Unknown
     - contextPath: EWS.Items.sender
       description: Email sender mail address.
       type: string
@@ -365,10 +361,8 @@ script:
       type: number
     - contextPath: EWS.Items.toRecipients
       description: Email recipients addresses (list).
-      type: Unknown
     - contextPath: EWS.Items.receivedBy
       description: Email received by address.
-      type: Unknown
     - contextPath: EWS.Items.messageId
       description: Email message id.
       type: string
@@ -398,19 +392,14 @@ script:
     outputs:
     - contextPath: Account.Email.EwsContacts.displayName
       description: The contact name.
-      type: Unknown
     - contextPath: Account.Email.EwsContacts.lastModifiedTime
       description: The contact last modified time.
-      type: Unknown
     - contextPath: Account.Email.EwsContacts.emailAddresses
       description: The contact phone numbers.
-      type: Unknown
     - contextPath: Account.Email.EwsContacts.physicalAddresses
       description: The contact physical addresses.
-      type: Unknown
     - contextPath: Account.Email.EwsContacts.phoneNumbers.phoneNumber
       description: The contact email addresses.
-      type: Unknown
   - arguments:
     - description: The mailbox to get out-of-office status.
       name: target-mailbox
@@ -420,25 +409,18 @@ script:
     outputs:
     - contextPath: Account.Email.OutOfOffice.state
       description: 'Out-of-office state. Result can be: Enabled, Scheduled, Disabled.'
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.externalAudience
       description: 'Out-of-office external audience. Result can be: None, Known, All.'
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.start
       description: Out-of-office start date.
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.end
       description: Out-of-office end date.
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.internalReply
       description: Out-of-office internal replay.
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.externalReply
       description: Out-of-office external replay.
-      type: Unknown
     - contextPath: Account.Email.OutOfOffice.mailbox
       description: Out-of-office mailbox.
-      type: Unknown
   - arguments:
     - description: The messages ids. Comma-separate value. Usually use the output
         of py-ews-delete-items.
@@ -462,13 +444,10 @@ script:
     outputs:
     - contextPath: EWS.Items.itemId
       description: The recovered item id.
-      type: Unknown
     - contextPath: EWS.Items.messageId
       description: The recovered message id.
-      type: Unknown
     - contextPath: EWS.Items.action
       description: The value will be 'recovered'.
-      type: Unknown
   - arguments:
     - description: The new folder name.
       name: new-folder-name
@@ -520,7 +499,6 @@ script:
       type: string
     - contextPath: EWS.Folders.totalCount
       description: Number of items in folder
-      type: Unknown
     - contextPath: EWS.Folders.unreadCount
       description: Number of unread items in folder
       type: number
@@ -563,7 +541,6 @@ script:
       type: date
     - contextPath: EWS.Items.headers
       description: Email headers (list).
-      type: Unknown
     - contextPath: EWS.Items.sender
       description: Email sender mail address.
       type: string
@@ -578,10 +555,8 @@ script:
       type: number
     - contextPath: EWS.Items.toRecipients
       description: Email recipients addresses (list).
-      type: Unknown
     - contextPath: EWS.Items.receivedBy
       description: Email received by address.
-      type: Unknown
     - contextPath: EWS.Items.messageId
       description: Email message id.
       type: string
@@ -624,7 +599,6 @@ script:
       type: date
     - contextPath: EWS.Items.headers
       description: Email headers (list).
-      type: Unknown
     - contextPath: EWS.Items.sender
       description: Email sender mail address.
       type: string
@@ -639,10 +613,8 @@ script:
       type: number
     - contextPath: EWS.Items.toRecipients
       description: Email recipients addresses (list).
-      type: Unknown
     - contextPath: EWS.Items.receivedBy
       description: Email received by address.
-      type: Unknown
     - contextPath: EWS.Items.messageId
       description: Email message id.
       type: string
@@ -751,7 +723,6 @@ script:
     outputs:
     - contextPath: EWS.ComplianceSearch.Status
       description: The status of the compliance search
-      type: Unknown
   - arguments:
     - default: true
       description: Name of the compliance search
@@ -784,7 +755,6 @@ script:
     outputs:
     - contextPath: EWS.ComplianceSearch.Status
       description: The status of the compliance search
-      type: Unknown
   - arguments: []
     description: Returns the auto-discovery information. Can be used to configurate
       Exchange server manually.
@@ -807,42 +777,34 @@ script:
   dockerimage: demisto/py-ews:2.0
   isfetch: true
   runonce: false
-  script: |2-
-
-
-
-    import sys
-    import traceback
-    import json
-    import os
-    import hashlib
+  script: |
+    import sys, traceback, json, os, hashlib
     from datetime import timedelta
     from cStringIO import StringIO
-    import logging
-    import warnings
+    import logging, warnings
     import subprocess
-    from requests.exceptions import ConnectionError
+
+    # Define utf8 as default encoding
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+
+    # Ignore warnings print to stdout
+    warnings.filterwarnings("ignore")
 
     import exchangelib
-    from exchangelib.errors import ErrorItemNotFound, ResponseMessageError, TransportError, RateLimitError, \
-        ErrorInvalidIdMalformed, \
-        ErrorFolderNotFound, ErrorToFolderNotFound, ErrorMailboxStoreUnavailable, ErrorMailboxMoveInProgress, \
+    from exchangelib.errors import ErrorItemNotFound, ResponseMessageError, TransportError, RateLimitError, ErrorInvalidIdMalformed, \
+        ErrorFolderNotFound, ErrorToFolderNotFound, ErrorMailboxStoreUnavailable, ErrorMailboxMoveInProgress, ErrorInvalidPropertyRequest, \
         AutoDiscoverFailed, ErrorNameResolutionNoResults
     from exchangelib.items import Item, Message
     from exchangelib.services import EWSService, EWSAccountService
     from exchangelib.util import create_element, add_xml_child
     from exchangelib import IMPERSONATION, DELEGATE, Account, Credentials, \
-        EWSDateTime, EWSTimeZone, Configuration, NTLM, DIGEST, BASIC, FileAttachment, \
+        EWSDateTime, EWSTimeZone, Configuration, NTLM, DIGEST, BASIC, FileAttachment, ItemAttachment, \
         Version, Folder, HTMLBody, Body, Build
     from exchangelib.version import EXCHANGE_2007, EXCHANGE_2010, EXCHANGE_2010_SP2, EXCHANGE_2013, EXCHANGE_2016
     from exchangelib.protocol import BaseProtocol, NoVerifyHTTPAdapter
 
-    # Define utf8 as default encoding
-    reload(sys)
-    sys.setdefaultencoding('utf8')  # pylint: disable=E1101
-
-    # Ignore warnings print to stdout
-    warnings.filterwarnings("ignore")
+    from requests.exceptions import ConnectionError
 
     # Docker BC
     MNS = None
@@ -850,7 +812,7 @@ script:
     if exchangelib.__version__ == "1.12.0":
         MNS, TNS = exchangelib.util.MNS, exchangelib.util.TNS
     else:
-        MNS, TNS = exchangelib.transport.MNS, exchangelib.transport.TNS  # pylint: disable=E1101
+        MNS, TNS = exchangelib.transport.MNS, exchangelib.transport.TNS
 
     # consts
     VERSIONS = {
@@ -959,10 +921,10 @@ script:
 
     def create_context_dict(account):
         return {
-            "auth_type": account.protocol.auth_type,
-            "service_endpoint": account.protocol.service_endpoint,
-            "build": str(account.protocol.version.build),
-            "api_version": account.protocol.version.api_version
+            "auth_type" : account.protocol.auth_type,
+            "service_endpoint" : account.protocol.service_endpoint,
+            "build" : str(account.protocol.version.build),
+            "api_version" : account.protocol.version.api_version
         }
 
 
@@ -1002,7 +964,7 @@ script:
             remove_from_dict(os.environ, 'https_proxy')
             os.environ['NO_PROXY'] = EWS_SERVER or ""
 
-        global AUTO_DISCOVERY, VERSION_STR, AUTH_METHOD_STR, USERNAME
+        global AUTO_DISCOVERY,VERSION_STR,AUTH_METHOD_STR,USERNAME
         AUTO_DISCOVERY = not EWS_SERVER
         if AUTO_DISCOVERY:
             credentials = Credentials(username=USERNAME, password=PASSWORD)
@@ -1035,6 +997,7 @@ script:
             else:
                 config_args['server'] = EWS_SERVER
 
+
             return Configuration(**config_args), None
 
 
@@ -1045,27 +1008,26 @@ script:
         version = Version(get_build_autodiscover(context_dict), api_version)
 
         config_args = {
-            'credentials': credentials,
-            'auth_type': auth_type,
-            'version': version,
-            'service_endpoint': service_endpoint
+            'credentials' : credentials,
+            'auth_type' : auth_type,
+            'version' : version,
+            'service_endpoint' : service_endpoint
         }
         return config_args
 
 
     def get_account_autodiscover(account_email, access_type=ACCESS_TYPE):
         account = None
-        original_exc = None  # type: ignore
+        original_exc = None
         context_dict = demisto.getIntegrationContext()
 
         if context_dict:
             try:
                 config_args = construct_config_args(context_dict, credentials)
                 account = Account(
-                    primary_smtp_address=account_email, autodiscover=False, config=Configuration(**config_args),
-                    access_type=access_type,
+                    primary_smtp_address=account_email, autodiscover=False, config=Configuration(**config_args), access_type=access_type,
                 )
-                account.root.effective_rights.read  # pylint: disable=E1101
+                account.root.effective_rights.read
                 return account
             except Exception, original_exc:
                 pass
@@ -1079,7 +1041,7 @@ script:
 
         autodiscover_result = create_context_dict(account)
         if autodiscover_result == context_dict:
-            raise original_exc  # pylint: disable=E0702
+            raise original_exc
 
         if account_email == ACCOUNT_EMAIL:
             demisto.setIntegrationContext(create_context_dict(account))
@@ -1097,7 +1059,6 @@ script:
     # LOGGING
     log_stream = None
 
-
     def start_logging():
         global log_stream
         if log_stream is None:
@@ -1109,32 +1070,28 @@ script:
     def fix_2010():
         version = SERVER_BUILD if SERVER_BUILD else get_build(VERSION_STR)
         if version <= EXCHANGE_2010_SP2:
-            for m in (
-                    Item, Message, exchangelib.items.CalendarItem, exchangelib.items.Contact,
-                    exchangelib.items.DistributionList,
-                    exchangelib.items.PostItem, exchangelib.items.Task, exchangelib.items.MeetingRequest,
-                    exchangelib.items.MeetingResponse, exchangelib.items.MeetingCancellation):
-                for i, f in enumerate(m.FIELDS):
+            for m in (Item, Message, exchangelib.items.CalendarItem, exchangelib.items.Contact, exchangelib.items.DistributionList, exchangelib.items.PostItem, exchangelib.items.Task, exchangelib.items.MeetingRequest, exchangelib.items.MeetingResponse, exchangelib.items.MeetingCancellation):
+                for i,f in enumerate(m.FIELDS):
                     if f.name == 'text_body':
                         m.FIELDS.pop(i)
                         break
             for m in (exchangelib.Folder, exchangelib.folders.Inbox):
-                for i, f in enumerate(m.FIELDS):
+                for i,f in enumerate(m.FIELDS):
                     if f.name == 'unread_count':
                         m.FIELDS.pop(i)
                         break
 
             def repr1(self):
-                return self.__class__.__name__ + repr((self.root, self.name, self.total_count, self.child_folder_count,
-                                                       self.folder_class, self.id, self.changekey))
+                return self.__class__.__name__ + \
+                    repr((self.root, self.name, self.total_count, self.child_folder_count, self.folder_class, self.id, self.changekey))
 
             def repr2(self):
-                return self.__class__.__name__ + repr(
-                    (self.root, self.name, self.total_count, self.child_folder_count, self.folder_class, self.changekey))
+                return self.__class__.__name__ + \
+                    repr((self.root, self.name, self.total_count, self.child_folder_count, self.folder_class, self.changekey))
 
             def repr3(self):
-                return self.__class__.__name__ + repr((self.account, '[self]', self.name, self.total_count,
-                                                       self.child_folder_count, self.folder_class, self.changekey))
+                return self.__class__.__name__ + \
+                       repr((self.account, '[self]', self.name, self.total_count, self.child_folder_count, self.folder_class, self.changekey))
 
             exchangelib.Folder.__repr__ = repr1
             exchangelib.folders.Inbox.__repr__ = exchangelib.folders.JunkEmail.__repr__ = repr2
@@ -1142,22 +1099,19 @@ script:
 
         start_logging()
 
-
     def str_to_unicode(obj):
         if isinstance(obj, dict):
-            obj = {k: str_to_unicode(v) for k, v in obj.iteritems()}
+            obj = {k: str_to_unicode(v) for k,v in obj.iteritems()}
         elif isinstance(obj, list):
             obj = map(str_to_unicode, obj)
         elif isinstance(obj, str):
             obj = unicode(obj, "utf-8")
         return obj
 
-
     def filter_dict_null(d):
         if isinstance(d, dict):
             return dict((k, v) for k, v in d.items() if v is not None)
         return d
-
 
     def get_attachment_name(attachment_name):
         if attachment_name is None or attachment_name == "":
@@ -1194,7 +1148,7 @@ script:
         result = [x for x in result if not isinstance(x, ErrorItemNotFound)]
         if len(result) != len(item_ids):
             raise Exception("One or more items were not found. Check the input item ids")
-        if exchangelib.__version__ != "1.12.0":  # Docker BC
+        if exchangelib.__version__ != "1.12.0":   # Docker BC
             for item in result:
                 item.folder = Folder(account=account)
         return result
@@ -1208,7 +1162,7 @@ script:
 
 
     def is_default_folder(folder_path, is_public):
-        if exchangelib.__version__ != "1.12.0":  # Docker BC
+        if exchangelib.__version__ != "1.12.0":   # Docker BC
             return False
 
         if is_public is not None:
@@ -1274,16 +1228,11 @@ script:
         @staticmethod
         def parse_element(element):
             return {
-                MAILBOX: element.find("{%s}PrimarySmtpAddress" % TNS).text if element.find(
-                    "{%s}PrimarySmtpAddress" % TNS) is not None else None,
-                MAILBOX_ID: element.find("{%s}ReferenceId" % TNS).text if element.find(
-                    "{%s}ReferenceId" % TNS) is not None else None,
-                'displayName': element.find("{%s}DisplayName" % TNS).text if element.find(
-                    "{%s}DisplayName" % TNS) is not None else None,
-                'isExternal': element.find("{%s}IsExternalMailbox" % TNS).text if element.find(
-                    "{%s}IsExternalMailbox" % TNS) is not None else None,
-                'externalEmailAddress': element.find("{%s}ExternalEmailAddress" % TNS).text if element.find(
-                    "{%s}ExternalEmailAddress" % TNS) is not None else None
+                MAILBOX: element.find("{%s}PrimarySmtpAddress" % TNS).text if element.find("{%s}PrimarySmtpAddress" % TNS) is not None else None,
+                MAILBOX_ID: element.find("{%s}ReferenceId" % TNS).text if element.find("{%s}ReferenceId" % TNS) is not None else None,
+                'displayName': element.find("{%s}DisplayName" % TNS).text if element.find("{%s}DisplayName" % TNS) is not None else None,
+                'isExternal': element.find("{%s}IsExternalMailbox" % TNS).text if element.find("{%s}IsExternalMailbox" % TNS) is not None else None,
+                'externalEmailAddress': element.find("{%s}ExternalEmailAddress" % TNS).text if element.find("{%s}ExternalEmailAddress" % TNS) is not None else None
             }
 
         def call(self):
@@ -1361,11 +1310,9 @@ script:
         @staticmethod
         def parse_element(element):
             return {
-                MAILBOX: element.find("{%s}EmailAddress" % TNS).text if element.find(
-                    "{%s}EmailAddress" % TNS) is not None else None,
+                MAILBOX: element.find("{%s}EmailAddress" % TNS).text if element.find("{%s}EmailAddress" % TNS) is not None else None,
                 'displayName': element.find("{%s}Name" % TNS).text if element.find("{%s}Name" % TNS) is not None else None,
-                'mailboxType': element.find("{%s}MailboxType" % TNS).text if element.find(
-                    "{%s}MailboxType" % TNS) is not None else None
+                'mailboxType': element.find("{%s}MailboxType" % TNS).text if element.find("{%s}MailboxType" % TNS) is not None else None
             }
 
         def call(self, email_address, recursive_expansion=False):
@@ -1373,7 +1320,7 @@ script:
                 raise NotImplementedError('%s is only supported for Exchange 2010 servers and later' % self.SERVICE_NAME)
             try:
                 if recursive_expansion == 'True':
-                    group_members = {}  # type: dict
+                    group_members = {}
                     self.expand_group_recursive(email_address, group_members)
                     return group_members.values()
                 else:
@@ -1383,7 +1330,7 @@ script:
                 sys.exit()
 
         def get_payload(self, email_address):
-            element = create_element('m:%s' % self.SERVICE_NAME, )
+            element = create_element('m:%s' % self.SERVICE_NAME,)
             mailbox_element = create_element('m:Mailbox')
             add_xml_child(mailbox_element, 't:EmailAddress', email_address)
             element.append(mailbox_element)
@@ -1534,9 +1481,9 @@ script:
             if type(value) in [str, unicode, int, float, bool, Body, HTMLBody, None]:
                 try:
                     if isinstance(value, basestring):
-                        value.encode('utf-8')  # type: ignore
+                        value.encode('utf-8')
                     raw_dict[field] = value
-                except Exception:
+                except:
                     pass
 
         if getattr(item, 'attachments', None):
@@ -1561,8 +1508,7 @@ script:
 
         if getattr(item, 'folder', None):
             raw_dict['folder'] = parse_folder_as_json(item.folder)
-            folder_path = item.folder.absolute[len(TOIS_PATH):] if item.folder.absolute.startswith(
-                TOIS_PATH) else item.folder.absolute
+            folder_path = item.folder.absolute[len(TOIS_PATH):] if item.folder.absolute.startswith(TOIS_PATH) else item.folder.absolute
             raw_dict['folder_path'] = folder_path
 
         if compact_fields:
@@ -1646,7 +1592,7 @@ script:
 
         # handle attachments
         if item.attachments:
-            incident['attachment'] = []
+            incident['attachment'] = [];
             for attachment in item.attachments:
                 file_result = None
                 label_attachment_type = None
@@ -1683,8 +1629,7 @@ script:
 
                     # save the attachment
                     if attachment.item.mime_content:
-                        file_result = fileResult(get_attachment_name(attachment.name) + ".eml",
-                                                 attachment.item.mime_content)
+                        file_result = fileResult(get_attachment_name(attachment.name) + ".eml", attachment.item.mime_content)
 
                     if file_result:
                         # check for error
@@ -1698,8 +1643,11 @@ script:
                             'name': get_attachment_name(attachment.name) + ".eml"
                         })
 
+
                 labels.append({'type': label_attachment_type, 'value': get_attachment_name(attachment.name)})
                 labels.append({'type': label_attachment_id_type, 'value': attachment.attachment_id.id})
+
+
 
         # handle headers
         if item.headers:
@@ -1777,8 +1725,7 @@ script:
 
     def parse_attachment_as_dict(item_id, attachment):
         try:
-            attachment_content = attachment.content if isinstance(attachment,
-                                                                  FileAttachment) else attachment.item.mime_content
+            attachment_content = attachment.content if isinstance(attachment, FileAttachment) else attachment.item.mime_content
             return {
                 ATTACHMENT_ORIGINAL_ITEM_ID: item_id,
                 ATTACHMENT_ID: attachment.attachment_id.id,
@@ -1845,7 +1792,7 @@ script:
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         attachments = get_attachments_for_item(item_id, account, attachment_ids)
         deleted_file_attachments = []
-        deleted_item_attachments = []  # type: ignore
+        deleted_item_attachments = []
         for attachment in attachments:
             attachment_deleted_action = {
                 ATTACHMENT_ID: attachment.attachment_id.id,
@@ -1891,9 +1838,7 @@ script:
 
         return entries
 
-
-    def move_item_between_mailboxes(item_id, destination_mailbox, destination_folder_path, source_mailbox=None,
-                                    is_public=None):
+    def move_item_between_mailboxes(item_id, destination_mailbox, destination_folder_path, source_mailbox=None, is_public=None):
         source_account = get_account(source_mailbox or ACCOUNT_EMAIL)
         destination_account = get_account(destination_mailbox or ACCOUNT_EMAIL)
         is_public = is_default_folder(destination_folder_path, is_public)
@@ -1916,10 +1861,9 @@ script:
             'Contents': "Item was moved successfully.",
             'ContentsFormat': formats['text'],
             ENTRY_CONTEXT: {
-                "EWS.Items(val.itemId === '%s')" % (item_id,): move_result
+               "EWS.Items(val.itemId === '%s')" % (item_id,): move_result
             }
         }
-
 
     def move_item(item_id, target_folder_path, target_mailbox=None, is_public=None):
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
@@ -1973,7 +1917,7 @@ script:
     def prepare_args(d):
         d = dict((k.replace("-", "_"), v) for k, v in d.items())
         if 'is_public' in d:
-            if exchangelib.__version__ != "1.12.0":  # Docker BC
+            if exchangelib.__version__ != "1.12.0":   # Docker BC
                 raise Exception(PUBLIC_FOLDERS_ERROR)
             else:
                 d['is_public'] = d['is_public'] == 'True'
@@ -1992,23 +1936,22 @@ script:
         return results
 
 
-    def search_items_in_mailbox(query=None, message_id=None, folder_path='', limit=100, target_mailbox=None,
-                                is_public=None):
+    def search_items_in_mailbox(query=None, message_id=None, folder_path='', limit=100, target_mailbox=None, is_public=None):
         if not query and not message_id:
             return_error("Missing required argument. Provide query or message-id")
 
-        if message_id and message_id[0] != '<' and message_id[-1] != '>':
+        if message_id and message_id[0] != '<' and message_id[-1] != '>' :
             message_id = '<{}>'.format(message_id)
 
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         limit = int(limit)
         if folder_path:
-            is_public = is_default_folder(folder_path, is_public)
+            public_folder = is_default_folder(folder_path, is_public)
             folders = [get_folder_by_path(account, folder_path, is_public)]
         else:
-            folders = account.inbox.parent.walk()  # pylint: disable=E1101
+            folders = account.inbox.parent.walk()
 
-        items = []  # type: ignore
+        items = []
         for folder in folders:
             if Message not in folder.supported_item_models:
                 continue
@@ -2020,9 +1963,7 @@ script:
             if len(items) >= limit:
                 break
         items = items[:limit]
-        searched_items_result = map(
-            lambda item: parse_item_as_dict(item, account.primary_smtp_address, camel_case=True, compact_fields=True),
-            items)
+        searched_items_result = map(lambda item: parse_item_as_dict(item, account.primary_smtp_address, camel_case=True, compact_fields=True), items)
 
         return get_entry_for_object('Searched items',
                                     CONTEXT_UPDATE_EWS_ITEM,
@@ -2034,10 +1975,10 @@ script:
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         oof = account.oof_settings
         oof_dict = {
-            'state': oof.state,  # pylint: disable=E1101
+            'state': oof.state,
             'externalAudience': getattr(oof, 'external_audience', None),
-            'start': oof.start.ewsformat() if oof.start else None,  # pylint: disable=E1101
-            'end': oof.end.ewsformat() if oof.end else None,  # pylint: disable=E1101
+            'start': oof.start.ewsformat() if oof.start else None,
+            'end': oof.end.ewsformat() if oof.end else None,
             'internalReply': getattr(oof, 'internal_replay', None),
             'externalReply': getattr(oof, 'external_replay', None),
             MAILBOX: account.primary_smtp_address
@@ -2054,8 +1995,7 @@ script:
         recovered_messages = []
         if type(message_ids) != list:
             message_ids = message_ids.split(",")
-        items_to_recover = account.recoverable_items_deletions.filter(  # pylint: disable=E1101
-            message_id__in=message_ids).all()  # pylint: disable=E1101
+        items_to_recover = account.recoverable_items_deletions.filter(message_id__in=message_ids).all()
         if len(items_to_recover) != len(message_ids):
             raise Exception("Some message ids are missing in recoverable items directory")
         for item in items_to_recover:
@@ -2102,7 +2042,7 @@ script:
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         contacts = []
         count = 0
-        for contact in account.contacts.all():  # pylint: disable=E1101
+        for contact in account.contacts.all():
             if count >= limit:
                 break
             contacts.append(parse_contact(contact))
@@ -2117,7 +2057,7 @@ script:
         try:
             if get_folder_by_path(account, full_path):
                 return "Folder %s already exists" % full_path
-        except Exception:
+        except:
             pass
         parent_folder = get_folder_by_path(account, folder_path)
         f = Folder(parent=parent_folder, name=new_folder_name)
@@ -2146,14 +2086,14 @@ script:
     def find_folders(target_mailbox=None, is_public=None):
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         root = account.root
-        if exchangelib.__version__ == "1.12.0":  # Docker BC
+        if exchangelib.__version__ == "1.12.0":   # Docker BC
             if is_public:
                 root = account.public_folders_root
         folders = []
-        for f in root.walk():  # pylint: disable=E1101
+        for f in root.walk():
             folder = folder_to_context_entry(f)
             folders.append(folder)
-        folders_tree = root.tree()  # pylint: disable=E1101
+        folders_tree = root.tree()
 
         return {
             'Type': entryTypes['note'],
@@ -2174,12 +2114,10 @@ script:
         folder = get_folder_by_path(account, folder_path, is_public)
         qs = folder.filter().order_by('-datetime_created')[:limit]
         items = get_limited_number_of_messages_from_qs(qs, limit)
-        items_result = map(
-            lambda item: parse_item_as_dict(item, account.primary_smtp_address, camel_case=True, compact_fields=True),
-            items)
+        items_result = map(lambda item: parse_item_as_dict(item, account.primary_smtp_address, camel_case=True, compact_fields=True), items)
         hm_headers = ['sender', 'subject', 'hasAttachments', 'datetimeReceived',
                       'receivedBy', 'author', 'toRecipients', ]
-        if exchangelib.__version__ == "1.12.0":  # Docker BC
+        if exchangelib.__version__ == "1.12.0":   # Docker BC
             hm_headers.append('itemId')
         return get_entry_for_object('Items in folder ' + folder_path,
                                     CONTEXT_UPDATE_EWS_ITEM,
@@ -2208,16 +2146,14 @@ script:
             }
         }
 
-
     def get_folder(folder_path, target_mailbox=None, is_public=None):
         account = get_account(target_mailbox or ACCOUNT_EMAIL)
         is_public = is_default_folder(folder_path, is_public)
         folder = folder_to_context_entry(get_folder_by_path(account, folder_path, is_public))
         return get_entry_for_object("Folder %s" % (folder_path,), CONTEXT_UPDATE_FOLDER, folder)
 
-
     def folder_to_context_entry(f):
-        f_entry = {
+        f_entry =  {
             'name': f.name,
             'totalCount': f.total_count,
             'id': f.folder_id,
@@ -2229,21 +2165,18 @@ script:
             f_entry['unreadCount'] = f.unread_count
         return f_entry
 
-
     def check_cs_prereqs():
-        if 'outlook.office365.com' not in EWS_SERVER:
+        if not 'outlook.office365.com' in EWS_SERVER:
             raise Exception("This command is only supported for Office 365")
         if exchangelib.__version__ != "1.12.0":
             raise Exception("Please update your docker image to use this command")
-
 
     def get_cs_error(stderr):
         return {
             "Type": entryTypes["error"],
             "ContentsFormat": formats["text"],
-            "Contents": stderr
+            "Contents" : stderr
         } if stderr else None
-
 
     def get_cs_status(search_name, status):
         return {
@@ -2255,11 +2188,9 @@ script:
             }
         }
 
-
     def start_compliance_search(query):
         check_cs_prereqs()
-        output = subprocess.Popen(["pwsh", "/usr/local/office365startcompliancesearch.ps1", USERNAME, PASSWORD, query],
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = subprocess.Popen(["pwsh","/usr/local/office365startcompliancesearch.ps1", USERNAME, PASSWORD, query], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         if stderr:
@@ -2279,11 +2210,9 @@ script:
             }
         }
 
-
     def get_compliance_search(search_name):
         check_cs_prereqs()
-        output = subprocess.Popen(["pwsh", "/usr/local/office365getcompliancesearch.ps1", USERNAME, PASSWORD, search_name],
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = subprocess.Popen(["pwsh","/usr/local/office365getcompliancesearch.ps1", USERNAME, PASSWORD, search_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         if stderr:
@@ -2296,15 +2225,14 @@ script:
         # Parse search results from script output if the search has completed. Output to warroom as table.
         if stdout[0] == 'Completed':
             res = list(r[:-1].split(', ') if r[-1] == ',' else r.split(', ') for r in stdout[1][2:-3].split(r'\r\n'))
-            res = map(lambda x: {k: v for k, v in (s.split(': ') for s in x)}, res)
+            res = map(lambda x: {k: v for k,v in (s.split(': ') for s in x)}, res)
             results.append(
                 {
                     'Type': entryTypes['note'],
                     'ContentsFormat': formats['text'],
                     'Contents': stdout,
                     'ReadableContentsFormat': formats['markdown'],
-                    'HumanReadable': tableToMarkdown('Office 365 Compliance search results', res,
-                                                     ['Location', 'Item count', 'Total size'])
+                    'HumanReadable': tableToMarkdown('Office 365 Compliance search results', res, ['Location', 'Item count', 'Total size'])
                 }
             )
 
@@ -2313,9 +2241,7 @@ script:
 
     def purge_compliance_search(search_name):
         check_cs_prereqs()
-        output = subprocess.Popen(
-            ["pwsh", "/usr/local/office365compliancesearchstartpurge.ps1", USERNAME, PASSWORD, search_name],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = subprocess.Popen(["pwsh","/usr/local/office365compliancesearchstartpurge.ps1", USERNAME, PASSWORD, search_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         if stderr:
@@ -2326,9 +2252,7 @@ script:
 
     def check_purge_compliance_search(search_name):
         check_cs_prereqs()
-        output = subprocess.Popen(
-            ["pwsh", "/usr/local/office365compliancesearchcheckpurge.ps1", USERNAME, PASSWORD, search_name],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = subprocess.Popen(["pwsh","/usr/local/office365compliancesearchcheckpurge.ps1", USERNAME, PASSWORD, search_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         if stderr:
@@ -2339,9 +2263,7 @@ script:
 
     def remove_compliance_search(search_name):
         check_cs_prereqs()
-        output = subprocess.Popen(
-            ["pwsh", "/usr/local/office365removecompliancesearch.ps1", USERNAME, PASSWORD, search_name],
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = subprocess.Popen(["pwsh","/usr/local/office365removecompliancesearch.ps1", USERNAME, PASSWORD, search_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = output.communicate()
 
         if stderr:
@@ -2366,7 +2288,7 @@ script:
             global IS_TEST_MODULE
             IS_TEST_MODULE = True
             account = get_account(ACCOUNT_EMAIL)
-            if not account.root.effective_rights.read:  # pylint: disable=E1101
+            if not account.root.effective_rights.read:
                 raise Exception("Success to authenticate, but user has no permissions to read from the mailbox. "
                                 "Need to delegate the user permissions to the mailbox - "
                                 "please read integration documentation and follow the instructions")
@@ -2458,15 +2380,13 @@ script:
 
         time.sleep(2)
         start_logging()
-        debug_log = log_stream.getvalue()  # type: ignore
+        debug_log = log_stream.getvalue()
         error_message_simple = ""
         error_message = ""
 
         # Office365 regular maintenance case
-        if (isinstance(e, ErrorMailboxStoreUnavailable) or isinstance(e, ErrorMailboxMoveInProgress)) \
-                and 'outlook.office365.com' in EWS_SERVER:
-            log_message = "Office365 is undergoing load balancing operations. " \
-                          "As a result, the service is temporarily unavailable."
+        if (isinstance(e, ErrorMailboxStoreUnavailable) or isinstance(e, ErrorMailboxMoveInProgress)) and 'outlook.office365.com' in EWS_SERVER:
+            log_message = "Office365 is undergoing load balancing operations. As a result, the service is temporarily unavailable."
             if demisto.command() == 'fetch-incidents':
                 demisto.info(log_message)
                 demisto.incidents([])
@@ -2481,27 +2401,22 @@ script:
             e.message = str(e.message)
 
         if isinstance(e, ConnectionError):
-            error_message_simple = "Could not connect to the server.\n" \
-                                   "Verify that the Hostname or IP address is correct.\n\n" \
-                                   "Additional information: {}".format(e.message)
+            error_message_simple = "Could not connect to the server.\nVerify that the Hostname or IP address is correct.\n\nAdditional information: {}".format(e.message)
         elif exchangelib.__version__ == "1.12.0":
             from exchangelib.errors import MalformedResponseError
-
             if IS_TEST_MODULE and isinstance(e, MalformedResponseError):
-                error_message_simple = "Got invalid response from the server.\n" \
-                                       "Verify that the Hostname or IP address is is correct."
+                error_message_simple = "Got invalid response from the server.\nVerify that the Hostname or IP address is is correct."
 
         # Legacy error handling
         if "Status code: 401" in debug_log:
             error_message_simple = "Got unauthorized from the server. " \
-                                   "Check credentials are correct and authentication method are supported. "
+                            "Check credentials are correct and authentication method are supported. "
 
-            error_message_simple += "You can try using 'domain\\username' as username for authentication. " \
-                if AUTH_METHOD_STR.lower() == 'ntlm' else ''
+            error_message_simple += "You can try using 'domain\\username' as username for authentication. " if AUTH_METHOD_STR.lower() == 'ntlm' else ''
         if "Status code: 503" in debug_log:
             error_message_simple = "Got timeout from the server. " \
-                                   "Probably the server is not reachable with the current settings. " \
-                                   "Check proxy parameter. If you are using server URL - change to server IP address. "
+                            "Probably the server is not reachable with the current settings. " \
+                            "Check proxy parameter. If you are using server URL - change to server IP address. "
 
         if not error_message_simple:
             error_message = error_message_simple = e.message
@@ -2520,8 +2435,7 @@ script:
         if IS_TEST_MODULE:
             demisto.results(error_message_simple)
         else:
-            demisto.results(
-                {"Type": entryTypes["error"], "ContentsFormat": formats["text"], "Contents": error_message_simple})
+            demisto.results({ "Type": entryTypes["error"], "ContentsFormat": formats["text"], "Contents": error_message_simple })
         demisto.error("%s: %s" % (e.__class__.__name__, error_message))
   type: python
 system: true

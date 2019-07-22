@@ -113,7 +113,7 @@ tasks:
       id: 620023d1-63b0-4834-81a2-74dd20437dda
       iscommand: false
       name: Send report to admin with update results
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: 620023d1-63b0-4834-81a2-74dd20437dda
@@ -152,7 +152,7 @@ tasks:
       id: dccfaaf4-cca5-44d3-8818-6a5131b502ed
       iscommand: false
       name: Send email alert with list of faulty repositories to admin
-      scriptName: SendEmail
+      script: SendEmail
       type: regular
       version: -1
     taskid: dccfaaf4-cca5-44d3-8818-6a5131b502ed
@@ -179,7 +179,7 @@ tasks:
       id: 220a0d1d-b7cc-403f-8750-526d3bf55b51
       iscommand: false
       name: Close the investigation
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: 220a0d1d-b7cc-403f-8750-526d3bf55b51
@@ -242,7 +242,7 @@ tasks:
       id: 4405829c-0e70-4c29-8a33-3c17a9644b00
       iscommand: false
       name: Check if ePO has latest DAT from McAfee
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: 4405829c-0e70-4c29-8a33-3c17a9644b00
@@ -272,7 +272,7 @@ tasks:
       id: 8de9cf55-b3d6-46d0-8aa6-3de9bcd2a64b
       iscommand: false
       name: Wait for 5 minutes
-      scriptName: Sleep
+      script: Sleep
       type: regular
       version: -1
     taskid: 8de9cf55-b3d6-46d0-8aa6-3de9bcd2a64b
@@ -338,7 +338,7 @@ tasks:
       id: 5b82d2b7-4ac6-4759-8f19-4810dff0b0ad
       iscommand: false
       name: Check if ePO has latest DAT from McAfee
-      scriptName: AreValuesEqual
+      script: AreValuesEqual
       type: condition
       version: -1
     taskid: 5b82d2b7-4ac6-4759-8f19-4810dff0b0ad
@@ -376,7 +376,7 @@ tasks:
       id: 5e480762-0617-4ad1-80e3-8bead4c6adf5
       iscommand: false
       name: Set incident to High severity
-      scriptName: IncidentSet
+      script: IncidentSet
       type: regular
       version: -1
     taskid: 5e480762-0617-4ad1-80e3-8bead4c6adf5

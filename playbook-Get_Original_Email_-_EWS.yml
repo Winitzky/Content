@@ -317,7 +317,7 @@ tasks:
       id: c729f95f-bc75-477e-8000-14c99346873d
       iscommand: false
       name: Set context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: c729f95f-bc75-477e-8000-14c99346873d
@@ -399,7 +399,7 @@ tasks:
       id: 8764cbb0-dd56-4095-8df2-e77035713e2e
       iscommand: false
       name: Delete old context
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: 8764cbb0-dd56-4095-8df2-e77035713e2e
@@ -435,7 +435,7 @@ tasks:
       id: fab3c34b-010a-4203-830a-7dbf0dde26e5
       iscommand: false
       name: Set output
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: fab3c34b-010a-4203-830a-7dbf0dde26e5

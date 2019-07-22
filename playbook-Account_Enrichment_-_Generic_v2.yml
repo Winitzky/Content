@@ -208,7 +208,7 @@ tasks:
       id: 34511610-25f6-4cba-88be-5efe1ce7a69e
       iscommand: false
       name: Get account info from Active Directory
-      scriptName: ADGetUser
+      script: ADGetUser
       type: regular
       version: -1
     taskid: 34511610-25f6-4cba-88be-5efe1ce7a69e

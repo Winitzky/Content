@@ -72,7 +72,7 @@ tasks:
       id: 831b0954-1008-49f0-84e1-43dc7c585ec0
       iscommand: false
       name: DBotCreatePhishingClassifier
-      playbookName: DBot Create Phishing Classifier
+      playbookId: DBotCreatePhishingClassifier
       type: playbook
       version: -1
     taskid: 831b0954-1008-49f0-84e1-43dc7c585ec0
@@ -161,7 +161,7 @@ tasks:
       id: cd901cee-98fa-416b-8e39-519218a516ea
       iscommand: false
       name: Clean context
-      scriptName: DeleteContext
+      script: DeleteContext
       type: regular
       version: -1
     taskid: cd901cee-98fa-416b-8e39-519218a516ea

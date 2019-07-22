@@ -180,7 +180,7 @@ tasks:
       id: ea5344ac-b7ac-47ea-8703-30b93a2bba43
       iscommand: false
       name: GenericPolling
-      playbookName: GenericPolling
+      playbookId: GenericPolling
       type: playbook
       version: -1
     taskid: ea5344ac-b7ac-47ea-8703-30b93a2bba43
@@ -433,7 +433,7 @@ tasks:
       id: 16c9088e-43fa-494a-80f2-646461c74a66
       iscommand: false
       name: Set Context
-      scriptName: Set
+      script: Set
       type: regular
       version: -1
     taskid: 16c9088e-43fa-494a-80f2-646461c74a66

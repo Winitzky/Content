@@ -175,7 +175,7 @@ tasks:
       id: 74889e4f-d5ea-46d2-8cfb-aac15c10a52f
       iscommand: false
       name: Check IP reputation
-      scriptName: IPReputation
+      script: IPReputation
       type: regular
       version: -1
     taskid: 74889e4f-d5ea-46d2-8cfb-aac15c10a52f
@@ -322,7 +322,7 @@ tasks:
       id: dfe5b434-e54a-4290-841e-073030e2af53
       iscommand: false
       name: Determine whether the IP address is internal or external
-      scriptName: IsIPInRanges
+      script: IsIPInRanges
       type: regular
       version: -1
     taskid: dfe5b434-e54a-4290-841e-073030e2af53
@@ -368,7 +368,7 @@ tasks:
       id: e39bd0d9-0f03-4dda-8ccd-2e31340c8daa
       iscommand: false
       name: Endpoint Enrichment - Generic
-      playbookName: Endpoint Enrichment - Generic
+      playbookId: endpoint_enrichment_-_generic
       type: playbook
       version: -1
     taskid: e39bd0d9-0f03-4dda-8ccd-2e31340c8daa
@@ -514,7 +514,7 @@ tasks:
       id: 4199432a-7b90-4880-8381-61a1f89a5073
       iscommand: false
       name: IP to Hostname (DNS)
-      scriptName: IPToHost
+      script: ip_to_host
       type: regular
       version: -1
     taskid: 4199432a-7b90-4880-8381-61a1f89a5073

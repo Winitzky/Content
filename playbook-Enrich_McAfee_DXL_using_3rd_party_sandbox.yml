@@ -52,7 +52,7 @@ tasks:
       id: a57644c8-775a-42ad-8800-3ac1a1d138cd
       iscommand: false
       name: Any malicious files detected?
-      scriptName: Exists
+      script: Exists
       type: condition
       version: -1
     taskid: a57644c8-775a-42ad-8800-3ac1a1d138cd
@@ -78,7 +78,7 @@ tasks:
       id: b27ad1bb-4eff-482e-82e1-ba2d4f5c2443
       iscommand: false
       name: Close incident
-      scriptName: CloseInvestigation
+      script: CloseInvestigation
       type: regular
       version: -1
     taskid: b27ad1bb-4eff-482e-82e1-ba2d4f5c2443
@@ -136,7 +136,7 @@ tasks:
       id: bfffbaa1-a550-47bd-8e84-e6c941cde205
       iscommand: false
       name: ""
-      playbookName: WildFire - Detonate file
+      playbookId: WildFire - Detonate file
       type: playbook
       version: -1
     taskid: bfffbaa1-a550-47bd-8e84-e6c941cde205

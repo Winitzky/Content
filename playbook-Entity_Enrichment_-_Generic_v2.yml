@@ -301,7 +301,7 @@ tasks:
       id: afe0c443-753d-4633-89e1-0d77dc533447
       iscommand: false
       name: IP Enrichment - Generic v2
-      playbookName: IP Enrichment - Generic v2
+      playbookId: IP Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: afe0c443-753d-4633-89e1-0d77dc533447
@@ -347,7 +347,7 @@ tasks:
       id: 8189698a-475c-433b-8fbf-20275b3b2084
       iscommand: false
       name: File Enrichment - Generic v2
-      playbookName: File Enrichment - Generic v2
+      playbookId: File Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: 8189698a-475c-433b-8fbf-20275b3b2084
@@ -388,7 +388,7 @@ tasks:
       id: b00cb02f-d44b-4e40-8c27-281d17a94723
       iscommand: false
       name: URL Enrichment - Generic v2
-      playbookName: URL Enrichment - Generic v2
+      playbookId: URL Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: b00cb02f-d44b-4e40-8c27-281d17a94723
@@ -428,7 +428,7 @@ tasks:
       id: 6245f7fc-b1cc-4120-81da-d3320f809b03
       iscommand: false
       name: Domain Enrichment - Generic v2
-      playbookName: Domain Enrichment - Generic v2
+      playbookId: Domain Enrichment - Generic v2
       type: playbook
       version: -1
     taskid: 6245f7fc-b1cc-4120-81da-d3320f809b03
@@ -475,7 +475,7 @@ tasks:
       id: 0ba8dffe-9aac-40a7-8303-ff40de2d91f9
       iscommand: false
       name: Email Address Enrichment - Generic v2.1
-      playbookName: Email Address Enrichment - Generic v2.1
+      playbookId: Email Address Enrichment - Generic v2.1
       type: playbook
       version: -1
     taskid: 0ba8dffe-9aac-40a7-8303-ff40de2d91f9
@@ -511,7 +511,7 @@ tasks:
       id: 7f313517-52cb-4653-8c77-08819d4910f3
       iscommand: false
       name: Account Enrichment - Generic v2.1
-      playbookName: Account Enrichment - Generic v2.1
+      playbookId: Account Enrichment - Generic v2.1
       type: playbook
       version: -1
     taskid: 7f313517-52cb-4653-8c77-08819d4910f3
@@ -547,7 +547,7 @@ tasks:
       id: 473ab066-87e5-408d-8317-70e38ead40ca
       iscommand: false
       name: Endpoint Enrichment - Generic v2.1
-      playbookName: Endpoint Enrichment - Generic v2.1
+      playbookId: Endpoint Enrichment - Generic v2.1
       type: playbook
       version: -1
     taskid: 473ab066-87e5-408d-8317-70e38ead40ca
