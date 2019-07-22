@@ -51,12 +51,12 @@ tasks:
     separatecontext: false
     task:
       brand: ""
-      id: 3874c696-3ea6-427f-80e7-c38bb0409e6c
+      id: 095d756e-6ef3-472a-89fe-80cbcb0fb1d9
       iscommand: false
-      name: Untitled Task
+      name: Testing
       type: condition
       version: -1
-    taskid: 3874c696-3ea6-427f-80e7-c38bb0409e6c
+    taskid: 095d756e-6ef3-472a-89fe-80cbcb0fb1d9
     timertriggers: []
     type: condition
     view: |-
