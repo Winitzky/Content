@@ -1,0 +1,19 @@
+{
+	"brandName": "New Integration",
+	"custom": true,
+	"defaultIncidentType": "Access",
+	"id": "New Integration",
+	"incidentSamples": null,
+	"instanceId": "",
+	"instanceName": "",
+	"isDefault": true,
+	"keyTypeMap": {},
+	"mapping": null,
+	"sortValues": null,
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"unclassifiedCases": {},
+	"version": -1
+}
