@@ -1,6 +1,6 @@
 category: Authentication
 commonfields:
-  id: New Integration_copy
+  id: New Integration
   version: -1
 configuration:
 - defaultvalue: ""
@@ -13,8 +13,8 @@ configuration:
   name: incidentType
   required: false
   type: 13
-display: New Integration_copy
-name: New Integration_copy
+display: New Integration
+name: New Integration
 script:
   dockerimage: demisto/python3:3.7.4.977
   isfetch: true
