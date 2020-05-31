@@ -1,0 +1,49 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels: []
+    toServerVersion: ""
+id: bf303188-4491-4f9c-81ff-b2ef44683654
+inputs: []
+name: testo
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0c25e09d-bf8f-42ab-887f-e91002f26593
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 0c25e09d-bf8f-42ab-887f-e91002f26593
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 65,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
