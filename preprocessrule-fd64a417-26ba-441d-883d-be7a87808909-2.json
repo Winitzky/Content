@@ -1,0 +1,73 @@
+{
+	"action": "linkAndClose",
+	"enabled": true,
+	"existingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "app"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "aa"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"fromServerVersion": "",
+	"id": "fd64a417-26ba-441d-883d-be7a87808909",
+	"index": 1,
+	"itemVersion": "",
+	"linkTo": "oldest",
+	"locked": false,
+	"name": "2",
+	"newEventFilters": [],
+	"packID": "",
+	"period": {
+		"by": "days",
+		"fromValue": 30
+	},
+	"propagationLabels": [
+		"all"
+	],
+	"readyExistingEventsFilters": [
+		[
+			{
+				"ignoreCase": false,
+				"left": {
+					"isContext": true,
+					"value": {
+						"complex": null,
+						"simple": "app"
+					}
+				},
+				"operator": "isEqualString",
+				"right": {
+					"isContext": false,
+					"value": {
+						"complex": null,
+						"simple": "aa"
+					}
+				},
+				"type": "shortText"
+			}
+		]
+	],
+	"readyNewEventFilters": [],
+	"scriptName": "",
+	"searchClosed": false,
+	"sortValues": null,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1
+}
