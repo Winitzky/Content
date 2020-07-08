@@ -7,7 +7,7 @@ contentitemexportablefields:
     itemVersion: ""
     packID: ""
     propagationLabels:
-    - all
+    - premium
     toServerVersion: ""
 dockerimage: demisto/python3:3.8.3.9324
 enabled: true
