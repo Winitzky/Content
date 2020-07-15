@@ -1,0 +1,50 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: cb125292-1dff-44af-8b79-c5aaebd397e9
+inputs: []
+name: test2
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 47fccc62-4464-4997-8f9b-0701058a470a
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 47fccc62-4464-4997-8f9b-0701058a470a
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 65,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
