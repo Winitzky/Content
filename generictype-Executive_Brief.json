@@ -1,0 +1,19 @@
+{
+	"color": "#00FFFF",
+	"definitionId": "ThreatIntelReport",
+	"detached": false,
+	"disabled": false,
+	"fromServerVersion": "",
+	"id": "generic_ThreatIntelReport_Executive Brief",
+	"itemVersion": "1.0.10",
+	"layout": "Executive Brief Report",
+	"locked": false,
+	"name": "Executive Brief",
+	"packID": "ThreatIntel",
+	"packPropagationLabels": [
+		"all"
+	],
+	"system": true,
+	"toServerVersion": "",
+	"version": -1
+}
