@@ -1,0 +1,277 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Analytics \u0026 SIEM"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"automation",
+		"layoutscontainer",
+		"generictype",
+		"genericfield"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Sets a Threat Intel Report as unpublished.",
+				"name": "UnpublishThreatIntelReport",
+				"tags": [
+					"threatIntelReport-action-button"
+				]
+			},
+			{
+				"description": "Sets a Threat Intel Report as published.",
+				"name": "PublishThreatIntelReport",
+				"tags": [
+					"threatIntelReport-action-button"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": null,
+		"genericfield": [
+			{
+				"description": "",
+				"name": "Creator"
+			},
+			{
+				"description": "",
+				"name": "Body Campaign"
+			},
+			{
+				"description": "",
+				"name": "CVE"
+			},
+			{
+				"description": "",
+				"name": "Goals"
+			},
+			{
+				"description": "",
+				"name": "Primary Motivation"
+			},
+			{
+				"description": "",
+				"name": "Value"
+			},
+			{
+				"description": "",
+				"name": "CVSS"
+			},
+			{
+				"description": "",
+				"name": "Vulnerability Type"
+			},
+			{
+				"description": "",
+				"name": "Traffic Light Protocol"
+			},
+			{
+				"description": "",
+				"name": "Indicator Type"
+			},
+			{
+				"description": "",
+				"name": "First Seen By Source"
+			},
+			{
+				"description": "",
+				"name": "Targeting"
+			},
+			{
+				"description": "",
+				"name": "Operating System"
+			},
+			{
+				"description": "",
+				"name": "Aliases"
+			},
+			{
+				"description": "",
+				"name": "Body Malware"
+			},
+			{
+				"description": "",
+				"name": "Malware Type"
+			},
+			{
+				"description": "",
+				"name": "Report Status"
+			},
+			{
+				"description": "",
+				"name": "Description"
+			},
+			{
+				"description": "",
+				"name": "Threat Actor"
+			},
+			{
+				"description": "",
+				"name": "Published"
+			},
+			{
+				"description": "",
+				"name": "Last Seen"
+			},
+			{
+				"description": "",
+				"name": "Tags"
+			},
+			{
+				"description": "",
+				"name": "Sophistication"
+			},
+			{
+				"description": "",
+				"name": "Source"
+			},
+			{
+				"description": "",
+				"name": "First Seen"
+			},
+			{
+				"description": "",
+				"name": "Logo"
+			},
+			{
+				"description": "",
+				"name": "Body Vulnerability"
+			},
+			{
+				"description": "",
+				"name": "Fuzzy Hash"
+			},
+			{
+				"description": "",
+				"name": "Modified"
+			},
+			{
+				"description": "",
+				"name": "Threat Actor Types"
+			},
+			{
+				"description": "",
+				"name": "Secondary Motivations"
+			},
+			{
+				"description": "",
+				"name": "Objective"
+			},
+			{
+				"description": "",
+				"name": "Body Threat Actor"
+			}
+		],
+		"generictype": [
+			{
+				"description": "",
+				"name": "Malware"
+			},
+			{
+				"description": "",
+				"name": "Executive Brief"
+			},
+			{
+				"description": "",
+				"name": "Vulnerability"
+			},
+			{
+				"description": "",
+				"name": "Threat Actor"
+			},
+			{
+				"description": "",
+				"name": "Campaign"
+			}
+		],
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": null,
+		"layoutscontainer": [
+			{
+				"description": "",
+				"name": "Threat Actor Report"
+			},
+			{
+				"description": "",
+				"name": "Vulnerability Report"
+			},
+			{
+				"description": "",
+				"name": "Executive Brief Report"
+			},
+			{
+				"description": "",
+				"name": "Malware Report"
+			},
+			{
+				"description": "",
+				"name": "Campaign Report"
+			}
+		],
+		"list": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2021-08-23T12:43:36Z",
+	"currentVersion": "1.0.10",
+	"definitionId": "",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.14.0",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "Threat Intel Reports gives the user the ability to create, review, publish, and export threat intel reports.",
+	"downloads": 0,
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.5.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "ThreatIntel",
+	"installMessage": "",
+	"integrations": [],
+	"itemVersion": "1.0.10",
+	"keywords": [],
+	"legacy": true,
+	"name": "Threat Intel Report",
+	"packID": "ThreatIntel",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"readme": "The Threat Intelligence Report pack gives the user a rich text creation and editing experience. The pack allows the user to publish the report within XSOAR to different roles as well as exporting it to PDF format with a push of a button.\n\nThe pack comes with 5 out of the box report templates for easier use:\n1. Executive Brief\n2. Campaign Report\n3. Threat Actor Report\n4. Malware Report\n5. Vulnerability Report\n\nThe user may also add relationships to indicators via a special Relationships section in order to add additional data to the report. Markdown is supported in the report body allowing the user to add tables, images, change the color of the font or background and much more.\n\nExecutive brief report\n![Layout](https://raw.githubusercontent.com/demisto/content/db59767bf57ba1f2e1306f4a593f2c1b014d4e0c/Packs/ThreatIntel/doc_files/executive_brief.png)\n\nMalware report\n![Layout](https://raw.githubusercontent.com/demisto/content/db59767bf57ba1f2e1306f4a593f2c1b014d4e0c/Packs/ThreatIntel/doc_files/malware.png)\n\nThreat actor report\n![Layout](https://raw.githubusercontent.com/demisto/content/db59767bf57ba1f2e1306f4a593f2c1b014d4e0c/Packs/ThreatIntel/doc_files/threat_actor.png)\n\nVulnerability report\n![Layout](https://raw.githubusercontent.com/demisto/content/db59767bf57ba1f2e1306f4a593f2c1b014d4e0c/Packs/ThreatIntel/doc_files/vulnerability.png)\n",
+	"searchRank": 10,
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.5.0",
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2021-11-02T21:14:01Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "1885297"
+}
